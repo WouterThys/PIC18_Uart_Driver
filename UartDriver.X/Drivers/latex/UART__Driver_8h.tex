@@ -1,0 +1,148 @@
+\hypertarget{UART__Driver_8h}{\section{U\+A\+R\+T\+\_\+\+Driver.\+h File Reference}
+\label{UART__Driver_8h}\index{U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}}
+}
+
+
+Documentation for P\+I\+C 18 Uart driver.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+Include dependency graph for U\+A\+R\+T\+\_\+\+Driver.\+h\+:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structREAD__Data}{R\+E\+A\+D\+\_\+\+Data}
+\begin{DoxyCompactList}\small\item\em Struct containing data for a read. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{UART__Driver_8h_a1c3c4afbbbeef5bd7cfe6c55ab3be3b5}{D\+\_\+\+U\+A\+R\+T\+\_\+\+Init} ()
+\begin{DoxyCompactList}\small\item\em Initialize Uart. \end{DoxyCompactList}\item 
+void \hyperlink{UART__Driver_8h_af7c04bef7b283b7c2fa4830ec2c5768f}{D\+\_\+\+U\+A\+R\+T\+\_\+\+Write} (uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Uart write data. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{UART__Driver_8h_a9887889e77fe83d85b38403d3714be4b}{D\+\_\+\+U\+A\+R\+T\+\_\+\+Read} ()
+\begin{DoxyCompactList}\small\item\em Uart read data. \end{DoxyCompactList}\item 
+void \hyperlink{UART__Driver_8h_a3a63ad57d218b05261ec419ca86a0fd8}{D\+\_\+\+U\+A\+R\+T\+\_\+\+Enable} ()
+\begin{DoxyCompactList}\small\item\em Enable the uart module. \end{DoxyCompactList}\item 
+void \hyperlink{UART__Driver_8h_ac6d7a7f35cbd3a036291d19bdde829d7}{D\+\_\+\+U\+A\+R\+T\+\_\+\+Disable} ()
+\begin{DoxyCompactList}\small\item\em Disable the uart module. \end{DoxyCompactList}\item 
+\hyperlink{structREAD__Data}{R\+E\+A\+D\+\_\+\+Data} \hyperlink{UART__Driver_8h_a5671a13f1e99a7978a1cf357d6b52e0d}{D\+\_\+\+U\+A\+R\+T\+\_\+get\+Read\+Data} ()
+\begin{DoxyCompactList}\small\item\em Get the data. \end{DoxyCompactList}\item 
+void \hyperlink{UART__Driver_8h_aa124dee6950b928c9530c64b04c3c94f}{D\+\_\+\+U\+A\+R\+T\+\_\+\+Fill\+Data\+Buffer} (uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Fill a data buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{UART__Driver_8h_ac067564dd331336a1d1e47a50b821fa0}{read\+Ready}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Documentation for P\+I\+C 18 Uart driver. 
+
+Waldo \begin{DoxyDate}{Date}
+22/10/2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{UART__Driver_8h_ac6d7a7f35cbd3a036291d19bdde829d7}{\index{U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}!D\+\_\+\+U\+A\+R\+T\+\_\+\+Disable@{D\+\_\+\+U\+A\+R\+T\+\_\+\+Disable}}
+\index{D\+\_\+\+U\+A\+R\+T\+\_\+\+Disable@{D\+\_\+\+U\+A\+R\+T\+\_\+\+Disable}!U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}}
+\subsubsection[{D\+\_\+\+U\+A\+R\+T\+\_\+\+Disable}]{\setlength{\rightskip}{0pt plus 5cm}void D\+\_\+\+U\+A\+R\+T\+\_\+\+Disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{UART__Driver_8h_ac6d7a7f35cbd3a036291d19bdde829d7}
+
+
+Disable the uart module. 
+
+Disable the U\+A\+R\+T module. \hypertarget{UART__Driver_8h_a3a63ad57d218b05261ec419ca86a0fd8}{\index{U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}!D\+\_\+\+U\+A\+R\+T\+\_\+\+Enable@{D\+\_\+\+U\+A\+R\+T\+\_\+\+Enable}}
+\index{D\+\_\+\+U\+A\+R\+T\+\_\+\+Enable@{D\+\_\+\+U\+A\+R\+T\+\_\+\+Enable}!U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}}
+\subsubsection[{D\+\_\+\+U\+A\+R\+T\+\_\+\+Enable}]{\setlength{\rightskip}{0pt plus 5cm}void D\+\_\+\+U\+A\+R\+T\+\_\+\+Enable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{UART__Driver_8h_a3a63ad57d218b05261ec419ca86a0fd8}
+
+
+Enable the uart module. 
+
+Enable the U\+A\+R\+T module \hypertarget{UART__Driver_8h_aa124dee6950b928c9530c64b04c3c94f}{\index{U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}!D\+\_\+\+U\+A\+R\+T\+\_\+\+Fill\+Data\+Buffer@{D\+\_\+\+U\+A\+R\+T\+\_\+\+Fill\+Data\+Buffer}}
+\index{D\+\_\+\+U\+A\+R\+T\+\_\+\+Fill\+Data\+Buffer@{D\+\_\+\+U\+A\+R\+T\+\_\+\+Fill\+Data\+Buffer}!U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}}
+\subsubsection[{D\+\_\+\+U\+A\+R\+T\+\_\+\+Fill\+Data\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void D\+\_\+\+U\+A\+R\+T\+\_\+\+Fill\+Data\+Buffer (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{data}
+\end{DoxyParamCaption}
+)}}\label{UART__Driver_8h_aa124dee6950b928c9530c64b04c3c94f}
+
+
+Fill a data buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{UART__Driver_8h_a5671a13f1e99a7978a1cf357d6b52e0d}{\index{U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}!D\+\_\+\+U\+A\+R\+T\+\_\+get\+Read\+Data@{D\+\_\+\+U\+A\+R\+T\+\_\+get\+Read\+Data}}
+\index{D\+\_\+\+U\+A\+R\+T\+\_\+get\+Read\+Data@{D\+\_\+\+U\+A\+R\+T\+\_\+get\+Read\+Data}!U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}}
+\subsubsection[{D\+\_\+\+U\+A\+R\+T\+\_\+get\+Read\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+E\+A\+D\+\_\+\+Data} D\+\_\+\+U\+A\+R\+T\+\_\+get\+Read\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{UART__Driver_8h_a5671a13f1e99a7978a1cf357d6b52e0d}
+
+
+Get the data. 
+
+Get the data read from the U\+A\+R\+T port; \begin{DoxyReturn}{Returns}
+struct with data 
+\end{DoxyReturn}
+\hypertarget{UART__Driver_8h_a1c3c4afbbbeef5bd7cfe6c55ab3be3b5}{\index{U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}!D\+\_\+\+U\+A\+R\+T\+\_\+\+Init@{D\+\_\+\+U\+A\+R\+T\+\_\+\+Init}}
+\index{D\+\_\+\+U\+A\+R\+T\+\_\+\+Init@{D\+\_\+\+U\+A\+R\+T\+\_\+\+Init}!U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}}
+\subsubsection[{D\+\_\+\+U\+A\+R\+T\+\_\+\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void D\+\_\+\+U\+A\+R\+T\+\_\+\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{UART__Driver_8h_a1c3c4afbbbeef5bd7cfe6c55ab3be3b5}
+
+
+Initialize Uart. 
+
+Initializes all the parameters to the default setting, as well as writing the tri-\/state registers. Initializes the U\+A\+R\+T to the default data rate and settings. \hypertarget{UART__Driver_8h_a9887889e77fe83d85b38403d3714be4b}{\index{U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}!D\+\_\+\+U\+A\+R\+T\+\_\+\+Read@{D\+\_\+\+U\+A\+R\+T\+\_\+\+Read}}
+\index{D\+\_\+\+U\+A\+R\+T\+\_\+\+Read@{D\+\_\+\+U\+A\+R\+T\+\_\+\+Read}!U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}}
+\subsubsection[{D\+\_\+\+U\+A\+R\+T\+\_\+\+Read}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t D\+\_\+\+U\+A\+R\+T\+\_\+\+Read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{UART__Driver_8h_a9887889e77fe83d85b38403d3714be4b}
+
+
+Uart read data. 
+
+Read 8-\/bit of data from the R\+X pin of U\+A\+R\+T module. \begin{DoxyReturn}{Returns}
+data\+: returns the data. 
+\end{DoxyReturn}
+\hypertarget{UART__Driver_8h_af7c04bef7b283b7c2fa4830ec2c5768f}{\index{U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}!D\+\_\+\+U\+A\+R\+T\+\_\+\+Write@{D\+\_\+\+U\+A\+R\+T\+\_\+\+Write}}
+\index{D\+\_\+\+U\+A\+R\+T\+\_\+\+Write@{D\+\_\+\+U\+A\+R\+T\+\_\+\+Write}!U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}}
+\subsubsection[{D\+\_\+\+U\+A\+R\+T\+\_\+\+Write}]{\setlength{\rightskip}{0pt plus 5cm}void D\+\_\+\+U\+A\+R\+T\+\_\+\+Write (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{data}
+\end{DoxyParamCaption}
+)}}\label{UART__Driver_8h_af7c04bef7b283b7c2fa4830ec2c5768f}
+
+
+Uart write data. 
+
+Write 8-\/bit of data to the T\+X pin of U\+A\+R\+T module. 
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to write. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\hypertarget{UART__Driver_8h_ac067564dd331336a1d1e47a50b821fa0}{\index{U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}!read\+Ready@{read\+Ready}}
+\index{read\+Ready@{read\+Ready}!U\+A\+R\+T\+\_\+\+Driver.\+h@{U\+A\+R\+T\+\_\+\+Driver.\+h}}
+\subsubsection[{read\+Ready}]{\setlength{\rightskip}{0pt plus 5cm}bool read\+Ready}}\label{UART__Driver_8h_ac067564dd331336a1d1e47a50b821fa0}
+Variable flag to indicate a read action is ready 
