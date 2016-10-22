@@ -67,8 +67,11 @@ void D_UART_Init(uint8_t baud, bool interrupts) {
     BAUDCONbits.RXDTP = 1; // RX data is inverted
     BAUDCONbits.TXCKP = 1; // TX data is inverted
     BAUDCONbits.BRG16 = 0; // 8-bit Baud Rate Generator
+    
+    // Invert
+    
 
-    SPBRG = ((_XTAL_FREQ/baud)/64)-1; // Baud rate selection
+    SPBRG = 15;//((_XTAL_FREQ/baud)/64)-1; // Baud rate selection
     
     // Interrupts for reading
     if (interrupts) {
@@ -77,7 +80,7 @@ void D_UART_Init(uint8_t baud, bool interrupts) {
 }
 
 void D_UART_Write(uint8_t data){
-    
+    writeByte(data);
 }
 
 uint8_t D_UART_Read(){
@@ -101,6 +104,6 @@ void D_UART_Enable(bool enable) {
 }
 
 void putch(char data) {
-    D_UART_Write(data); // Write the data
+    writeByte(data); // Write the data
 }
 
