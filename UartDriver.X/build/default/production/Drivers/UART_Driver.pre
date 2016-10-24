@@ -4852,7 +4852,7 @@ void D_PORT_Init();
 typedef unsigned char bool;
 
 # 46 "Drivers/UART_Driver.h"
-void D_UART_Init(uint8_t baud, bool interrupts);
+void D_UART_Init(uint16_t baud, bool interrupts);
 
 # 52
 void D_UART_Write(uint8_t data);
@@ -4863,10 +4863,10 @@ uint8_t D_UART_Read();
 # 64
 void D_UART_Enable(bool enable);
 
-# 21 "Drivers/UART_Driver.c"
+# 20 "Drivers/UART_Driver.c"
 uint8_t baud;
 
-# 26
+# 25
 void writeByte(uint8_t data);
 uint8_t readByte(void);
 
@@ -4885,13 +4885,13 @@ if(RCSTAbits.OERR == 1) {
 return RCREG;
 }
 
-# 47
-void D_UART_Init(uint8_t baud, bool interrupts) {
+# 46
+void D_UART_Init(uint16_t baud, bool interrupts) {
 
 TRISCbits.TRISC7 = 0;
 TRISCbits.TRISC6 = 1;
 
-# 56
+# 55
 D_UART_Enable(0);
 
 
@@ -4910,7 +4910,7 @@ BAUDCONbits.BRG16 = 0;
 
 
 
-SPBRG = 15;
+SPBRG = ((10000000/baud)/64)-1;
 
 
 if (interrupts) {

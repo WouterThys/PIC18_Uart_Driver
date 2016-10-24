@@ -3,7 +3,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "20 Drivers/PORT_Driver.h
 [v _D_PORT_Init `(v ~T0 @X0 0 ef ]
 "46 Drivers/UART_Driver.h
-[v _D_UART_Init `(v ~T0 @X0 0 ef2`uc`uc ]
+[v _D_UART_Init `(v ~T0 @X0 0 ef2`ui`uc ]
 "64
 [v _D_UART_Enable `(v ~T0 @X0 0 ef1`uc ]
 "52
@@ -3572,7 +3572,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;PORT_Driver.h: 20: void D_PORT_Init();
-[; ;UART_Driver.h: 46: void D_UART_Init(uint8_t baud, bool interrupts);
+[; ;UART_Driver.h: 46: void D_UART_Init(uint16_t baud, bool interrupts);
 [; ;UART_Driver.h: 52: void D_UART_Write(uint8_t data);
 [; ;UART_Driver.h: 58: uint8_t D_UART_Read();
 [; ;UART_Driver.h: 64: void D_UART_Enable(bool enable);
@@ -3587,7 +3587,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _D_PORT_Init ..  ]
 [; ;main.c: 22: D_UART_Init(9600, 1);
 "22
-[e ( _D_UART_Init (2 , -> -> 9600 `i `uc -> -> 1 `i `uc ]
+[e ( _D_UART_Init (2 , -> -> 9600 `i `ui -> -> 1 `i `uc ]
 [; ;main.c: 23: D_UART_Enable(1);
 "23
 [e ( _D_UART_Enable (1 -> -> 1 `i `uc ]

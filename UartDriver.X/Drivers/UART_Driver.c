@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <xc.h>
-#include <p18f4550.h>
 
 #include "PORT_Driver.h"
 #include "UART_Driver.h"
@@ -10,7 +9,7 @@
 /*******************************************************************************
  *          DEFINES
  ******************************************************************************/
-
+#define _XTAL_FREQ 10000000
 /*******************************************************************************
  *          MACRO FUNCTIONS
  ******************************************************************************/
@@ -44,7 +43,7 @@ uint8_t readByte() {
 /*******************************************************************************
  *          DRIVER FUNCTIONS
  ******************************************************************************/
-void D_UART_Init(uint8_t baud, bool interrupts) {
+void D_UART_Init(uint16_t baud, bool interrupts) {
     // Port settings
     UART_TX_Dir = 0;
     UART_RX_Dir = 1;
@@ -71,7 +70,7 @@ void D_UART_Init(uint8_t baud, bool interrupts) {
     // Invert
     
 
-    SPBRG = 15;//((_XTAL_FREQ/baud)/64)-1; // Baud rate selection
+    SPBRG = ((_XTAL_FREQ/baud)/64)-1; // Baud rate selection
     
     // Interrupts for reading
     if (interrupts) {

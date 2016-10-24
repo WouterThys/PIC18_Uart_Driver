@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=/opt/microchip/xc8/v1.37/dat/en_msgs.txt -cs \
   -h+dist/default/production/UartDriver.X.production.sym \
   --cmf=dist/default/production/UartDriver.X.production.cmf -z -Q18F2550 \
-  -o/tmp/xcXWpP1iu -Mdist/default/production/UartDriver.X.production.map \
+  -o/tmp/xcX0O2Jsl -Mdist/default/production/UartDriver.X.production.map \
   -E1 -ver=XC8 -ASTACK=060h-07ffh -pstack=STACK -ACODE=00h-07FFFh \
   -ACONST=00h-07FFFh -ASMALLCONST=0800h-08FFhx120 \
   -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh -AABS1=00h-07FFh \
@@ -22,7 +22,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  /tmp/xcXCSDZhI.obj dist/default/production/UartDriver.X.production.obj 
+  /tmp/xcXvS8yEr.obj dist/default/production/UartDriver.X.production.obj 
 
 Object code version is 3.11
 
@@ -34,33 +34,35 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcXCSDZhI.obj
+/tmp/xcXvS8yEr.obj
                 end_init                              0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
 dist/default/production/UartDriver.X.production.obj
-                text5                              7EA2     7EA2       1E     3F51       0
-                text4                              7EDE     7EDE       20     3F6F       0
-                text3                              7EC0     7EC0       1E     3F60       0
-                text2                              7E96     7E96        C     3F4B       0
-                text1                              7E8C     7E8C        A     3F46       0
-                text0                              7EFE     7EFE      102     3F7F       0
-                cstackCOMRAM                          1        1        3        1       1
-                bssCOMRAM                             4        4        1        1       1
-                cinit                              7E84     7E84        8     3F42       0
+                text6                              7D7C     7D7C       1E     3EBE       0
+                text5                              7D9A     7D9A       20     3ECD       0
+                text4                              7E2C     7E2C       CC     3F16       0
+                text3                              7DBA     7DBA       72     3EDD       0
+                text2                              7D70     7D70        C     3EB8       0
+                text1                              7D66     7D66        A     3EB3       0
+                text0                              7EF8     7EF8      108     3F7C       0
+                cstackCOMRAM                          1        1       16        1       1
+                bssCOMRAM                            17       17        1        1       1
+                cinit                              7D5E     7D5E        8     3EAF       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
                 end_init                              0        0        4         0
-                text5                              7EA2     7EA2       1E         0
-                text4                              7EDE     7EDE       20         0
-                text3                              7EC0     7EC0       1E         0
-                text2                              7E96     7E96        C         0
-                text1                              7E8C     7E8C        A         0
-                text0                              7EFE     7EFE      102         0
-                cinit                              7E84     7E84        8         0
+                text6                              7D7C     7D7C       1E         0
+                text5                              7D9A     7D9A       20         0
+                text4                              7E2C     7E2C       CC         0
+                text3                              7DBA     7DBA       72         0
+                text2                              7D70     7D70        C         0
+                text1                              7D66     7D66        A         0
+                text0                              7EF8     7EF8      108         0
+                cinit                              7D5E     7D5E        8         0
 
         CLASS   CONST          
 
@@ -69,8 +71,8 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   MEDIUMCONST    
 
         CLASS   COMRAM         
-                cstackCOMRAM                          1        1        3         1
-                bssCOMRAM                             4        4        1         1
+                cstackCOMRAM                          1        1       16         1
+                bssCOMRAM                            17       17        1         1
 
         CLASS   ABS1           
 
@@ -111,14 +113,15 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
-                cstackCOMRAM                   000001  000004  000005         1       1  COMRAM  
-                cinit                          007E84  000008  007E8C      3F42       0  CODE    
-                text1                          007E8C  00000A  007E96      3F46       0  CODE    
-                text2                          007E96  00000C  007EA2      3F4B       0  CODE    
-                text5                          007EA2  00001E  007EC0      3F51       0  CODE    
-                text3                          007EC0  00001E  007EDE      3F60       0  CODE    
-                text4                          007EDE  000020  007EFE      3F6F       0  CODE    
-                text0                          007EFE  000102  008000      3F7F       0  CODE    
+                cstackCOMRAM                   000001  000017  000018         1       1  COMRAM  
+                cinit                          007D5E  000008  007D66      3EAF       0  CODE    
+                text1                          007D66  00000A  007D70      3EB3       0  CODE    
+                text2                          007D70  00000C  007D7C      3EB8       0  CODE    
+                text6                          007D7C  00001E  007D9A      3EBE       0  CODE    
+                text5                          007D9A  000020  007DBA      3ECD       0  CODE    
+                text3                          007DBA  000072  007E2C      3EDD       0  CODE    
+                text4                          007E2C  0000CC  007EF8      3F16       0  CODE    
+                text0                          007EF8  000108  008000      3F7C       0  CODE    
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -134,28 +137,31 @@ UNUSED ADDRESS RANGES
         BANK5            000500-0005FF              100
         BANK6            000600-0006FF              100
         BANK7            000700-0007FF              100
-        BIGRAM           000005-0007FF              7FB
-        CODE             000004-007E83             7E80
-        COMRAM           000005-00005F               5B
-        CONST            000004-007E83             7E80
+        BIGRAM           000018-0007FF              7E8
+        CODE             000004-007D5D             7D5A
+        COMRAM           000018-00005F               48
+        CONST            000004-007D5D             7D5A
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      000800-007E83             7684
+        MEDIUMCONST      000800-007D5D             755E
         RAM              000060-0007FF              100
         SFR              000F60-000FFF               A0
-        SMALLCONST       000800-007E83              100
+        SMALLCONST       000800-007D5D              100
         STACK            000060-0007FF              7A0
 
                                   Symbol Table
 
+?___aldiv                cstackCOMRAM 000001
 D_UART_Enable@enable     cstackCOMRAM 000001
-D_UART_Init@interrupts   cstackCOMRAM 000002
+D_UART_Init@baud         cstackCOMRAM 00000F
+D_UART_Init@interrupts   cstackCOMRAM 000011
 D_UART_Write@data        cstackCOMRAM 000002
 _ADCON1                  (abs)        000FC1
 _BAUDCONbits             (abs)        000FB8
-_D_PORT_Init             text5        007EA2
-_D_UART_Enable           text4        007EDE
-_D_UART_Init             text3        007EC0
-_D_UART_Write            text1        007E8C
+_D_PORT_Init             text6        007D7C
+_D_UART_Enable           text5        007D9A
+_D_UART_Init             text3        007DBA
+_D_UART_Init$853         cstackCOMRAM 000012
+_D_UART_Write            text1        007D66
 _PORTA                   (abs)        000F80
 _PORTB                   (abs)        000F81
 _PORTC                   (abs)        000F82
@@ -259,7 +265,7 @@ __Hrparam                rparam       000000
 __Hsfr                   sfr          000000
 __Hsmallconst            smallconst   000000
 __Hspace_0               (abs)        30000E
-__Hspace_1               (abs)        000005
+__Hspace_1               (abs)        000018
 __Hspace_2               (abs)        000000
 __Hstack                 stack        000000
 __Hstruct                struct       000000
@@ -271,6 +277,7 @@ __Htext2                 text2        000000
 __Htext3                 text3        000000
 __Htext4                 text4        000000
 __Htext5                 text5        000000
+__Htext6                 text6        000000
 __LRAM                   (abs)        000001
 __Labs1                  abs1         000000
 __Lbank0                 bank0        000000
@@ -337,9 +344,16 @@ __Ltext2                 text2        000000
 __Ltext3                 text3        000000
 __Ltext4                 text4        000000
 __Ltext5                 text5        000000
+__Ltext6                 text6        000000
 __S0                     (abs)        30000E
-__S1                     (abs)        000005
+__S1                     (abs)        000018
 __S2                     (abs)        000000
+___aldiv                 text4        007E2C
+___aldiv@counter         cstackCOMRAM 000009
+___aldiv@dividend        cstackCOMRAM 000001
+___aldiv@divisor         cstackCOMRAM 000005
+___aldiv@quotient        cstackCOMRAM 00000B
+___aldiv@sign            cstackCOMRAM 00000A
 ___inthi_sp              stack        000000
 ___intlo_sp              stack        000000
 ___param_bank            (abs)        000010
@@ -347,36 +361,39 @@ ___rparam_used           (abs)        000001
 ___sp                    stack        000000
 __accesstop              (abs)        000060
 __activetblptr           (abs)        000000
-__end_of_D_PORT_Init     text5        007EC0
-__end_of_D_UART_Enable   text4        007EFE
-__end_of_D_UART_Init     text3        007EDE
-__end_of_D_UART_Write    text1        007E96
-__end_of__initialization cinit        007E86
+__end_of_D_PORT_Init     text6        007D9A
+__end_of_D_UART_Enable   text5        007DBA
+__end_of_D_UART_Init     text3        007E2C
+__end_of_D_UART_Write    text1        007D70
+__end_of___aldiv         text4        007EF8
+__end_of__initialization cinit        007D60
 __end_of_main            text0        008000
-__end_of_writeByte       text2        007EA2
-__initialization         cinit        007E84
+__end_of_writeByte       text2        007D7C
+__initialization         cinit        007D5E
 __mediumconst            mediumconst  000000
-__pbssCOMRAM             bssCOMRAM    000004
-__pcinit                 cinit        007E84
+__pbssCOMRAM             bssCOMRAM    000017
+__pcinit                 cinit        007D5E
 __pcstackCOMRAM          cstackCOMRAM 000001
-__ptext0                 text0        007EFE
-__ptext1                 text1        007E8C
-__ptext2                 text2        007E96
-__ptext3                 text3        007EC0
-__ptext4                 text4        007EDE
-__ptext5                 text5        007EA2
+__ptext0                 text0        007EF8
+__ptext1                 text1        007D66
+__ptext2                 text2        007D70
+__ptext3                 text3        007DBA
+__ptext4                 text4        007E2C
+__ptext5                 text5        007D9A
+__ptext6                 text6        007D7C
 __ramtop                 ramtop       000800
 __size_of_D_PORT_Init    (abs)        000000
 __size_of_D_UART_Enable  (abs)        000000
 __size_of_D_UART_Init    (abs)        000000
 __size_of_D_UART_Write   (abs)        000000
+__size_of___aldiv        (abs)        000000
 __size_of_main           (abs)        000000
 __size_of_writeByte      (abs)        000000
 __smallconst             smallconst   000000
-_baud                    bssCOMRAM    000004
-_main                    text0        007EFE
-_writeByte               text2        007E96
-end_of_initialization    cinit        007E86
+_baud                    bssCOMRAM    000017
+_main                    text0        007EF8
+_writeByte               text2        007D70
+end_of_initialization    cinit        007D60
 intlevel0                text         000000
 intlevel1                text         000000
 intlevel2                text         000000
@@ -384,7 +401,7 @@ intlevel3                text         000000
 stackhi                  (abs)        0007FF
 stacklo                  (abs)        000060
 start                    init         000000
-start_initialization     cinit        007E84
+start_initialization     cinit        007D5E
 writeByte@data           cstackCOMRAM 000001
 
 
@@ -400,7 +417,7 @@ FUNCTION INFORMATION:
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, status,2, cstack
+		wreg, status,2, status,0, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -424,7 +441,7 @@ Total ram usage:        1 bytes
 
  *************** function _D_UART_Write *****************
  Defined at:
-		line 82 in file "Drivers/UART_Driver.c"
+		line 81 in file "Drivers/UART_Driver.c"
  Parameters:    Size  Location     Type
   data            1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -454,7 +471,7 @@ Total ram usage:        1 bytes
 
  *************** function _writeByte *****************
  Defined at:
-		line 29 in file "Drivers/UART_Driver.c"
+		line 28 in file "Drivers/UART_Driver.c"
  Parameters:    Size  Location     Type
   data            1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -484,38 +501,71 @@ Total ram usage:        1 bytes
 
  *************** function _D_UART_Init *****************
  Defined at:
-		line 47 in file "Drivers/UART_Driver.c"
+		line 46 in file "Drivers/UART_Driver.c"
  Parameters:    Size  Location     Type
-  baud            1    wreg     unsigned char 
-  interrupts      1    1[COMRAM] unsigned char 
+  baud            2   14[COMRAM] unsigned int 
+  interrupts      1   16[COMRAM] unsigned char 
  Auto vars:     Size  Location     Type
-  baud            1    0[COMRAM] unsigned char 
+		None
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, status,2, cstack
+		wreg, status,2, status,0, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-      Params:         1       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0
+      Params:         3       0       0       0       0       0       0       0       0
+      Locals:         4       0       0       0       0       0       0       0       0
       Temps:          0       0       0       0       0       0       0       0       0
-      Totals:         1       0       0       0       0       0       0       0       0
-Total ram usage:        1 bytes
+      Totals:         7       0       0       0       0       0       0       0       0
+Total ram usage:        7 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    1
  This function calls:
 		_D_UART_Enable
+		___aldiv
  This function is called by:
 		_main
  This function uses a non-reentrant model
 
 
+ *************** function ___aldiv *****************
+ Defined at:
+		line 8 in file "/opt/microchip/xc8/v1.37/sources/common/aldiv.c"
+ Parameters:    Size  Location     Type
+  dividend        4    0[COMRAM] long 
+  divisor         4    4[COMRAM] long 
+ Auto vars:     Size  Location     Type
+  quotient        4   10[COMRAM] long 
+  sign            1    9[COMRAM] unsigned char 
+  counter         1    8[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  4    0[COMRAM] long 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         8       0       0       0       0       0       0       0       0
+      Locals:         6       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:        14       0       0       0       0       0       0       0       0
+Total ram usage:       14 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_D_UART_Init
+ This function uses a non-reentrant model
+
+
  *************** function _D_UART_Enable *****************
  Defined at:
-		line 90 in file "Drivers/UART_Driver.c"
+		line 89 in file "Drivers/UART_Driver.c"
  Parameters:    Size  Location     Type
   enable          1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -538,8 +588,8 @@ Total ram usage:        1 bytes
  This function calls:
 		Nothing
  This function is called by:
-		_main
 		_D_UART_Init
+		_main
  This function uses a non-reentrant model
 
 
@@ -577,25 +627,30 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 Drivers/PORT_Driver.c
-		_D_PORT_Init   		CODE           	7EA2	0000	31
+		_D_PORT_Init   		CODE           	7D7C	0000	31
 
 Drivers/PORT_Driver.c estimated size: 31
 
 Drivers/UART_Driver.c
-		_D_UART_Init   		CODE           	7EC0	0000	31
-		_D_UART_Write  		CODE           	7E8C	0000	11
-		_D_UART_Enable 		CODE           	7EDE	0000	33
-		_writeByte     		CODE           	7E96	0000	13
+		_D_UART_Init   		CODE           	7DBA	0000	115
+		_D_UART_Write  		CODE           	7D66	0000	11
+		_D_UART_Enable 		CODE           	7D9A	0000	33
+		_writeByte     		CODE           	7D70	0000	13
 
-Drivers/UART_Driver.c estimated size: 88
+Drivers/UART_Driver.c estimated size: 172
+
+/opt/microchip/xc8/v1.37/sources/common/aldiv.c
+		___aldiv       		CODE           	7E2C	0000	205
+
+/opt/microchip/xc8/v1.37/sources/common/aldiv.c estimated size: 205
 
 shared
-		__initialization		CODE           	7E84	0000	3
+		__initialization		CODE           	7D5E	0000	3
 
 shared estimated size: 3
 
 main.c
-		_main          		CODE           	7EFE	0000	259
+		_main          		CODE           	7EF8	0000	265
 
-main.c estimated size: 259
+main.c estimated size: 265
 

@@ -43,7 +43,7 @@ extern "C" {
  * @param baud The baud rate.
  * @param interrupts Boolean to set if interrupts should be used.
 */
-void D_UART_Init(uint8_t baud, bool interrupts);
+void D_UART_Init(uint16_t baud, bool interrupts);
 
 /**
  * Write 8-bit of data to the TX pin of UART module. 

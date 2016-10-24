@@ -4720,7 +4720,7 @@ typedef uint16_t uintptr_t;
 void D_PORT_Init();
 
 # 46 "Drivers/UART_Driver.h"
-void D_UART_Init(uint8_t baud, bool interrupts);
+void D_UART_Init(uint16_t baud, bool interrupts);
 
 # 52
 void D_UART_Write(uint8_t data);
