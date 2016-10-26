@@ -77,7 +77,7 @@ public class SerialInterface {
 					writeThread = new Thread(new SerialWriter(outputStream));
 					writeThread.start();
 					
-					serialPort.addEventListener(new SerialReader(inputStream));
+					serialPort.addEventListener(new SerialReader(inputStream, uartInterface));
 					serialPort.notifyOnDataAvailable(true);
 					connected = true;
 					uartInterface.onConnectedListener();
@@ -113,9 +113,11 @@ public class SerialInterface {
 		
 		private InputStream input;
 		private byte[] buffer = new byte[1024];
+		private SerialUartInterface uartInterface;
 		
-		public SerialReader(InputStream input) {
+		public SerialReader(InputStream input, SerialUartInterface uartInterface) {
 			this.input = input;
+			this.uartInterface = uartInterface;
 		}
 
 		@Override
@@ -128,6 +130,7 @@ public class SerialInterface {
 					if(data == 5) break;
 					buffer[length++] = (byte)data;
 				}
+				uartInterface.onDataReadyListener(new String(buffer, 0, length));
 				System.out.println("Data: "+new String(buffer, 0, length));
 			} catch (IOException e) {
 				System.out.println("Serial error in serialEvent: "+e.getMessage());

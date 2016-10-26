@@ -1,3 +1,5 @@
+import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -6,22 +8,31 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
-import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerListModel;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumnModel;
+
+import classes.Input;
+import javax.swing.JScrollBar;
 
 
 public class InterfaceFrame implements SerialUartInterface {
 
 	private JFrame frame;
-	private JTextField textField;
+	
+	private SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm");
 	
 	private static JSpinner spnrPortSelect;
 	private static SpinnerListModel spnrPorts;
@@ -36,6 +47,9 @@ public class InterfaceFrame implements SerialUartInterface {
 	private ImageIcon greenLedImg;
 	
 	private JButton btnConnect;
+	private JTable tblInput;
+	
+	private DefaultTableModel tblModel;
 	/**
 	 * Launch the application.
 	 */
@@ -67,6 +81,21 @@ public class InterfaceFrame implements SerialUartInterface {
 	@Override
 	public void onDisconnectedListener() {
 		connectedLed.setIcon(redLedImg);
+	}
+	
+	@Override
+	public void onDataReadyListener(String input) {
+		// Add row to table
+		Input newMessage = new Input(input);
+		DefaultTableModel dtm = (DefaultTableModel) tblInput.getModel();
+		
+		dtm.addRow(new Object[]{
+				dateFormat.format(newMessage.getTime().getTime()),
+				newMessage.getSender(),
+				newMessage.getCommand(),
+				newMessage.getMessage()});
+		resizeTable(tblInput);
+		tblInput.setRowSelectionInterval(tbl., index1);
 	}
 	
 	private void loadImages() {
@@ -101,12 +130,7 @@ public class InterfaceFrame implements SerialUartInterface {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(12, 72, 178, 189);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
-		
-		JLabel lblNewLabel = new JLabel("New label");
+		JLabel lblNewLabel = new JLabel("Input");
 		lblNewLabel.setBounds(12, 55, 70, 15);
 		frame.getContentPane().add(lblNewLabel);
 		
@@ -135,6 +159,7 @@ public class InterfaceFrame implements SerialUartInterface {
 		spnrBaudRates = new SpinnerListModel(baudStrings);
 		spnrBaudSelect = new JSpinner(spnrBaudRates);
 		spnrBaudSelect.setBounds(112, 28, 78, 20);
+		spnrBaudSelect.setValue("9600");
 		frame.getContentPane().add(spnrBaudSelect);
 		
 		// Connect button
@@ -164,6 +189,37 @@ public class InterfaceFrame implements SerialUartInterface {
 		frame.getContentPane().add(connectedLed);
 		loadImages();
 		connectedLed.setIcon(redLedImg);
+		
+		// Table
+		String[] header = {"Time", "Sender", "Command", "Message"};
+		String[][] data = {{"","","",""}};
+		tblModel = new DefaultTableModel(data, header);
+		tblInput = new JTable(tblModel);
+		tblInput.setShowHorizontalLines(false);
+		tblInput.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+		tblInput.setBounds(12, 69, 424, 87);
+		frame.getContentPane().add(tblInput);
+		JScrollPane jp=new JScrollPane(tblInput);
+	    jp.setBounds(12, 69, 424, 87);
+	    jp.setVisible(true);
+	    frame.add(jp);
+	    frame.getContentPane().add(jp);
+	}
+	
+	private void resizeTable(JTable table) {
+		final TableColumnModel columnModel = table.getColumnModel();
+		for (int col = 0; col < table.getColumnCount(); col++) {
+			int width = 15; //Min width
+			for (int row = 0; row < table.getRowCount(); row++) {
+				TableCellRenderer renderer = table.getCellRenderer(row, col);
+				Component comp = table.prepareRenderer(renderer, row, col);
+				width = Math.max(comp.getPreferredSize().width+1, width);
+			}
+			if (width > 300) {
+				width = 300;
+			}
+			columnModel.getColumn(col).setPreferredWidth(width);
+		}
 	}
 	
 	private static BufferedImage resizeImage(BufferedImage img, int newW, int newH) {
