@@ -35,9 +35,9 @@
 [v _D_UART_Init D_UART_Init `(v  1 e 1 0 ]
 "87
 [v _D_UART_Write D_UART_Write `(v  1 e 1 0 ]
-"102
+"105
 [v _D_UART_Enable D_UART_Enable `(v  1 e 1 0 ]
-"118
+"121
 [v _putch putch `(v  1 e 1 0 ]
 "17 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/main.c
 [v _main main `(v  1 e 1 0 ]
@@ -183,8 +183,9 @@
 "87 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/UART_Driver.c
 [v _D_UART_Write D_UART_Write `(v  1 e 1 0 ]
 {
-[v D_UART_Write@data data `*.25Cuc  1 p 2 12 ]
-"96
+[v D_UART_Write@command command `*.25Cuc  1 p 2 12 ]
+[v D_UART_Write@data data `*.25Cuc  1 p 2 14 ]
+"99
 } 0
 "464 /opt/microchip/xc8/v1.37/sources/common/doprnt.c
 [v _printf printf `(i  1 e 2 0 ]
@@ -199,13 +200,13 @@
 [v printf@f f `*.33Cuc  1 p 3 2 ]
 "1541
 } 0
-"118 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/UART_Driver.c
+"121 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/UART_Driver.c
 [v _putch putch `(v  1 e 1 0 ]
 {
 [v putch@data data `uc  1 a 1 wreg ]
 [v putch@data data `uc  1 a 1 wreg ]
 [v putch@data data `uc  1 a 1 1 ]
-"120
+"123
 } 0
 "34
 [v _writeByte writeByte `(v  1 e 1 0 ]
@@ -236,13 +237,13 @@
 [v ___aldiv@divisor divisor `l  1 p 4 4 ]
 "42
 } 0
-"102 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/UART_Driver.c
+"105 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/UART_Driver.c
 [v _D_UART_Enable D_UART_Enable `(v  1 e 1 0 ]
 {
 [v D_UART_Enable@enable enable `uc  1 a 1 wreg ]
 [v D_UART_Enable@enable enable `uc  1 a 1 wreg ]
 [v D_UART_Enable@enable enable `uc  1 a 1 0 ]
-"116
+"119
 } 0
 "32 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/PORT_Driver.c
 [v _D_PORT_Init D_PORT_Init `(v  1 e 1 0 ]

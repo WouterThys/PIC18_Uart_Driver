@@ -14,6 +14,9 @@ public class SerialInterface {
 	
 	private int baud;
 	
+	private static final char startCharacter = '&';
+	private static final char stopCharacter = '$';
+	
 	private static InputStream inputStream;
 	private static OutputStream outputStream;
 	private SerialPort serialPort;
@@ -127,8 +130,10 @@ public class SerialInterface {
 			try {
 				int length = 0;
 				while((data = input.read()) > -1) {
-					if(data == 5) break;
+					if(data == stopCharacter) break;
 					buffer[length++] = (byte)data;
+					
+					if(length > 200) break; // error
 				}
 				uartInterface.onDataReadyListener(new String(buffer, 0, length));
 				System.out.println("Data: "+new String(buffer, 0, length));

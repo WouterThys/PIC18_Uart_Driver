@@ -47,11 +47,11 @@ extern "C" {
 void D_UART_Init(const char* name, uint16_t baud, bool interrupts);
 
 /**
- * Write 8-bit of data to the TX pin of UART module. 
- * @param command: Command value (unsigned int)
+ * Write data to the TX pin of UART module. 
+ * @param command: Command
  * @param data: Date string to write
  */
-void D_UART_Write(uint8_t command, const char* data);
+void D_UART_Write(const char* command, const char* data);
 
 /**
  * Read 8-bit of data from the RX pin of UART module.

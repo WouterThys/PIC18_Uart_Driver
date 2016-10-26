@@ -4855,7 +4855,7 @@ typedef unsigned char bool;
 void D_UART_Init(const char* name, uint16_t baud, bool interrupts);
 
 # 54
-void D_UART_Write(uint8_t command, const char* data);
+void D_UART_Write(const char* command, const char* data);
 
 # 60
 uint8_t D_UART_Read();
@@ -4926,15 +4926,18 @@ if (interrupts) {
 }
 }
 
-void D_UART_Write(uint8_t command, const char* data) {
+void D_UART_Write(const char* command, const char* data) {
 printf(startCharacter);
 
 printf(messageCharacter);
 printf(deviceName);
+
+printf(":");printf(command);
+
 printf(":");printf(data);
 
 printf(stopCharacter);
-_delay((unsigned long)((10)*(10000000/4000.0)));
+_delay((unsigned long)((1)*(10000000/4000.0)));
 }
 
 uint8_t D_UART_Read(){

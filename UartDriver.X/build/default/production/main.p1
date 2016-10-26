@@ -7,7 +7,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "66
 [v _D_UART_Enable `(v ~T0 @X0 0 ef1`uc ]
 "54
-[v _D_UART_Write `(v ~T0 @X0 0 ef2`uc`*Cuc ]
+[v _D_UART_Write `(v ~T0 @X0 0 ef2`*Cuc`*Cuc ]
 [v F3735 `(v ~T0 @X0 1 tf1`ul ]
 "159 /opt/microchip/xc8/v1.37/include/pic18.h
 [v __delay `JF3735 ~T0 @X0 0 e ]
@@ -3573,7 +3573,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;PORT_Driver.h: 20: void D_PORT_Init();
 [; ;UART_Driver.h: 47: void D_UART_Init(const char* name, uint16_t baud, bool interrupts);
-[; ;UART_Driver.h: 54: void D_UART_Write(uint8_t command, const char* data);
+[; ;UART_Driver.h: 54: void D_UART_Write(const char* command, const char* data);
 [; ;UART_Driver.h: 60: uint8_t D_UART_Read();
 [; ;UART_Driver.h: 66: void D_UART_Enable(bool enable);
 "17 main.c
@@ -3595,9 +3595,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "25
 [e :U 469 ]
 {
-[; ;main.c: 27: D_UART_Write(0x12, "command1");
+[; ;main.c: 27: D_UART_Write("command", "panda message");
 "27
-[e ( _D_UART_Write (2 , -> -> 18 `i `uc :s 2C ]
+[e ( _D_UART_Write (2 , :s 2C :s 3C ]
 [; ;main.c: 28: _delay((unsigned long)((30)*(10000000/4000.0)));_delay((unsigned long)((30)*(10000000/4000.0)));
 "28
 [e ( __delay (1 -> * -> -> 30 `i `d / -> -> 10000000 `l `d .4000.0 `ul ]
@@ -3644,5 +3644,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 "39
 [e :UE 467 ]
 }
+[a 3C 112 97 110 100 97 32 109 101 115 115 97 103 101 0 ]
+[a 2C 99 111 109 109 97 110 100 0 ]
 [a 1C 80 97 110 100 97 0 ]
-[a 2C 99 111 109 109 97 110 100 49 0 ]

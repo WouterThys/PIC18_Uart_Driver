@@ -4723,7 +4723,7 @@ void D_PORT_Init();
 void D_UART_Init(const char* name, uint16_t baud, bool interrupts);
 
 # 54
-void D_UART_Write(uint8_t command, const char* data);
+void D_UART_Write(const char* command, const char* data);
 
 # 60
 uint8_t D_UART_Read();
@@ -4742,7 +4742,7 @@ D_UART_Enable(1);
 
 while(1) {
 
-D_UART_Write(0x12, "command1");
+D_UART_Write("command", "panda message");
 _delay((unsigned long)((30)*(10000000/4000.0)));_delay((unsigned long)((30)*(10000000/4000.0)));
 _delay((unsigned long)((30)*(10000000/4000.0)));_delay((unsigned long)((30)*(10000000/4000.0)));
 _delay((unsigned long)((30)*(10000000/4000.0)));_delay((unsigned long)((30)*(10000000/4000.0)));

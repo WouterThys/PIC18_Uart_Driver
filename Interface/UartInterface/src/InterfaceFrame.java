@@ -95,6 +95,7 @@ public class InterfaceFrame implements SerialUartInterface {
 				newMessage.getCommand(),
 				newMessage.getMessage()});
 		resizeTable(tblInput);
+		tblInput.scrollRectToVisible(tblInput.getCellRect(tblInput.getRowCount()-1, 0, true));
 	}
 	
 	private void loadImages() {
@@ -125,7 +126,7 @@ public class InterfaceFrame implements SerialUartInterface {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 497, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -201,8 +202,19 @@ public class InterfaceFrame implements SerialUartInterface {
 		JScrollPane jp=new JScrollPane(tblInput);
 	    jp.setBounds(12, 69, 424, 87);
 	    jp.setVisible(true);
-	    frame.add(jp);
 	    frame.getContentPane().add(jp);
+	    frame.getContentPane().add(jp);
+	    
+	    JButton btnX = new JButton("x");
+	    btnX.addActionListener(new ActionListener() {
+	    	public void actionPerformed(ActionEvent arg0) {
+	    		tblModel.getDataVector().removeAllElements();
+	    		tblModel.fireTableDataChanged();
+	    	}
+	    });
+	    btnX.setBounds(443, 69, 40, 35);
+	    frame.getContentPane().add(btnX);
+	   
 	}
 	
 	private void resizeTable(JTable table) {

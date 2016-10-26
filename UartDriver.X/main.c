@@ -24,7 +24,7 @@ void main(void) {
     
     while(1) {
         //D_UART_Write(0x55);
-        D_UART_Write(0x12, "command1");
+        D_UART_Write("command", "panda message");
         __delay_ms(30);__delay_ms(30);
         __delay_ms(30);__delay_ms(30);
         __delay_ms(30);__delay_ms(30);

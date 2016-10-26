@@ -84,15 +84,18 @@ void D_UART_Init(const char* name, uint16_t baud, bool interrupts) {
     }
 }
 
-void D_UART_Write(uint8_t command, const char* data) {
+void D_UART_Write(const char* command, const char* data) {
     printf(startCharacter);
     
     printf(messageCharacter);
     printf(deviceName);
+    // Command
+    printf(":");printf(command);
+    // Message
     printf(":");printf(data);
     
     printf(stopCharacter);
-    __delay_ms(10);
+    __delay_ms(1);
 }
 
 uint8_t D_UART_Read(){
