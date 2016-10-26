@@ -4851,22 +4851,27 @@ void D_PORT_Init();
 # 12 "/opt/microchip/xc8/v1.37/include/stdbool.h"
 typedef unsigned char bool;
 
-# 46 "Drivers/UART_Driver.h"
-void D_UART_Init(uint16_t baud, bool interrupts);
+# 47 "Drivers/UART_Driver.h"
+void D_UART_Init(const char* name, uint16_t baud, bool interrupts);
 
-# 52
-void D_UART_Write(uint8_t data);
+# 54
+void D_UART_Write(uint8_t command, const char* data);
 
-# 58
+# 60
 uint8_t D_UART_Read();
 
-# 64
+# 66
 void D_UART_Enable(bool enable);
 
-# 20 "Drivers/UART_Driver.c"
+# 21 "Drivers/UART_Driver.c"
 uint8_t baud;
 
-# 25
+const char* startCharacter = "&";
+const char* stopCharacter = "$";
+const char* deviceName;
+const char* messageCharacter = "[M]";
+
+# 31
 void writeByte(uint8_t data);
 uint8_t readByte(void);
 
@@ -4885,13 +4890,16 @@ if(RCSTAbits.OERR == 1) {
 return RCREG;
 }
 
-# 46
-void D_UART_Init(uint16_t baud, bool interrupts) {
+# 52
+void D_UART_Init(const char* name, uint16_t baud, bool interrupts) {
 
 TRISCbits.TRISC7 = 0;
 TRISCbits.TRISC6 = 1;
 
-# 55
+
+deviceName = name;
+
+
 D_UART_Enable(0);
 
 
@@ -4918,8 +4926,15 @@ if (interrupts) {
 }
 }
 
-void D_UART_Write(uint8_t data){
-writeByte(data);
+void D_UART_Write(uint8_t command, const char* data) {
+printf(startCharacter);
+
+printf(messageCharacter);
+printf(deviceName);
+printf(":");printf(data);
+
+printf(stopCharacter);
+_delay((unsigned long)((10)*(10000000/4000.0)));
 }
 
 uint8_t D_UART_Read(){

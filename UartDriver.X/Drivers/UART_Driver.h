@@ -40,16 +40,18 @@ extern "C" {
 /**
 * Initializes all the parameters to the default setting, as well as writing the
 * tri-state registers. Initializes the UART to the default data rate and settings.
+ * @param name The name of the device.
  * @param baud The baud rate.
  * @param interrupts Boolean to set if interrupts should be used.
 */
-void D_UART_Init(uint16_t baud, bool interrupts);
+void D_UART_Init(const char* name, uint16_t baud, bool interrupts);
 
 /**
  * Write 8-bit of data to the TX pin of UART module. 
- * @param data: Data to write.
+ * @param command: Command value (unsigned int)
+ * @param data: Date string to write
  */
-void D_UART_Write(uint8_t data);
+void D_UART_Write(uint8_t command, const char* data);
 
 /**
  * Read 8-bit of data from the RX pin of UART module.

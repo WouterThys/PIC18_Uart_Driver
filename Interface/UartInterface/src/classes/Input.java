@@ -4,6 +4,11 @@ import java.util.Calendar;
 
 public class Input {
 	
+	private static final char startCharacter = '&';
+	private static final char stopCharacter = '$';
+	private static final String deviceName = "Computer";
+	private static final String messageCharacter = "[M]";
+	
 	private Calendar time;
 	private String sender;
 	private String command;

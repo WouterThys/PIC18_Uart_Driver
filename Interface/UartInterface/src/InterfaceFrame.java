@@ -95,7 +95,6 @@ public class InterfaceFrame implements SerialUartInterface {
 				newMessage.getCommand(),
 				newMessage.getMessage()});
 		resizeTable(tblInput);
-		tblInput.setRowSelectionInterval(tbl., index1);
 	}
 	
 	private void loadImages() {

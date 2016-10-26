@@ -5,6 +5,8 @@
 [d frameptr 4065 ]
 "8 /opt/microchip/xc8/v1.37/sources/common/aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
+"464 /opt/microchip/xc8/v1.37/sources/common/doprnt.c
+[v _printf printf `(i  1 e 2 0 ]
 "62 /opt/microchip/xc8/v1.37/sources/common/float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 /opt/microchip/xc8/v1.37/sources/common/ftadd.c
@@ -27,14 +29,16 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "32 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/PORT_Driver.c
 [v _D_PORT_Init D_PORT_Init `(v  1 e 1 0 ]
-"28 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/UART_Driver.c
+"34 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/UART_Driver.c
 [v _writeByte writeByte `(v  1 e 1 0 ]
-"46
+"52
 [v _D_UART_Init D_UART_Init `(v  1 e 1 0 ]
-"81
+"87
 [v _D_UART_Write D_UART_Write `(v  1 e 1 0 ]
-"89
+"102
 [v _D_UART_Enable D_UART_Enable `(v  1 e 1 0 ]
+"118
+[v _putch putch `(v  1 e 1 0 ]
 "17 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/main.c
 [v _main main `(v  1 e 1 0 ]
 "2378 /opt/microchip/xc8/v1.37/include/pic18f2550.h
@@ -163,33 +167,61 @@
 [v _BAUDCONbits BAUDCONbits `VES221  1 e 1 @4024 ]
 "5728
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"23 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/UART_Driver.c
+[v _startCharacter startCharacter `*.25Cuc  1 e 2 0 ]
+"24
+[v _stopCharacter stopCharacter `*.25Cuc  1 e 2 0 ]
+"25
+[v _deviceName deviceName `*.33Cuc  1 e 3 0 ]
+"26
+[v _messageCharacter messageCharacter `*.25Cuc  1 e 2 0 ]
 "17 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"40
+"39
 } 0
-"81 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/UART_Driver.c
+"87 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/UART_Driver.c
 [v _D_UART_Write D_UART_Write `(v  1 e 1 0 ]
 {
-[v D_UART_Write@data data `uc  1 a 1 wreg ]
-[v D_UART_Write@data data `uc  1 a 1 wreg ]
-[v D_UART_Write@data data `uc  1 a 1 1 ]
-"83
+[v D_UART_Write@data data `*.25Cuc  1 p 2 12 ]
+"96
 } 0
-"28
+"464 /opt/microchip/xc8/v1.37/sources/common/doprnt.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"466
+[v printf@ap ap `[1]*.39v  1 a 2 8 ]
+"499
+[v printf@c c `c  1 a 1 11 ]
+"508
+[v printf@flag flag `uc  1 a 1 10 ]
+"464
+[v printf@f f `*.33Cuc  1 p 3 2 ]
+"1541
+} 0
+"118 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/UART_Driver.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@data data `uc  1 a 1 wreg ]
+[v putch@data data `uc  1 a 1 wreg ]
+[v putch@data data `uc  1 a 1 1 ]
+"120
+} 0
+"34
 [v _writeByte writeByte `(v  1 e 1 0 ]
 {
 [v writeByte@data data `uc  1 a 1 wreg ]
 [v writeByte@data data `uc  1 a 1 wreg ]
 [v writeByte@data data `uc  1 a 1 0 ]
-"31
+"37
 } 0
-"46
+"52
 [v _D_UART_Init D_UART_Init `(v  1 e 1 0 ]
 {
-[v D_UART_Init@baud baud `ui  1 p 2 14 ]
-[v D_UART_Init@interrupts interrupts `uc  1 p 1 16 ]
-"79
+[v D_UART_Init@name name `*.25Cuc  1 p 2 14 ]
+[v D_UART_Init@baud baud `ui  1 p 2 16 ]
+[v D_UART_Init@interrupts interrupts `uc  1 p 1 18 ]
+"85
 } 0
 "8 /opt/microchip/xc8/v1.37/sources/common/aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
@@ -204,13 +236,13 @@
 [v ___aldiv@divisor divisor `l  1 p 4 4 ]
 "42
 } 0
-"89 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/UART_Driver.c
+"102 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/UART_Driver.c
 [v _D_UART_Enable D_UART_Enable `(v  1 e 1 0 ]
 {
 [v D_UART_Enable@enable enable `uc  1 a 1 wreg ]
 [v D_UART_Enable@enable enable `uc  1 a 1 wreg ]
 [v D_UART_Enable@enable enable `uc  1 a 1 0 ]
-"103
+"116
 } 0
 "32 /home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/UartDriver.X/Drivers/PORT_Driver.c
 [v _D_PORT_Init D_PORT_Init `(v  1 e 1 0 ]

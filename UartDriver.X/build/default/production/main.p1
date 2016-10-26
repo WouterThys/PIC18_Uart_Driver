@@ -2,12 +2,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
 "20 Drivers/PORT_Driver.h
 [v _D_PORT_Init `(v ~T0 @X0 0 ef ]
-"46 Drivers/UART_Driver.h
-[v _D_UART_Init `(v ~T0 @X0 0 ef2`ui`uc ]
-"64
+"47 Drivers/UART_Driver.h
+[v _D_UART_Init `(v ~T0 @X0 0 ef3`*Cuc`ui`uc ]
+"66
 [v _D_UART_Enable `(v ~T0 @X0 0 ef1`uc ]
-"52
-[v _D_UART_Write `(v ~T0 @X0 0 ef1`uc ]
+"54
+[v _D_UART_Write `(v ~T0 @X0 0 ef2`uc`*Cuc ]
 [v F3735 `(v ~T0 @X0 1 tf1`ul ]
 "159 /opt/microchip/xc8/v1.37/include/pic18.h
 [v __delay `JF3735 ~T0 @X0 0 e ]
@@ -3572,10 +3572,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;PORT_Driver.h: 20: void D_PORT_Init();
-[; ;UART_Driver.h: 46: void D_UART_Init(uint16_t baud, bool interrupts);
-[; ;UART_Driver.h: 52: void D_UART_Write(uint8_t data);
-[; ;UART_Driver.h: 58: uint8_t D_UART_Read();
-[; ;UART_Driver.h: 64: void D_UART_Enable(bool enable);
+[; ;UART_Driver.h: 47: void D_UART_Init(const char* name, uint16_t baud, bool interrupts);
+[; ;UART_Driver.h: 54: void D_UART_Write(uint8_t command, const char* data);
+[; ;UART_Driver.h: 60: uint8_t D_UART_Read();
+[; ;UART_Driver.h: 66: void D_UART_Enable(bool enable);
 "17 main.c
 [v _main `(v ~T0 @X0 1 ef ]
 {
@@ -3585,9 +3585,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 19: D_PORT_Init();
 "19
 [e ( _D_PORT_Init ..  ]
-[; ;main.c: 22: D_UART_Init(9600, 1);
+[; ;main.c: 22: D_UART_Init("Panda", 9600, 1);
 "22
-[e ( _D_UART_Init (2 , -> -> 9600 `i `ui -> -> 1 `i `uc ]
+[e ( _D_UART_Init (3 , , :s 1C -> -> 9600 `i `ui -> -> 1 `i `uc ]
 [; ;main.c: 23: D_UART_Enable(1);
 "23
 [e ( _D_UART_Enable (1 -> -> 1 `i `uc ]
@@ -3595,12 +3595,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 "25
 [e :U 469 ]
 {
-[; ;main.c: 27: D_UART_Write(0x12);
+[; ;main.c: 27: D_UART_Write(0x12, "command1");
 "27
-[e ( _D_UART_Write (1 -> -> 18 `i `uc ]
-[; ;main.c: 28: D_UART_Write(0x05);
+[e ( _D_UART_Write (2 , -> -> 18 `i `uc :s 2C ]
+[; ;main.c: 28: _delay((unsigned long)((30)*(10000000/4000.0)));_delay((unsigned long)((30)*(10000000/4000.0)));
 "28
-[e ( _D_UART_Write (1 -> -> 5 `i `uc ]
+[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 10000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 10000000 `l `d .4000.0 `ul ]
 [; ;main.c: 29: _delay((unsigned long)((30)*(10000000/4000.0)));_delay((unsigned long)((30)*(10000000/4000.0)));
 "29
 [e ( __delay (1 -> * -> -> 30 `i `d / -> -> 10000000 `l `d .4000.0 `ul ]
@@ -3629,21 +3630,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 "35
 [e ( __delay (1 -> * -> -> 30 `i `d / -> -> 10000000 `l `d .4000.0 `ul ]
 [e ( __delay (1 -> * -> -> 30 `i `d / -> -> 10000000 `l `d .4000.0 `ul ]
-[; ;main.c: 36: _delay((unsigned long)((30)*(10000000/4000.0)));_delay((unsigned long)((30)*(10000000/4000.0)));
-"36
-[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 10000000 `l `d .4000.0 `ul ]
-[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 10000000 `l `d .4000.0 `ul ]
-"38
+"37
 }
 [e :U 468 ]
 "25
 [e $U 469  ]
 [e :U 470 ]
-[; ;main.c: 38: }
-[; ;main.c: 39: return;
-"39
+[; ;main.c: 37: }
+[; ;main.c: 38: return;
+"38
 [e $UE 467  ]
-[; ;main.c: 40: }
-"40
+[; ;main.c: 39: }
+"39
 [e :UE 467 ]
 }
+[a 1C 80 97 110 100 97 0 ]
+[a 2C 99 111 109 109 97 110 100 49 0 ]

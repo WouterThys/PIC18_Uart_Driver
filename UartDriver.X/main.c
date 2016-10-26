@@ -19,13 +19,12 @@ void main(void) {
     D_PORT_Init();
     // Initialize the UART module with a baud rate of 9600, with the use 
     // of interrupts.
-    D_UART_Init(9600, true);
+    D_UART_Init("Panda", 9600, true);
     D_UART_Enable(true);
     
     while(1) {
         //D_UART_Write(0x55);
-        D_UART_Write(0x12);
-        D_UART_Write(0x05);
+        D_UART_Write(0x12, "command1");
         __delay_ms(30);__delay_ms(30);
         __delay_ms(30);__delay_ms(30);
         __delay_ms(30);__delay_ms(30);

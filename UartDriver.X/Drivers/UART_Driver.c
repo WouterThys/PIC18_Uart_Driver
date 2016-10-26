@@ -10,6 +10,7 @@
  *          DEFINES
  ******************************************************************************/
 #define _XTAL_FREQ 10000000
+
 /*******************************************************************************
  *          MACRO FUNCTIONS
  ******************************************************************************/
@@ -18,6 +19,11 @@
  *          VARIABLES
  ******************************************************************************/
 uint8_t baud;
+
+const char* startCharacter =       "&";
+const char* stopCharacter =        "$";
+const char* deviceName;
+const char* messageCharacter =     "[M]";
 
 /*******************************************************************************
  *          BASIC FUNCTIONS
@@ -43,13 +49,13 @@ uint8_t readByte() {
 /*******************************************************************************
  *          DRIVER FUNCTIONS
  ******************************************************************************/
-void D_UART_Init(uint16_t baud, bool interrupts) {
+void D_UART_Init(const char* name, uint16_t baud, bool interrupts) {
     // Port settings
     UART_TX_Dir = 0;
     UART_RX_Dir = 1;
     
-    // Clear variables
-    
+    // Clear/set variables
+    deviceName = name;
     
     // Disable UART while initializing
     D_UART_Enable(false);
@@ -78,8 +84,15 @@ void D_UART_Init(uint16_t baud, bool interrupts) {
     }
 }
 
-void D_UART_Write(uint8_t data){
-    writeByte(data);
+void D_UART_Write(uint8_t command, const char* data) {
+    printf(startCharacter);
+    
+    printf(messageCharacter);
+    printf(deviceName);
+    printf(":");printf(data);
+    
+    printf(stopCharacter);
+    __delay_ms(10);
 }
 
 uint8_t D_UART_Read(){
