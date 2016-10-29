@@ -46,7 +46,9 @@ public class SerialInterface {
 	}
 	
 	public static void stopSerialInterface() {
-		serialInterface.disconnect();
+		if(serialInterface != null) {
+			serialInterface.disconnect();
+		}
 	}
 	
 	public static boolean isReadyToSend() {
@@ -114,6 +116,10 @@ public class SerialInterface {
 			serialPort.removeEventListener();
 			serialPort.close();
 			connected = false;
+		}
+		if (writeThread != null) {
+			writeThread.interrupt();
+			writeThread = null;
 		}
 		System.out.println("Serial disconnected");
 	}

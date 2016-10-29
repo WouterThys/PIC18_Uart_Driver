@@ -5,6 +5,7 @@ import java.awt.Image;
 import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -148,6 +149,14 @@ public class InterfaceFrame implements SerialUartInterface {
 		frmUartInterface.setBounds(100, 100, 499, 664);
 		frmUartInterface.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmUartInterface.getContentPane().setLayout(null);
+		
+		// When closed
+		frmUartInterface.addWindowListener(new java.awt.event.WindowAdapter() {
+	        public void windowClosing(WindowEvent winEvt) {
+	            SerialInterface.stopSerialInterface();
+	            System.exit(0);
+	        }
+	    });
 		
 		JLabel lblNewLabel = new JLabel("Input");
 		lblNewLabel.setBounds(12, 55, 70, 15);
