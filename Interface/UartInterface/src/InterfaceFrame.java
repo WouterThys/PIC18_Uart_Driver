@@ -57,7 +57,7 @@ public class InterfaceFrame implements SerialUartInterface {
 	private JTextField messageTf;
 	private JTextField errorTf;
 	
-	
+	private int sendId = 0;
 	
 	/**
 	 * Launch the application.
@@ -104,17 +104,28 @@ public class InterfaceFrame implements SerialUartInterface {
 	
 	@Override
 	public void onDataReadyListener(String input) {
-		// Add row to table
 		Message newMessage = new Message(input);
-		DefaultTableModel dtm = (DefaultTableModel) tblInput.getModel();
-		
-		dtm.addRow(new Object[]{
-				dateFormat.format(newMessage.getTime().getTime()),
-				newMessage.getSender(),
-				newMessage.getCommand(),
-				newMessage.getMessage()});
-		resizeTable(tblInput);
-		tblInput.scrollRectToVisible(tblInput.getCellRect(tblInput.getRowCount()-1, 0, true));
+		switch(newMessage.getMessageType()) {
+		case Message.MES_MESSAGE:
+			// Add row to table
+			DefaultTableModel dtm = (DefaultTableModel) tblInput.getModel();
+			
+			dtm.addRow(new Object[]{
+					dateFormat.format(newMessage.getTime().getTime()),
+					newMessage.getSender(),
+					newMessage.getCommand(),
+					newMessage.getMessage()});
+			resizeTable(tblInput);
+			tblInput.scrollRectToVisible(tblInput.getCellRect(tblInput.getRowCount()-1, 0, true));
+			break;
+			
+		case Message.MES_ACK:
+			// Acknowledge for send message
+			if(Integer.valueOf(newMessage.getMessage()) == sendId) {
+				
+			}
+			break;
+		}
 	}
 	
 	private void loadImages() {
@@ -283,7 +294,9 @@ public class InterfaceFrame implements SerialUartInterface {
 		    		Message newMessage = new Message(commandTf.getText().toString(), messageTf.getText().toString());
 		    		DefaultTableModel dtm = (DefaultTableModel) tblOutput.getModel();
 		    		
-		    		SerialInterface.writeData(newMessage.construct().getBytes());
+		    		SerialInterface.writeData(newMessage.construct(sendId).getBytes());
+		    		sendId++;
+		    		if (sendId > 9) sendId = 0;
 		    		
 		    		dtm.addRow(new Object[]{
 		    				dateFormat.format(newMessage.getTime().getTime()),

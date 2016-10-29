@@ -6,6 +6,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _D_UART_Init `(v ~T0 @X0 0 ef3`*Cuc`ui`uc ]
 "66
 [v _D_UART_Enable `(v ~T0 @X0 0 ef1`uc ]
+"54
+[v _D_UART_Write `(v ~T0 @X0 0 ef2`*Cuc`*Cuc ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3585,23 +3587,27 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 23: D_UART_Enable(1);
 "23
 [e ( _D_UART_Enable (1 -> -> 1 `i `uc ]
-[; ;main.c: 25: while(1) {
+[; ;main.c: 25: D_UART_Write("I", "Init");
 "25
+[e ( _D_UART_Write (2 , :s 2C :s 3C ]
+[; ;main.c: 26: while(1) {
+"26
 [e :U 469 ]
 {
-"28
+"29
 }
 [e :U 468 ]
-"25
+"26
 [e $U 469  ]
 [e :U 470 ]
-[; ;main.c: 28: }
-[; ;main.c: 29: return;
-"29
-[e $UE 467  ]
-[; ;main.c: 30: }
+[; ;main.c: 29: }
+[; ;main.c: 30: return;
 "30
+[e $UE 467  ]
+[; ;main.c: 31: }
+"31
 [e :UE 467 ]
 }
+[a 3C 73 110 105 116 0 ]
 [a 1C 80 97 110 100 97 0 ]
-
+[a 2C 73 0 ]

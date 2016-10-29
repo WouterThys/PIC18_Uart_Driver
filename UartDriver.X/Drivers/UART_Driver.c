@@ -16,6 +16,14 @@
 #define STOP_CHAR  0x24 
 // :
 #define SEP_CHAR   0x3A 
+
+#define READ_STATE_START   0x00
+#define READ_STATE_TYPE    0x01
+#define READ_STATE_SENDER  0x02
+#define READ_STATE_COMMAND 0x03
+#define READ_STATE_MESSAGE 0x04
+#define READ_STATE_END     0x05
+
 /*******************************************************************************
  *          MACRO FUNCTIONS
  ******************************************************************************/
@@ -29,13 +37,19 @@ const char* startCharacter =       "&";
 const char* stopCharacter =        "$";
 const char* deviceName;
 const char* messageCharacter =     "[M]";
+const char* ackCharacter =         "[A]";
 
 typedef struct {
-    uint8_t start;
-    const char* command;
-    const char* message;
-    uint8_t stop;
-    uint8_t counter;
+    uint8_t type[10];     // Type of the message buffer  
+    uint8_t typeCnt;      // Count of the type buffer
+    uint8_t sender[50];   // Sender name buffer
+    uint8_t senderCnt;    // Count of the sender buffer
+    uint8_t command[50];  // Command buffer
+    uint8_t commandCnt;   // Count of the command buffer
+    uint8_t message[50];  // Message buffer
+    uint8_t messageCnt;   // Count of the message buffer
+    uint8_t readId;       // Id send from the sender, to acknowledge
+    uint8_t state;    // State of the read buffer
 } READ_Data;
 READ_Data readBuffer;
 bool readReady;
@@ -46,6 +60,7 @@ bool readReady;
 void writeByte(uint8_t data);
 uint8_t readByte(void);
 void fillDataBuffer(uint8_t data);
+void acknowledge();
 
 void writeByte(uint8_t data) {
     while(TXSTAbits.TRMT == 0); // Wait while buffer is still full
@@ -63,43 +78,96 @@ uint8_t readByte() {
 }
 
 void fillDataBuffer(uint8_t data){
-    switch(readBuffer.counter) {
-        case 0:
+    switch(readBuffer.state) {
+        case READ_STATE_START:
             if(data == START_CHAR) {
+                readBuffer.typeCnt = 0;
+                readBuffer.senderCnt = 0;
+                readBuffer.commandCnt = 0;
+                readBuffer.messageCnt = 0;
                 readReady = false;
-                readBuffer.counter = 1;
+                readBuffer.state = READ_STATE_TYPE;
             } else {
-                readBuffer.counter = 0;
+                readBuffer.state = READ_STATE_START;
                 return;
             }
             break;
-        case 1:
+        
+        case READ_STATE_TYPE:
             if (data == SEP_CHAR) {
-                readBuffer.counter = 2;
+                readBuffer.state = READ_STATE_SENDER;
             } else {
-                readBuffer.command = &data;
-                readBuffer.command++;
+                readBuffer.type[readBuffer.typeCnt] = data;
+                readBuffer.typeCnt++;
+                if(readBuffer.typeCnt > 10) {
+                    readBuffer.typeCnt = 0;
+                }
             }
             break;
-        case 2:
+            
+        case READ_STATE_SENDER:
             if (data == SEP_CHAR) {
-                readBuffer.counter = 3;
+                readBuffer.state = READ_STATE_COMMAND;
             } else {
-                readBuffer.message = &data;
-                readBuffer.message++;
+                readBuffer.sender[readBuffer.senderCnt] = data;
+                readBuffer.senderCnt++;
+                if(readBuffer.senderCnt > 50) {
+                    readBuffer.senderCnt = 0;
+                }
             }
             break;
-        case 3:
-            if(data == STOP_CHAR) {
-                D_UART_Write(readBuffer.command, readBuffer.message);
+            
+        case READ_STATE_COMMAND:
+            if (data == SEP_CHAR) {
+                readBuffer.state = READ_STATE_MESSAGE;
+            } else {
+                readBuffer.command[readBuffer.commandCnt] = data;
+                readBuffer.commandCnt++;
+                if(readBuffer.commandCnt > 50) {
+                    readBuffer.commandCnt = 0;
+                }
+            }
+            break;
+            
+        case READ_STATE_MESSAGE:
+            if (data == SEP_CHAR) {
+                readBuffer.state = READ_STATE_END;
+            } else {
+                readBuffer.message[readBuffer.messageCnt] = data;
+                readBuffer.messageCnt++;
+                if(readBuffer.messageCnt > 50) {
+                    readBuffer.messageCnt = 0;
+                }
+            }
+            break;
+            
+        case READ_STATE_END:
+            if (data == STOP_CHAR) {
+                acknowledge();
                 readReady = true;
+                readBuffer.state = READ_STATE_START;
+            } else {
+                // Convert from (ASCII)char to integer.
+                readBuffer.readId = (data - 0x30);
             }
-            readBuffer.counter = 0;
             break;
+            
         default: 
-            readBuffer.counter = 0;
+            readBuffer.state = READ_STATE_START;
+            readReady = false;
             break;
     }
+    PORTAbits.RA0  = readReady;
+}
+
+void acknowledge() {
+    printf(startCharacter);
+    
+    printf(ackCharacter);
+    // id
+    printf("%x",readBuffer.readId);
+    
+    printf(stopCharacter);
 }
 
 /*******************************************************************************
@@ -184,11 +252,9 @@ void putch(char data) {
 }
 
 void interrupt low_priority LowISR(void) {
-    PORTAbits.RA0 = 1;
     if (PIR1bits.RC1IF) {
         fillDataBuffer(readByte());
         PIR1bits.RC1IF = 0;
     }
-    PORTAbits.RA0 = 0;
 }
 

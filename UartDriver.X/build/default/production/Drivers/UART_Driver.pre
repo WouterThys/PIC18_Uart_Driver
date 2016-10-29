@@ -4863,28 +4863,35 @@ uint8_t D_UART_Read();
 # 66
 void D_UART_Enable(bool enable);
 
-# 26 "Drivers/UART_Driver.c"
+# 34 "Drivers/UART_Driver.c"
 uint8_t baud;
 
 const char* startCharacter = "&";
 const char* stopCharacter = "$";
 const char* deviceName;
 const char* messageCharacter = "[M]";
+const char* ackCharacter = "[A]";
 
 typedef struct {
-uint8_t start;
-const char* command;
-const char* message;
-uint8_t stop;
-uint8_t counter;
+uint8_t type[10];
+uint8_t typeCnt;
+uint8_t sender[50];
+uint8_t senderCnt;
+uint8_t command[50];
+uint8_t commandCnt;
+uint8_t message[50];
+uint8_t messageCnt;
+uint8_t readId;
+uint8_t state;
 } READ_Data;
 READ_Data readBuffer;
 bool readReady;
 
-# 46
+# 60
 void writeByte(uint8_t data);
 uint8_t readByte(void);
 void fillDataBuffer(uint8_t data);
+void acknowledge();
 
 void writeByte(uint8_t data) {
 while(TXSTAbits.TRMT == 0);
@@ -4902,46 +4909,99 @@ return RCREG;
 }
 
 void fillDataBuffer(uint8_t data){
-switch(readBuffer.counter) {
-case 0:
+switch(readBuffer.state) {
+case 0x00:
 if(data == 0x26) {
+readBuffer.typeCnt = 0;
+readBuffer.senderCnt = 0;
+readBuffer.commandCnt = 0;
+readBuffer.messageCnt = 0;
 readReady = 0;
-readBuffer.counter = 1;
+readBuffer.state = 0x01;
 } else {
-readBuffer.counter = 0;
+readBuffer.state = 0x00;
 return;
 }
 break;
-case 1:
+
+case 0x01:
 if (data == 0x3A) {
-readBuffer.counter = 2;
+readBuffer.state = 0x02;
 } else {
-readBuffer.command = &data;
-readBuffer.command++;
+readBuffer.type[readBuffer.typeCnt] = data;
+readBuffer.typeCnt++;
+if(readBuffer.typeCnt > 10) {
+readBuffer.typeCnt = 0;
+}
 }
 break;
-case 2:
+
+case 0x02:
 if (data == 0x3A) {
-readBuffer.counter = 3;
+readBuffer.state = 0x03;
 } else {
-readBuffer.message = &data;
-readBuffer.message++;
+readBuffer.sender[readBuffer.senderCnt] = data;
+readBuffer.senderCnt++;
+if(readBuffer.senderCnt > 50) {
+readBuffer.senderCnt = 0;
+}
 }
 break;
-case 3:
-if(data == 0x24) {
-D_UART_Write(readBuffer.command, readBuffer.message);
+
+case 0x03:
+if (data == 0x3A) {
+readBuffer.state = 0x04;
+} else {
+readBuffer.command[readBuffer.commandCnt] = data;
+readBuffer.commandCnt++;
+if(readBuffer.commandCnt > 50) {
+readBuffer.commandCnt = 0;
+}
+}
+break;
+
+case 0x04:
+if (data == 0x3A) {
+readBuffer.state = 0x05;
+} else {
+readBuffer.message[readBuffer.messageCnt] = data;
+readBuffer.messageCnt++;
+if(readBuffer.messageCnt > 50) {
+readBuffer.messageCnt = 0;
+}
+}
+break;
+
+case 0x05:
+if (data == 0x24) {
+acknowledge();
 readReady = 1;
+readBuffer.state = 0x00;
+} else {
+
+readBuffer.readId = (data - 0x30);
 }
-readBuffer.counter = 0;
 break;
+
 default:
-readBuffer.counter = 0;
+readBuffer.state = 0x00;
+readReady = 0;
 break;
 }
+PORTAbits.RA0 = readReady;
 }
 
-# 108
+void acknowledge() {
+printf(startCharacter);
+
+printf(ackCharacter);
+
+printf("%x",readBuffer.readId);
+
+printf(stopCharacter);
+}
+
+# 176
 void D_UART_Init(const char* name, uint16_t baud, bool interrupts) {
 
 TRISCbits.TRISC7 = 0;
@@ -5021,11 +5081,9 @@ writeByte(data);
 }
 
 void interrupt low_priority LowISR(void) {
-PORTAbits.RA0 = 1;
 if (PIR1bits.RC1IF) {
 fillDataBuffer(readByte());
 PIR1bits.RC1IF = 0;
 }
-PORTAbits.RA0 = 0;
 }
 

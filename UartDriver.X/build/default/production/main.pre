@@ -4740,6 +4740,7 @@ D_PORT_Init();
 D_UART_Init("Panda", 9600, 1);
 D_UART_Enable(1);
 
+D_UART_Write("I", "Init");
 while(1) {
 
 

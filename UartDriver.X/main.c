@@ -22,6 +22,7 @@ void main(void) {
     D_UART_Init("Panda", 9600, true);
     D_UART_Enable(true);
     
+    D_UART_Write("I", "Init");
     while(1) {
 
         
