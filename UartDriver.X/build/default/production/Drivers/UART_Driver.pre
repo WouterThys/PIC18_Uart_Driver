@@ -4863,7 +4863,7 @@ uint8_t D_UART_Read();
 # 66
 void D_UART_Enable(bool enable);
 
-# 21 "Drivers/UART_Driver.c"
+# 26 "Drivers/UART_Driver.c"
 uint8_t baud;
 
 const char* startCharacter = "&";
@@ -4871,9 +4871,20 @@ const char* stopCharacter = "$";
 const char* deviceName;
 const char* messageCharacter = "[M]";
 
-# 31
+typedef struct {
+uint8_t start;
+const char* command;
+const char* message;
+uint8_t stop;
+uint8_t counter;
+} READ_Data;
+READ_Data readBuffer;
+bool readReady;
+
+# 46
 void writeByte(uint8_t data);
 uint8_t readByte(void);
+void fillDataBuffer(uint8_t data);
 
 void writeByte(uint8_t data) {
 while(TXSTAbits.TRMT == 0);
@@ -4890,7 +4901,47 @@ if(RCSTAbits.OERR == 1) {
 return RCREG;
 }
 
-# 52
+void fillDataBuffer(uint8_t data){
+switch(readBuffer.counter) {
+case 0:
+if(data == 0x26) {
+readReady = 0;
+readBuffer.counter = 1;
+} else {
+readBuffer.counter = 0;
+return;
+}
+break;
+case 1:
+if (data == 0x3A) {
+readBuffer.counter = 2;
+} else {
+readBuffer.command = &data;
+readBuffer.command++;
+}
+break;
+case 2:
+if (data == 0x3A) {
+readBuffer.counter = 3;
+} else {
+readBuffer.message = &data;
+readBuffer.message++;
+}
+break;
+case 3:
+if(data == 0x24) {
+D_UART_Write(readBuffer.command, readBuffer.message);
+readReady = 1;
+}
+readBuffer.counter = 0;
+break;
+default:
+readBuffer.counter = 0;
+break;
+}
+}
+
+# 108
 void D_UART_Init(const char* name, uint16_t baud, bool interrupts) {
 
 TRISCbits.TRISC7 = 0;
@@ -4922,7 +4973,12 @@ SPBRG = ((10000000/baud)/64)-1;
 
 
 if (interrupts) {
-
+RCONbits.IPEN = 1;
+INTCONbits.GIEH = 1;
+INTCONbits.GIEL = 1;
+PIR1bits.RCIF = 0;
+IPR1bits.RCIP = 0;
+PIE1bits.RCIE = 1;
 }
 }
 
@@ -4962,5 +5018,14 @@ RCSTAbits.SPEN = 0;
 
 void putch(char data) {
 writeByte(data);
+}
+
+void interrupt low_priority LowISR(void) {
+PORTAbits.RA0 = 1;
+if (PIR1bits.RC1IF) {
+fillDataBuffer(readByte());
+PIR1bits.RC1IF = 0;
+}
+PORTAbits.RA0 = 0;
 }
 

@@ -23,16 +23,7 @@ void main(void) {
     D_UART_Enable(true);
     
     while(1) {
-        //D_UART_Write(0x55);
-        D_UART_Write("command", "panda message");
-        __delay_ms(30);__delay_ms(30);
-        __delay_ms(30);__delay_ms(30);
-        __delay_ms(30);__delay_ms(30);
-        __delay_ms(30);__delay_ms(30);
-        __delay_ms(30);__delay_ms(30);
-        __delay_ms(30);__delay_ms(30);
-        __delay_ms(30);__delay_ms(30);
-        __delay_ms(30);__delay_ms(30);
+
         
     }
     return;

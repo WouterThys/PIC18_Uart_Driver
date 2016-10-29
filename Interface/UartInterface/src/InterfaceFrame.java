@@ -1,5 +1,4 @@
 import java.awt.Component;
-import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -24,13 +23,15 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumnModel;
 
-import classes.Input;
-import javax.swing.JScrollBar;
+import classes.Message;
+
+import javax.swing.JTextField;
+import java.awt.Color;
 
 
 public class InterfaceFrame implements SerialUartInterface {
 
-	private JFrame frame;
+	private JFrame frmUartInterface;
 	
 	private SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm");
 	
@@ -48,8 +49,16 @@ public class InterfaceFrame implements SerialUartInterface {
 	
 	private JButton btnConnect;
 	private JTable tblInput;
+	private JTable tblOutput;
 	
-	private DefaultTableModel tblModel;
+	private DefaultTableModel tblModelInput;
+	private DefaultTableModel tblModelOutput;
+	private JTextField commandTf;
+	private JTextField messageTf;
+	private JTextField errorTf;
+	
+	
+	
 	/**
 	 * Launch the application.
 	 */
@@ -58,7 +67,7 @@ public class InterfaceFrame implements SerialUartInterface {
 			public void run() {
 				try {
 					InterfaceFrame window = new InterfaceFrame();
-					window.frame.setVisible(true);
+					window.frmUartInterface.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -84,9 +93,19 @@ public class InterfaceFrame implements SerialUartInterface {
 	}
 	
 	@Override
+	public void onWriteSuccesListener() {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public void onWriteFailedListener(String error) {
+		errorTf.setText("Write failed: "+error);
+	}
+	
+	@Override
 	public void onDataReadyListener(String input) {
 		// Add row to table
-		Input newMessage = new Input(input);
+		Message newMessage = new Message(input);
 		DefaultTableModel dtm = (DefaultTableModel) tblInput.getModel();
 		
 		dtm.addRow(new Object[]{
@@ -125,22 +144,23 @@ public class InterfaceFrame implements SerialUartInterface {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 497, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmUartInterface = new JFrame();
+		frmUartInterface.setTitle("Uart interface");
+		frmUartInterface.setBounds(100, 100, 499, 664);
+		frmUartInterface.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmUartInterface.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Input");
 		lblNewLabel.setBounds(12, 55, 70, 15);
-		frame.getContentPane().add(lblNewLabel);
+		frmUartInterface.getContentPane().add(lblNewLabel);
 		
 		JLabel lblComPort = new JLabel("Com port");
 		lblComPort.setBounds(30, 12, 70, 15);
-		frame.getContentPane().add(lblComPort);
+		frmUartInterface.getContentPane().add(lblComPort);
 		
 		JLabel lblBaud = new JLabel("Baud");
 		lblBaud.setBounds(152, 12, 70, 15);
-		frame.getContentPane().add(lblBaud);
+		frmUartInterface.getContentPane().add(lblBaud);
 		
 		
 		// Com port spinner
@@ -153,14 +173,14 @@ public class InterfaceFrame implements SerialUartInterface {
 		spnrPorts = new SpinnerListModel(portStrings);
 		spnrPortSelect = new JSpinner(spnrPorts);
 		spnrPortSelect.setBounds(12, 28, 88, 20);
-		frame.getContentPane().add(spnrPortSelect);
+		frmUartInterface.getContentPane().add(spnrPortSelect);
 		
 		// Baud rate spinner
 		spnrBaudRates = new SpinnerListModel(baudStrings);
 		spnrBaudSelect = new JSpinner(spnrBaudRates);
 		spnrBaudSelect.setBounds(112, 28, 78, 20);
 		spnrBaudSelect.setValue("9600");
-		frame.getContentPane().add(spnrBaudSelect);
+		frmUartInterface.getContentPane().add(spnrBaudSelect);
 		
 		// Connect button
 		btnConnect = new JButton("Connect");
@@ -179,41 +199,133 @@ public class InterfaceFrame implements SerialUartInterface {
 				}
 			}
 		});
-		btnConnect.setBounds(202, 25, 99, 25);
-		frame.getContentPane().add(btnConnect);
+		btnConnect.setBounds(202, 25, 154, 25);
+		frmUartInterface.getContentPane().add(btnConnect);
 		
 		
 		// Image
 		connectedLed = new JLabel("");
-		connectedLed.setBounds(419, 0, 29, 27);
-		frame.getContentPane().add(connectedLed);
+		connectedLed.setBounds(407, 21, 29, 27);
+		frmUartInterface.getContentPane().add(connectedLed);
 		loadImages();
 		connectedLed.setIcon(redLedImg);
 		
-		// Table
+		// Table input
 		String[] header = {"Time", "Sender", "Command", "Message"};
 		String[][] data = {{"","","",""}};
-		tblModel = new DefaultTableModel(data, header);
-		tblInput = new JTable(tblModel);
+		tblModelInput = new DefaultTableModel(data, header);
+		tblInput = new JTable(tblModelInput);
 		tblInput.setShowHorizontalLines(false);
 		tblInput.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-		tblInput.setBounds(12, 69, 424, 87);
-		frame.getContentPane().add(tblInput);
+		tblInput.setEnabled(false);
+		tblInput.setBounds(12, 69, 424, 241);
+		frmUartInterface.getContentPane().add(tblInput);
 		JScrollPane jp=new JScrollPane(tblInput);
-	    jp.setBounds(12, 69, 424, 87);
+	    jp.setBounds(12, 69, 424, 241);
 	    jp.setVisible(true);
-	    frame.getContentPane().add(jp);
-	    frame.getContentPane().add(jp);
+	    frmUartInterface.getContentPane().add(jp);
 	    
 	    JButton btnX = new JButton("x");
 	    btnX.addActionListener(new ActionListener() {
 	    	public void actionPerformed(ActionEvent arg0) {
-	    		tblModel.getDataVector().removeAllElements();
-	    		tblModel.fireTableDataChanged();
+	    		tblModelInput.getDataVector().removeAllElements();
+	    		tblModelInput.fireTableDataChanged();
 	    	}
 	    });
 	    btnX.setBounds(443, 69, 40, 35);
-	    frame.getContentPane().add(btnX);
+	    frmUartInterface.getContentPane().add(btnX);
+	    
+	    // Table output
+	    tblModelOutput = new DefaultTableModel(data, header);
+	    tblOutput = new JTable(tblModelOutput);
+	    tblOutput.setShowHorizontalLines(false);
+	    tblOutput.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+	    tblOutput.setBounds(12, 360, 424, 122);
+	    frmUartInterface.getContentPane().add(tblOutput);
+	    JScrollPane jp2=new JScrollPane(tblOutput);
+	    jp2.setBounds(12, 360, 424, 122);
+	    jp2.setVisible(true);
+	    frmUartInterface.getContentPane().add(jp2);
+	    
+	    JButton button = new JButton("x");
+	    button.addActionListener(new ActionListener() {
+	    	public void actionPerformed(ActionEvent arg0) {
+	    		tblModelOutput.getDataVector().removeAllElements();
+	    		tblModelOutput.fireTableDataChanged();
+	    	}
+	    });
+	    button.setBounds(443, 360, 40, 35);
+	    frmUartInterface.getContentPane().add(button);
+	    
+	    commandTf = new JTextField();
+	    commandTf.setBounds(12, 510, 172, 27);
+	    frmUartInterface.getContentPane().add(commandTf);
+	    commandTf.setColumns(10);
+	    
+	    messageTf = new JTextField();
+	    messageTf.setBounds(202, 510, 234, 27);
+	    frmUartInterface.getContentPane().add(messageTf);
+	    messageTf.setColumns(10);
+	    
+	    JLabel lblCommand = new JLabel("Command");
+	    lblCommand.setBounds(12, 494, 168, 15);
+	    frmUartInterface.getContentPane().add(lblCommand);
+	    
+	    JLabel lblMessage = new JLabel("  Message");
+	    lblMessage.setBounds(202, 494, 234, 15);
+	    frmUartInterface.getContentPane().add(lblMessage);
+	    
+	    JButton btnSend = new JButton("Send");
+	    btnSend.addActionListener(new ActionListener() {
+	    	public void actionPerformed(ActionEvent arg0) {
+	    		if (SerialInterface.isReadyToSend()) {
+		    		// Add row to table
+		    		Message newMessage = new Message(commandTf.getText().toString(), messageTf.getText().toString());
+		    		DefaultTableModel dtm = (DefaultTableModel) tblOutput.getModel();
+		    		
+		    		SerialInterface.writeData(newMessage.construct().getBytes());
+		    		
+		    		dtm.addRow(new Object[]{
+		    				dateFormat.format(newMessage.getTime().getTime()),
+		    				newMessage.getSender(),
+		    				newMessage.getCommand(),
+		    				newMessage.getMessage()});
+		    		resizeTable(tblOutput);
+		    		tblOutput.scrollRectToVisible(tblOutput.getCellRect(tblOutput.getRowCount()-1, 0, true));
+	    		} else {
+	    			errorTf.setText("Not ready to send data, are you connected?");
+	    			errorTf.setForeground(Color.RED);
+	    		}
+	    	}
+	    });
+	    btnSend.setBounds(336, 537, 100, 27);
+	    frmUartInterface.getContentPane().add(btnSend);
+	    
+	    JLabel lblOutput = new JLabel("Output");
+	    lblOutput.setBounds(12, 343, 60, 15);
+	    frmUartInterface.getContentPane().add(lblOutput);
+	    
+	    errorTf = new JTextField();
+	    errorTf.setForeground(Color.RED);
+	    //errorTf.setEnabled(false);
+	    errorTf.setEditable(false);
+	    errorTf.setBounds(12, 604, 424, 27);
+	    frmUartInterface.getContentPane().add(errorTf);
+	    errorTf.setColumns(10);
+	    
+	    JLabel lblErrors = new JLabel("Errors");
+	    lblErrors.setBounds(12, 588, 60, 15);
+	    frmUartInterface.getContentPane().add(lblErrors);
+	    
+	    JButton button_1 = new JButton("x");
+	    button_1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				errorTf.setText("");
+			}
+		});
+	    button_1.setBounds(443, 596, 40, 35);
+	    frmUartInterface.getContentPane().add(button_1);
 	   
 	}
 	

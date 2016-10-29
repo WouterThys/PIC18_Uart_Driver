@@ -10,7 +10,12 @@
  *          DEFINES
  ******************************************************************************/
 #define _XTAL_FREQ 10000000
-
+// &
+#define START_CHAR 0x26 
+// $
+#define STOP_CHAR  0x24 
+// :
+#define SEP_CHAR   0x3A 
 /*******************************************************************************
  *          MACRO FUNCTIONS
  ******************************************************************************/
@@ -25,11 +30,22 @@ const char* stopCharacter =        "$";
 const char* deviceName;
 const char* messageCharacter =     "[M]";
 
+typedef struct {
+    uint8_t start;
+    const char* command;
+    const char* message;
+    uint8_t stop;
+    uint8_t counter;
+} READ_Data;
+READ_Data readBuffer;
+bool readReady;
+
 /*******************************************************************************
  *          BASIC FUNCTIONS
  ******************************************************************************/
 void writeByte(uint8_t data);
 uint8_t readByte(void);
+void fillDataBuffer(uint8_t data);
 
 void writeByte(uint8_t data) {
     while(TXSTAbits.TRMT == 0); // Wait while buffer is still full
@@ -44,6 +60,46 @@ uint8_t readByte() {
         // TODO: create error handler
     }
     return RCREG;
+}
+
+void fillDataBuffer(uint8_t data){
+    switch(readBuffer.counter) {
+        case 0:
+            if(data == START_CHAR) {
+                readReady = false;
+                readBuffer.counter = 1;
+            } else {
+                readBuffer.counter = 0;
+                return;
+            }
+            break;
+        case 1:
+            if (data == SEP_CHAR) {
+                readBuffer.counter = 2;
+            } else {
+                readBuffer.command = &data;
+                readBuffer.command++;
+            }
+            break;
+        case 2:
+            if (data == SEP_CHAR) {
+                readBuffer.counter = 3;
+            } else {
+                readBuffer.message = &data;
+                readBuffer.message++;
+            }
+            break;
+        case 3:
+            if(data == STOP_CHAR) {
+                D_UART_Write(readBuffer.command, readBuffer.message);
+                readReady = true;
+            }
+            readBuffer.counter = 0;
+            break;
+        default: 
+            readBuffer.counter = 0;
+            break;
+    }
 }
 
 /*******************************************************************************
@@ -80,7 +136,12 @@ void D_UART_Init(const char* name, uint16_t baud, bool interrupts) {
     
     // Interrupts for reading
     if (interrupts) {
-        
+        RCONbits.IPEN = 1;   // Enable priority levels on interrupts
+        INTCONbits.GIEH = 1; // Enable high interrupt
+        INTCONbits.GIEL = 1; // Enable low interrupt
+        PIR1bits.RCIF = 0; // Clear flag
+        IPR1bits.RCIP = 0; // Low priority
+        PIE1bits.RCIE = 1; // Enable UART interrupt
     }
 }
 
@@ -120,5 +181,14 @@ void D_UART_Enable(bool enable) {
 
 void putch(char data) {
     writeByte(data); // Write the data
+}
+
+void interrupt low_priority LowISR(void) {
+    PORTAbits.RA0 = 1;
+    if (PIR1bits.RC1IF) {
+        fillDataBuffer(readByte());
+        PIR1bits.RC1IF = 0;
+    }
+    PORTAbits.RA0 = 0;
 }
 

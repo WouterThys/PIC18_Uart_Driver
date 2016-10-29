@@ -14,7 +14,7 @@ public class SerialInterface {
 	
 	private int baud;
 	
-	private static final char startCharacter = '&';
+	//private static final char startCharacter = '&';
 	private static final char stopCharacter = '$';
 	
 	private static InputStream inputStream;
@@ -23,7 +23,7 @@ public class SerialInterface {
 	private Thread writeThread;
 	
 	private static boolean connected;
-	private SerialUartInterface uartInterface;
+	private static SerialUartInterface uartInterface;
 	
 	private static SerialInterface serialInterface;
 	
@@ -32,7 +32,7 @@ public class SerialInterface {
 		
 		SerialInterface.connected = false;
 		this.baud = baud;
-		this.uartInterface = serialUartInterface;
+		SerialInterface.uartInterface = serialUartInterface;
 	}
 	
 	public static void startSerialInterface(String port, int baud, SerialUartInterface sui) {
@@ -49,12 +49,22 @@ public class SerialInterface {
 		serialInterface.disconnect();
 	}
 	
+	public static boolean isReadyToSend() {
+		if (uartInterface == null) return false;
+		if (serialInterface == null) return false;
+		return isConnected();
+	}
+	
 	public static void writeData(byte[] data) {
 		try {
 			outputStream.write(data);
+			uartInterface.onWriteSuccesListener();
 		} catch (Exception e) {
 			System.out.println("Serial error in writeData: "+e.getMessage());
+			uartInterface.onWriteFailedListener(e.getMessage());
+			return;
 		}
+		
 	}
 	
 	private void connect(String portName) {
