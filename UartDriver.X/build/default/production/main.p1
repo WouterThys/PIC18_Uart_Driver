@@ -1,13 +1,42 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"42 Drivers/UART_Driver.h
+[s S467 `*Cuc 1 `*Cuc 1 `*Cuc 1 ]
+[n S467 . sender command message ]
 [p mainexit ]
 "20 Drivers/PORT_Driver.h
 [v _D_PORT_Init `(v ~T0 @X0 0 ef ]
-"47 Drivers/UART_Driver.h
+"55 Drivers/UART_Driver.h
 [v _D_UART_Init `(v ~T0 @X0 0 ef3`*Cuc`ui`uc ]
-"66
+"74
 [v _D_UART_Enable `(v ~T0 @X0 0 ef1`uc ]
-"54
+"62
 [v _D_UART_Write `(v ~T0 @X0 0 ef2`*Cuc`*Cuc ]
+"40
+[v _readReady `uc ~T0 @X0 0 e ]
+"68
+[v _D_UART_Read `(S467 ~T0 @X0 0 ef ]
+"43 /opt/microchip/xc8/v1.37/include/string.h
+[v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
+"2384 /opt/microchip/xc8/v1.37/include/pic18f2550.h
+[s S182 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S182 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 ]
+"2393
+[s S183 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S183 . AN0 AN1 AN2 AN3 T0CKI AN4 OSC2 ]
+"2402
+[s S184 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S184 . . VREFM VREFP . LVDIN ]
+"2409
+[s S185 :5 `uc 1 :1 `uc 1 ]
+[n S185 . . HLVDIN ]
+"2413
+[s S186 :1 `uc 1 ]
+[n S186 . ULPWUIN ]
+"2383
+[u S181 `S182 1 `S183 1 `S184 1 `S185 1 `S186 1 ]
+[n S181 . . . . . . ]
+"2417
+[v _PORTAbits `VS181 ~T0 @X0 0 e@3968 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3567,47 +3596,140 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 205: typedef uint32_t uintmax_t;
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;string.h: 14: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 15: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 16: extern void * memset(void *, int, size_t);
+[; ;string.h: 34: extern char * strcat(char *, const char *);
+[; ;string.h: 35: extern char * strcpy(char *, const char *);
+[; ;string.h: 36: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 37: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 38: extern char * strdup(const char *);
+[; ;string.h: 39: extern char * strtok(char *, const char *);
+[; ;string.h: 42: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 43: extern int strcmp(const char *, const char *);
+[; ;string.h: 44: extern int stricmp(const char *, const char *);
+[; ;string.h: 45: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 46: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 47: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 48: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 49: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 50: extern size_t strspn(const char *, const char *);
+[; ;string.h: 51: extern char * strstr(const char *, const char *);
+[; ;string.h: 52: extern char * stristr(const char *, const char *);
+[; ;string.h: 53: extern char * strerror(int);
+[; ;string.h: 54: extern size_t strlen(const char *);
+[; ;string.h: 55: extern char * strchr(const char *, int);
+[; ;string.h: 56: extern char * strichr(const char *, int);
+[; ;string.h: 57: extern char * strrchr(const char *, int);
+[; ;string.h: 58: extern char * strrichr(const char *, int);
 [; ;PORT_Driver.h: 20: void D_PORT_Init();
-[; ;UART_Driver.h: 47: void D_UART_Init(const char* name, uint16_t baud, bool interrupts);
-[; ;UART_Driver.h: 54: void D_UART_Write(const char* command, const char* data);
-[; ;UART_Driver.h: 60: uint8_t D_UART_Read();
-[; ;UART_Driver.h: 66: void D_UART_Enable(bool enable);
-"17 main.c
+[; ;UART_Driver.h: 40: extern bool readReady;
+[; ;UART_Driver.h: 42: typedef struct {
+[; ;UART_Driver.h: 43: const char* sender;
+[; ;UART_Driver.h: 44: const char* command;
+[; ;UART_Driver.h: 45: const char* message;
+[; ;UART_Driver.h: 46: }READ_Data;
+[; ;UART_Driver.h: 55: void D_UART_Init(const char* name, uint16_t baud, bool interrupts);
+[; ;UART_Driver.h: 62: void D_UART_Write(const char* command, const char* data);
+[; ;UART_Driver.h: 68: READ_Data D_UART_Read();
+[; ;UART_Driver.h: 74: void D_UART_Enable(bool enable);
+"18 main.c
+[v _read `S467 ~T0 @X0 1 e ]
+[; ;main.c: 18: READ_Data read;
+"20
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 17: void main(void) {
+[; ;main.c: 20: void main(void) {
 [e :U _main ]
 [f ]
-[; ;main.c: 19: D_PORT_Init();
-"19
-[e ( _D_PORT_Init ..  ]
-[; ;main.c: 22: D_UART_Init("Panda", 9600, 1);
+[; ;main.c: 22: D_PORT_Init();
 "22
-[e ( _D_UART_Init (3 , , :s 1C -> -> 9600 `i `ui -> -> 1 `i `uc ]
-[; ;main.c: 23: D_UART_Enable(1);
-"23
-[e ( _D_UART_Enable (1 -> -> 1 `i `uc ]
-[; ;main.c: 25: D_UART_Write("I", "Init");
+[e ( _D_PORT_Init ..  ]
+[; ;main.c: 25: D_UART_Init("Panda", 9600, 1);
 "25
+[e ( _D_UART_Init (3 , , :s 1C -> -> 9600 `i `ui -> -> 1 `i `uc ]
+[; ;main.c: 26: D_UART_Enable(1);
+"26
+[e ( _D_UART_Enable (1 -> -> 1 `i `uc ]
+[; ;main.c: 28: D_UART_Write("I", "Init");
+"28
 [e ( _D_UART_Write (2 , :s 2C :s 3C ]
-[; ;main.c: 26: while(1) {
-"26
-[e :U 469 ]
-{
+[; ;main.c: 29: while(1) {
 "29
-}
-[e :U 468 ]
-"26
-[e $U 469  ]
 [e :U 470 ]
-[; ;main.c: 29: }
-[; ;main.c: 30: return;
+{
+[; ;main.c: 30: if(readReady) {
 "30
-[e $UE 467  ]
-[; ;main.c: 31: }
+[e $ ! != -> _readReady `i -> -> -> 0 `i `uc `i 472  ]
+{
+[; ;main.c: 31: readReady = 0;
 "31
-[e :UE 467 ]
+[e = _readReady -> -> 0 `i `uc ]
+[; ;main.c: 32: read = D_UART_Read();
+"32
+[e = _read ( _D_UART_Read ..  ]
+[; ;main.c: 33: if (strcmp(read.command, "led") == 0) {
+"33
+[e $ ! == ( _strcmp (2 , . _read 1 :s 4C -> 0 `i 473  ]
+{
+[; ;main.c: 34: if (strcmp(read.message, "on") == 0) {
+"34
+[e $ ! == ( _strcmp (2 , . _read 2 :s 5C -> 0 `i 474  ]
+{
+[; ;main.c: 35: PORTAbits.RA0 = 1;
+"35
+[e = . . _PORTAbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 36: D_UART_Write("Led", "I put it on");
+"36
+[e ( _D_UART_Write (2 , :s 6C :s 7C ]
+"37
+}
+[e :U 474 ]
+[; ;main.c: 37: }
+[; ;main.c: 38: if (strcmp(read.message, "off") == 0) {
+"38
+[e $ ! == ( _strcmp (2 , . _read 2 :s 8C -> 0 `i 475  ]
+{
+[; ;main.c: 39: PORTAbits.RA0 = 0;
+"39
+[e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 40: D_UART_Write("Led", "Putting led off sir");
+"40
+[e ( _D_UART_Write (2 , :s 9C :s 10C ]
+"41
+}
+[e :U 475 ]
+"42
+}
+[e :U 473 ]
+"43
+}
+[e :U 472 ]
+"44
+}
+[e :U 469 ]
+"29
+[e $U 470  ]
+[e :U 471 ]
+[; ;main.c: 41: }
+[; ;main.c: 42: }
+[; ;main.c: 43: }
+[; ;main.c: 44: }
+[; ;main.c: 45: return;
+"45
+[e $UE 468  ]
+[; ;main.c: 46: }
+"46
+[e :UE 468 ]
 }
 [a 3C 73 110 105 116 0 ]
+[a 10C 80 117 116 116 105 110 103 32 108 101 100 32 111 102 102 32 115 105 114 0 ]
+[a 7C 73 32 112 117 116 32 105 116 32 111 110 0 ]
+[a 5C 111 110 0 ]
+[a 8C 111 102 102 0 ]
+[a 4C 108 101 100 0 ]
+[a 6C 76 101 100 0 ]
+[a 9C 76 101 100 0 ]
 [a 1C 80 97 110 100 97 0 ]
 [a 2C 73 0 ]

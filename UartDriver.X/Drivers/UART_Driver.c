@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <xc.h>
+#include <string.h>
 
 #include "PORT_Driver.h"
 #include "UART_Driver.h"
@@ -50,8 +51,11 @@ typedef struct {
     uint8_t messageCnt;   // Count of the message buffer
     uint8_t readId;       // Id send from the sender, to acknowledge
     uint8_t state;    // State of the read buffer
-} READ_Data;
-READ_Data readBuffer;
+} READ_Buffer;
+READ_Buffer readBuffer;
+
+READ_Data readData;
+
 bool readReady;
 
 /*******************************************************************************
@@ -96,6 +100,7 @@ void fillDataBuffer(uint8_t data){
         case READ_STATE_TYPE:
             if (data == SEP_CHAR) {
                 readBuffer.state = READ_STATE_SENDER;
+                readBuffer.type[readBuffer.typeCnt] = '\0';
             } else {
                 readBuffer.type[readBuffer.typeCnt] = data;
                 readBuffer.typeCnt++;
@@ -108,6 +113,7 @@ void fillDataBuffer(uint8_t data){
         case READ_STATE_SENDER:
             if (data == SEP_CHAR) {
                 readBuffer.state = READ_STATE_COMMAND;
+                readBuffer.sender[readBuffer.senderCnt] = '\0';
             } else {
                 readBuffer.sender[readBuffer.senderCnt] = data;
                 readBuffer.senderCnt++;
@@ -120,6 +126,7 @@ void fillDataBuffer(uint8_t data){
         case READ_STATE_COMMAND:
             if (data == SEP_CHAR) {
                 readBuffer.state = READ_STATE_MESSAGE;
+                readBuffer.command[readBuffer.commandCnt] = '\0';
             } else {
                 readBuffer.command[readBuffer.commandCnt] = data;
                 readBuffer.commandCnt++;
@@ -132,6 +139,7 @@ void fillDataBuffer(uint8_t data){
         case READ_STATE_MESSAGE:
             if (data == SEP_CHAR) {
                 readBuffer.state = READ_STATE_END;
+                readBuffer.message[readBuffer.messageCnt] = '\0';
             } else {
                 readBuffer.message[readBuffer.messageCnt] = data;
                 readBuffer.messageCnt++;
@@ -144,8 +152,8 @@ void fillDataBuffer(uint8_t data){
         case READ_STATE_END:
             if (data == STOP_CHAR) {
                 acknowledge();
-                readReady = true;
                 readBuffer.state = READ_STATE_START;
+                readReady = true;
             } else {
                 // Convert from (ASCII)char to integer.
                 readBuffer.readId = (data - 0x30);
@@ -154,10 +162,8 @@ void fillDataBuffer(uint8_t data){
             
         default: 
             readBuffer.state = READ_STATE_START;
-            readReady = false;
             break;
     }
-    PORTAbits.RA0  = readReady;
 }
 
 void acknowledge() {
@@ -180,6 +186,7 @@ void D_UART_Init(const char* name, uint16_t baud, bool interrupts) {
     
     // Clear/set variables
     deviceName = name;
+    readReady = false;
     
     // Disable UART while initializing
     D_UART_Enable(false);
@@ -227,8 +234,11 @@ void D_UART_Write(const char* command, const char* data) {
     __delay_ms(1);
 }
 
-uint8_t D_UART_Read(){
-    return 0;
+READ_Data D_UART_Read(){
+    readData.sender = readBuffer.sender;
+    readData.command = readBuffer.command;
+    readData.message = readBuffer.message;
+    return readData;
 }
 
 void D_UART_Enable(bool enable) {

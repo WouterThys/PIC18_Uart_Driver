@@ -4716,22 +4716,68 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
+# 4 "/opt/microchip/xc8/v1.37/include/__size_t.h"
+typedef unsigned size_t;
+
+# 14 "/opt/microchip/xc8/v1.37/include/string.h"
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 34
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+
 # 20 "Drivers/PORT_Driver.h"
 void D_PORT_Init();
 
-# 47 "Drivers/UART_Driver.h"
+# 40 "Drivers/UART_Driver.h"
+extern bool readReady;
+
+typedef struct {
+const char* sender;
+const char* command;
+const char* message;
+}READ_Data;
+
+# 55
 void D_UART_Init(const char* name, uint16_t baud, bool interrupts);
 
-# 54
+# 62
 void D_UART_Write(const char* command, const char* data);
 
-# 60
-uint8_t D_UART_Read();
+# 68
+READ_Data D_UART_Read();
 
-# 66
+# 74
 void D_UART_Enable(bool enable);
 
-# 17 "main.c"
+# 18 "main.c"
+READ_Data read;
+
 void main(void) {
 
 D_PORT_Init();
@@ -4742,8 +4788,20 @@ D_UART_Enable(1);
 
 D_UART_Write("I", "Init");
 while(1) {
-
-
+if(readReady) {
+readReady = 0;
+read = D_UART_Read();
+if (strcmp(read.command, "led") == 0) {
+if (strcmp(read.message, "on") == 0) {
+PORTAbits.RA0 = 1;
+D_UART_Write("Led", "I put it on");
+}
+if (strcmp(read.message, "off") == 0) {
+PORTAbits.RA0 = 0;
+D_UART_Write("Led", "Putting led off sir");
+}
+}
+}
 }
 return;
 }

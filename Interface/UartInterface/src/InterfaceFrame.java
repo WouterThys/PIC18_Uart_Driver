@@ -2,15 +2,13 @@ import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.Graphics2D;
 import java.awt.Image;
+import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
-import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
@@ -26,6 +24,7 @@ import javax.swing.table.TableColumnModel;
 import classes.Message;
 
 import javax.swing.JTextField;
+
 import java.awt.Color;
 
 
@@ -44,8 +43,11 @@ public class InterfaceFrame implements SerialUartInterface {
 	private String[] baudStrings = {"4800", "9600", "19200", "38400", "57600", "115200"};
 	
 	private JLabel connectedLed;
+	private JLabel writeLed;
 	private ImageIcon redLedImg;
 	private ImageIcon greenLedImg;
+	private ImageIcon blueLedImg;
+	private ImageIcon trashImg;
 	
 	private JButton btnConnect;
 	private JTable tblInput;
@@ -94,7 +96,7 @@ public class InterfaceFrame implements SerialUartInterface {
 	
 	@Override
 	public void onWriteSuccesListener() {
-		// TODO Auto-generated method stub
+		writeLed.setIcon(blueLedImg);
 	}
 
 	@Override
@@ -121,34 +123,20 @@ public class InterfaceFrame implements SerialUartInterface {
 			
 		case Message.MES_ACK:
 			// Acknowledge for send message
-			if(Integer.valueOf(newMessage.getMessage()) == sendId) {
-				
+			if(Integer.valueOf(newMessage.getMessage()) == (sendId-1)) {
+				writeLed.setIcon(greenLedImg);
+			} else {
+				writeLed.setIcon(redLedImg);
 			}
 			break;
 		}
 	}
 	
 	private void loadImages() {
-		// red led
-		InputStream inp = ClassLoader.getSystemResourceAsStream("redled.png");
-		BufferedImage led = null;
-		try {
-			led = ImageIO.read(inp);
-			redLedImg = new ImageIcon(resizeImage(led, connectedLed.getWidth(), connectedLed.getHeight()));
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
-		
-		// green led
-		inp = ClassLoader.getSystemResourceAsStream("greenled.png");
-		led = null;
-		try {
-			led = ImageIO.read(inp);
-			greenLedImg = new ImageIcon(resizeImage(led, connectedLed.getWidth(), connectedLed.getHeight()));
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
-		
+		redLedImg = createImageIcon("redled.png");
+		greenLedImg = createImageIcon("greenled.png");
+		blueLedImg = createImageIcon("blueled.png");
+		trashImg = createImageIcon("trash.png");
 	}
 
 	/**
@@ -176,9 +164,14 @@ public class InterfaceFrame implements SerialUartInterface {
 		
 		// Com port spinner
 		ArrayList<String> ports = SerialInterface.listPorts();
-		portStrings = new String[ports.size()];
-		for(int i=0; i<ports.size(); i++) {
-			portStrings[i] = ports.get(i);
+		if (ports.size() > 0) {
+			portStrings = new String[ports.size()];
+			for(int i=0; i<ports.size(); i++) {
+				portStrings[i] = ports.get(i);
+			}
+		} else {
+			portStrings = new String[1];
+			portStrings[0] = "No ports found";
 		}
 		
 		spnrPorts = new SpinnerListModel(portStrings);
@@ -213,10 +206,9 @@ public class InterfaceFrame implements SerialUartInterface {
 		btnConnect.setBounds(202, 25, 154, 25);
 		frmUartInterface.getContentPane().add(btnConnect);
 		
-		
 		// Image
 		connectedLed = new JLabel("");
-		connectedLed.setBounds(407, 21, 29, 27);
+		connectedLed.setBounds(407, 21, 30, 30);
 		frmUartInterface.getContentPane().add(connectedLed);
 		loadImages();
 		connectedLed.setIcon(redLedImg);
@@ -225,10 +217,12 @@ public class InterfaceFrame implements SerialUartInterface {
 		String[] header = {"Time", "Sender", "Command", "Message"};
 		String[][] data = {{"","","",""}};
 		tblModelInput = new DefaultTableModel(data, header);
+		tblModelInput.getDataVector().removeAllElements();
+		tblModelInput.fireTableDataChanged();
 		tblInput = new JTable(tblModelInput);
+		tblInput.setEnabled(false);
 		tblInput.setShowHorizontalLines(false);
 		tblInput.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-		tblInput.setEnabled(false);
 		tblInput.setBounds(12, 69, 424, 241);
 		frmUartInterface.getContentPane().add(tblInput);
 		JScrollPane jp=new JScrollPane(tblInput);
@@ -236,7 +230,7 @@ public class InterfaceFrame implements SerialUartInterface {
 	    jp.setVisible(true);
 	    frmUartInterface.getContentPane().add(jp);
 	    
-	    JButton btnX = new JButton("x");
+	    JButton btnX = new JButton("");
 	    btnX.addActionListener(new ActionListener() {
 	    	public void actionPerformed(ActionEvent arg0) {
 	    		tblModelInput.getDataVector().removeAllElements();
@@ -244,11 +238,15 @@ public class InterfaceFrame implements SerialUartInterface {
 	    	}
 	    });
 	    btnX.setBounds(443, 69, 40, 35);
+	    btnX.setIcon(trashImg);
 	    frmUartInterface.getContentPane().add(btnX);
 	    
 	    // Table output
 	    tblModelOutput = new DefaultTableModel(data, header);
+	    tblModelOutput.getDataVector().removeAllElements();
+		tblModelOutput.fireTableDataChanged();
 	    tblOutput = new JTable(tblModelOutput);
+	    tblOutput.setEnabled(false);
 	    tblOutput.setShowHorizontalLines(false);
 	    tblOutput.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 	    tblOutput.setBounds(12, 360, 424, 122);
@@ -258,7 +256,7 @@ public class InterfaceFrame implements SerialUartInterface {
 	    jp2.setVisible(true);
 	    frmUartInterface.getContentPane().add(jp2);
 	    
-	    JButton button = new JButton("x");
+	    JButton button = new JButton("");
 	    button.addActionListener(new ActionListener() {
 	    	public void actionPerformed(ActionEvent arg0) {
 	    		tblModelOutput.getDataVector().removeAllElements();
@@ -266,6 +264,7 @@ public class InterfaceFrame implements SerialUartInterface {
 	    	}
 	    });
 	    button.setBounds(443, 360, 40, 35);
+	    button.setIcon(trashImg);
 	    frmUartInterface.getContentPane().add(button);
 	    
 	    commandTf = new JTextField();
@@ -330,7 +329,7 @@ public class InterfaceFrame implements SerialUartInterface {
 	    lblErrors.setBounds(12, 588, 60, 15);
 	    frmUartInterface.getContentPane().add(lblErrors);
 	    
-	    JButton button_1 = new JButton("x");
+	    JButton button_1 = new JButton("");
 	    button_1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -338,7 +337,13 @@ public class InterfaceFrame implements SerialUartInterface {
 			}
 		});
 	    button_1.setBounds(443, 596, 40, 35);
+	    button_1.setIcon(trashImg);
 	    frmUartInterface.getContentPane().add(button_1);
+	    
+	    writeLed = new JLabel("");
+	    writeLed.setBounds(443, 537, 30, 30);
+	    frmUartInterface.getContentPane().add(writeLed);
+	    writeLed.setIcon(redLedImg);
 	   
 	}
 	
@@ -358,14 +363,34 @@ public class InterfaceFrame implements SerialUartInterface {
 		}
 	}
 	
-	private static BufferedImage resizeImage(BufferedImage img, int newW, int newH) {
-		Image tmp = img.getScaledInstance(newW, newH, Image.SCALE_SMOOTH);
-		BufferedImage dimg = new BufferedImage(newW, newH, BufferedImage.TYPE_INT_ARGB_PRE);
-		
-		Graphics2D g2d = dimg.createGraphics();
-		g2d.drawImage(tmp,0,0,null);
-		g2d.dispose();
-		
-		return dimg;
+//	private static BufferedImage resizeImage(BufferedImage img, int newW, int newH) {
+//		Image tmp = img.getScaledInstance(newW, newH, Image.SCALE_SMOOTH);
+//		BufferedImage dimg = new BufferedImage(newW, newH, BufferedImage.TYPE_INT_ARGB_PRE);
+//		
+//		Graphics2D g2d = dimg.createGraphics();
+//		g2d.drawImage(tmp,0,0,null);
+//		g2d.dispose();
+//		
+//		return dimg;
+//	}
+	
+	private Image getScaledImage(Image srcImg, int w, int h){
+	    BufferedImage resizedImg = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB_PRE);
+	    Graphics2D g2 = resizedImg.createGraphics();
+
+	    g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+	    g2.drawImage(srcImg, 0, 0, w, h, null);
+	    g2.dispose();
+
+	    return resizedImg;
+	}
+	
+	protected ImageIcon createImageIcon(String path) {
+		java.net.URL imageUrl = getClass().getResource(path);
+		if (imageUrl != null) {
+			ImageIcon icon = new ImageIcon(imageUrl);
+			return new ImageIcon(getScaledImage(icon.getImage(), 30, 30));
+		}
+		return null;
 	}
 }

@@ -37,6 +37,14 @@ extern "C" {
 #include <stdbool.h>
 #include <stdint.h>
     
+extern bool readReady;
+
+typedef struct {
+    const char* sender;
+    const char* command;
+    const char* message;
+}READ_Data;
+    
 /**
 * Initializes all the parameters to the default setting, as well as writing the
 * tri-state registers. Initializes the UART to the default data rate and settings.
@@ -57,7 +65,7 @@ void D_UART_Write(const char* command, const char* data);
  * Read 8-bit of data from the RX pin of UART module.
  * @return data: returns the data.
  */
-uint8_t D_UART_Read();
+READ_Data D_UART_Read();
 
 /**
  * Enable the UART module
