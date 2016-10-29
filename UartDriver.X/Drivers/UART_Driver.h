@@ -1,32 +1,3 @@
-
-/**
- *                              UART DRIVER
- * 
- * Description
- * -----------
- * 
- * 
- * Resources
- * ---------
- * 
- * 
- * Get it started
- * --------------
- * 
- * 1. Define in the main project the crystal frequency (_XTAL_FREQ)
- *      for example: #define _XTAL_FREQ 20000000 to set the frequency to 20MHz
- * 
- * 2. Make sure there is a .h file named PORT_Driver.h mapping the UART ports
- *      to the correct pins of the PIC. The file should contain the following
- *      defines:
- *          * #define UART_TX         PORTCbits.RC7
- *          * #define UART_RX         PORTCbits.RC6
- *          * #define UART_TX_Dir     TRISCbits.TRISC7
- *          * #define UART_RX_Dir     TRISCbits.TRISC6
- * 
- * 
- * 
- */
 #ifndef UART_DRIVER_H
 #define	UART_DRIVER_H
 
@@ -37,8 +8,14 @@ extern "C" {
 #include <stdbool.h>
 #include <stdint.h>
     
+/**
+ * Boolean indicating data can be read.
+ */    
 extern bool readReady;
 
+/**
+ * Data struct for reading data.
+ */
 typedef struct {
     const char* sender;
     const char* command;
@@ -62,8 +39,8 @@ void D_UART_Init(const char* name, uint16_t baud, bool interrupts);
 void D_UART_Write(const char* command, const char* data);
 
 /**
- * Read 8-bit of data from the RX pin of UART module.
- * @return data: returns the data.
+ * Read data from the RX pin of UART module.
+ * @return data: returns the data struct.
  */
 READ_Data D_UART_Read();
 

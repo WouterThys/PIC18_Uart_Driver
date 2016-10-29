@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.io.OutputStream"/>
-<fullyQualifiedTypeName name="SerialInterface"/>
 <fullyQualifiedTypeName name="gnu.io.CommPortIdentifier"/>
 <fullyQualifiedTypeName name="gnu.io.SerialPortEventListener"/>
 <fullyQualifiedTypeName name="gnu.io.SerialPortEvent"/>
@@ -30,4 +29,6 @@
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="java.awt.RenderingHints"/>
 <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+<fullyQualifiedTypeName name="java.awt.event.WindowEvent"/>
+<fullyQualifiedTypeName name="SerialInterface"/>
 </qualifiedTypeNameHistroy>

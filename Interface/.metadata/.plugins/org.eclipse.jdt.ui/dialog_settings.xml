@@ -12,12 +12,14 @@
 		<item value="600" key="width"/>
 	</section>
 	<section name="FatJarPackageWizard">
-		<item value="/home/wouter/Desktop/Untitled.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
+		<item value="/home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/Interface/Interface.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
 		<item value="InterfaceFrame - UartInterface" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
 		<item value="/home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/Interface" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
 		<item value="false" key="FatJarPackageWizardPage.ANTSCRIPT_SAVE"/>
 		<item value="3" key="FatJarPackageWizardPage.LIBRARY_HANDLING"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/home/wouter/Documents/geeken/github/PIC_Drivers/PIC18/Uart/Interface/Interface.jar"/>
+			<item value="/home/wouter/Desktop/Interface.jar"/>
 			<item value="/home/wouter/Desktop/Untitled.jar"/>
 		</list>
 		<list key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION_HISTORY">
@@ -28,8 +30,8 @@
 	<section name="quick_assist_proposal_size">
 	</section>
 	<section name="SourceActionDialog.methods">
-		<item value="1" key="VisibilityModifier"/>
 		<item value="false" key="Comments"/>
+		<item value="1" key="VisibilityModifier"/>
 		<item value="false" key="SynchronizedModifier"/>
 		<item value="false" key="FinalModifier"/>
 	</section>
@@ -52,8 +54,8 @@
 		<section name="DialogBoundsSettings">
 			<item value="600" key="DIALOG_WIDTH"/>
 			<item value="179" key="DIALOG_Y_ORIGIN"/>
-			<item value="500" key="DIALOG_HEIGHT"/>
 			<item value="541" key="DIALOG_X_ORIGIN"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
 			<item value="1|Noto Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		</section>
 	</section>
@@ -64,23 +66,23 @@
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
 		<item value="545" key="DIALOG_WIDTH"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
-		<item value="569" key="DIALOG_X_ORIGIN"/>
 		<item value="779" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Noto Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
-	<section name="NewClassWizardPage">
-		<item value="false" key="create_constructor"/>
-		<item value="true" key="create_unimplemented"/>
-		<item value="false" key="create_main"/>
-	</section>
-	<section name="RenameInformationPopup">
-	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
-		<item value="false" key="updateQualifiedNames"/>
 		<item value="*" key="patterns"/>
+		<item value="false" key="updateQualifiedNames"/>
 		<item value="1" key="updateSimilarElementsMatchStrategy"/>
 		<item value="false" key="updateTextualMatches"/>
 		<item value="false" key="updateSimilarElements"/>
+	</section>
+	<section name="RenameInformationPopup">
+	</section>
+	<section name="NewClassWizardPage">
+		<item value="false" key="create_constructor"/>
+		<item value="false" key="create_main"/>
+		<item value="true" key="create_unimplemented"/>
 	</section>
 	<section name="AddGetterSetterDialog">
 		<item value="false" key="RemoveFinal"/>
