@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="java:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0495e1f5-6b88-4b0b-b38b-92f915e883e8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fazecast_jSerialComm_1_3_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/libs/jSerialComm-1.3.11.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/waldo/serial/classes/SerialListener.class" afterPath="$PROJECT_DIR$/target/classes/com/waldo/serial/classes/SerialListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/waldo/serial/classes/SerialManager$1.class" afterPath="$PROJECT_DIR$/target/classes/com/waldo/serial/classes/SerialManager$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/waldo/serial/classes/SerialManager.class" afterPath="$PROJECT_DIR$/target/classes/com/waldo/serial/classes/SerialManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/java_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/Application$1.class" afterPath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/Application$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/Application$2.class" afterPath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/Application$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/Application.class" afterPath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/MessagePanel$1.class" afterPath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/MessagePanel$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/MessagePanel.class" afterPath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/MessagePanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/dialogs/SerialSettingsDialogLayout.class" afterPath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/dialogs/SerialSettingsDialogLayout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java.iml" afterPath="$PROJECT_DIR$/java.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/MessagePanel.java" afterPath="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/MessagePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialogLayout.java" afterPath="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialogLayout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/settings/Icons.properties" afterPath="$PROJECT_DIR$/src/main/resources/settings/Icons.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/settings/Icons.properties" afterPath="$PROJECT_DIR$/target/classes/settings/Icons.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -66,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="109" column="48" lean-forward="true" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
+            <state relative-caret-position="225">
+              <caret line="138" column="43" lean-forward="false" selection-start-line="138" selection-start-column="43" selection-end-line="138" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2114#2115#0" expanded="true" />
@@ -79,9 +73,21 @@
                 <element signature="e#2279#2280#0" expanded="true" />
                 <element signature="e#2314#2315#0" expanded="true" />
                 <element signature="e#2385#2386#0" expanded="true" />
-                <element signature="e#3512#3513#0" expanded="true" />
-                <element signature="e#3575#3576#0" expanded="true" />
+                <element signature="e#3508#3509#0" expanded="true" />
+                <element signature="e#3554#3555#0" expanded="true" />
+                <element signature="e#3697#3698#0" expanded="true" />
+                <element signature="e#3760#3761#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Icons.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/settings/Icons.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SerialManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SerialManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2910">
-              <caret line="352" column="0" lean-forward="false" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#594#595#0" expanded="true" />
@@ -178,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/settings/Icons.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/waldo/serial/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/ISerialPort.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialog.java" />
@@ -186,8 +191,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialogLayout.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/MessagePanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialManager.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/settings/Icons.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/Application.java" />
       </list>
     </option>
   </component>
@@ -198,10 +204,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="width" value="1736" />
-    <option name="height" value="1398" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-239" />
+    <option name="y" value="106" />
+    <option name="width" value="1906" />
+    <option name="height" value="1072" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -234,42 +241,20 @@
             <path>
               <item name="Serialator" type="b2602c69:ProjectViewProjectNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Serialator" type="b2602c69:ProjectViewProjectNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Serialator" type="b2602c69:ProjectViewProjectNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Serialator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Serialator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Serialator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="settings" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="java_jar" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -281,6 +266,9 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -420,8 +408,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1922" height="1053" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="0" width="1922" height="1053" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -431,17 +418,17 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33728448" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33728448" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286638" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15989584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15989584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39870688" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39870688" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -501,8 +488,10 @@
             <element signature="e#2279#2280#0" expanded="true" />
             <element signature="e#2314#2315#0" expanded="true" />
             <element signature="e#2385#2386#0" expanded="true" />
-            <element signature="e#3512#3513#0" expanded="true" />
-            <element signature="e#3575#3576#0" expanded="true" />
+            <element signature="e#3508#3509#0" expanded="true" />
+            <element signature="e#3554#3555#0" expanded="true" />
+            <element signature="e#3697#3698#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -608,8 +597,10 @@
             <element signature="e#2279#2280#0" expanded="true" />
             <element signature="e#2314#2315#0" expanded="true" />
             <element signature="e#2385#2386#0" expanded="true" />
-            <element signature="e#3512#3513#0" expanded="true" />
-            <element signature="e#3575#3576#0" expanded="true" />
+            <element signature="e#3508#3509#0" expanded="true" />
+            <element signature="e#3554#3555#0" expanded="true" />
+            <element signature="e#3697#3698#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -681,8 +672,10 @@
             <element signature="e#2279#2280#0" expanded="true" />
             <element signature="e#2314#2315#0" expanded="true" />
             <element signature="e#2385#2386#0" expanded="true" />
-            <element signature="e#3512#3513#0" expanded="true" />
-            <element signature="e#3575#3576#0" expanded="true" />
+            <element signature="e#3508#3509#0" expanded="true" />
+            <element signature="e#3554#3555#0" expanded="true" />
+            <element signature="e#3697#3698#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -735,13 +728,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/settings/Icons.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -825,28 +811,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="109" column="48" lean-forward="true" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2114#2115#0" expanded="true" />
-            <element signature="e#2192#2193#0" expanded="true" />
-            <element signature="e#2222#2223#0" expanded="true" />
-            <element signature="e#2279#2280#0" expanded="true" />
-            <element signature="e#2314#2315#0" expanded="true" />
-            <element signature="e#2385#2386#0" expanded="true" />
-            <element signature="e#3512#3513#0" expanded="true" />
-            <element signature="e#3575#3576#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2910">
-          <caret line="352" column="0" lean-forward="false" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#594#595#0" expanded="true" />
@@ -872,5 +840,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/settings/Icons.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="138" column="43" lean-forward="false" selection-start-line="138" selection-start-column="43" selection-end-line="138" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2114#2115#0" expanded="true" />
+            <element signature="e#2192#2193#0" expanded="true" />
+            <element signature="e#2222#2223#0" expanded="true" />
+            <element signature="e#2279#2280#0" expanded="true" />
+            <element signature="e#2314#2315#0" expanded="true" />
+            <element signature="e#2385#2386#0" expanded="true" />
+            <element signature="e#3508#3509#0" expanded="true" />
+            <element signature="e#3554#3555#0" expanded="true" />
+            <element signature="e#3697#3698#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>java:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>java</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jSerialComm-1.3.11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

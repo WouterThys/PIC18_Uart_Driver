@@ -74,11 +74,38 @@ public class Application extends IFrame implements SerialListener {
         return this.getCursor().getType() == Cursor.WAIT_CURSOR;
     }
 
+    private void openSettings() {
+        SerialSettingsDialog dialog = new SerialSettingsDialog(
+                Application.this, "Settings", serMgr().getSerialPort());
+
+        if (dialog.showDialog() == IDialog.OK) {
+            beginWait();
+            try {
+                SerialPort port = dialog.getSerialPort();
+                if (port != null) {
+                    messagePanel.setEnabled(serMgr().open(port));
+                }
+                updateStatus(port);
+            } finally {
+                endWait();
+            }
+        }
+    }
+
     //
     // Gui interface
     //
     @Override
     public void initializeComponents() {
+        // Icon
+        try {
+            Image image = resMgr.readImage("Main.Icon").getImage();
+            setIconImage(image);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Stuff
         statusLbl = new ILabel();
         infoLbl = new ILabel();
         messagePanel = new MessagePanel();
@@ -86,21 +113,7 @@ public class Application extends IFrame implements SerialListener {
         settingsActions = new AbstractAction("Settings") {
             @Override
             public void actionPerformed(ActionEvent e) {
-                SerialSettingsDialog dialog = new SerialSettingsDialog(
-                        Application.this, "Settings", serMgr().getSerialPort());
-
-                if (dialog.showDialog() == IDialog.OK) {
-                    beginWait();
-                    try {
-                        SerialPort port = dialog.getSerialPort();
-                        if (port != null) {
-                            messagePanel.setEnabled(serMgr().open(port));
-                        }
-                        updateStatus(port);
-                    } finally {
-                        endWait();
-                    }
-                }
+                openSettings();
             }
         };
 
@@ -123,6 +136,7 @@ public class Application extends IFrame implements SerialListener {
     @Override
     public void updateComponents(Object... objects) {
         updateStatus(null);
+        SwingUtilities.invokeLater(this::openSettings);
     }
 
     //
