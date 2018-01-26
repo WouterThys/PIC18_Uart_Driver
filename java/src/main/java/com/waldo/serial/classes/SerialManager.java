@@ -271,13 +271,18 @@ public class SerialManager {
         return new ArrayList<>(rxMessageList);
     }
 
-    private void write(String data) {
+    public void write(String data) {
         try {
             if (serialPort != null) {
                 if (serialPort.isOpen()) {
                     SwingUtilities.invokeLater(() -> {
-                        serialPort.writeBytes(data.getBytes(), data.length());
-                        System.out.println("Bytes written: " + data);
+                        try {
+                            serialPort.writeBytes(data.getBytes(), data.length());
+                            onTransmitted(data);
+                        } catch (Exception e) {
+                            onError("Failed to write bytes..", e);
+                        }
+
                     });
                 } else {
                     onError("COM port is closed..");
@@ -308,9 +313,15 @@ public class SerialManager {
         }
     }
 
-    private void onNewMessage(String message) {
+    private void onReceived(String message) {
         for (SerialListener listener : serialListenerList) {
-            listener.onNewMessage(message);
+            listener.onReceived(message);
+        }
+    }
+
+    private void onTransmitted(String message) {
+        for (SerialListener listener : serialListenerList) {
+            listener.onTransmitted(message);
         }
     }
 
@@ -334,9 +345,16 @@ public class SerialManager {
     }
 
 
+    private String inputMessage = "";
     private void newDataAvailable(byte[] newData) {
-        String m = new String(newData);
-        rxMessageList.add(m);
-        onNewMessage(m);
+        String newMessage = new String(newData);
+        if (!newMessage.isEmpty()) {
+            inputMessage += new String(newData);
+            if (inputMessage.charAt(inputMessage.length()-1) == '\n') {
+                rxMessageList.add(inputMessage);
+                onReceived(inputMessage);
+                inputMessage = "";
+            }
+        }
     }
 }

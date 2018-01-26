@@ -60,14 +60,8 @@ abstract class SerialSettingsDialogLayout extends IDialog {
      *                   METHODS
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     void updateComPortCb() {
-        comPortCbModel.removeAllElements();
-
-        for (SerialPort port : serMgr().getSerialPorts()) {
-            comPortCbModel.addElement(port.getSystemPortName());
-        }
-
         if (selectedPort != null) {
-            comPortCb.selectItem(selectedPort.getDescriptivePortName());
+            comPortCb.selectItem(selectedPort.getSystemPortName());
         }
 
     }
@@ -138,8 +132,11 @@ abstract class SerialSettingsDialogLayout extends IDialog {
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     @Override
     public void initializeComponents() {
+        for (SerialPort port : serMgr().getSerialPorts()) {
+            comPortCbModel.addElement(port.getSystemPortName());
+        }
         comPortCb.addItemListener(e -> {
-            if (e.getStateChange() == ItemEvent.SELECTED) {
+            if (e.getStateChange() == ItemEvent.SELECTED && !isUpdating()) {
                 String port = (String) e.getItem();
                 updateComponents(serMgr().findSerialPortByName(port));
             }

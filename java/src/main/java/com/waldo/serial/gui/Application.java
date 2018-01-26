@@ -1,6 +1,7 @@
 package com.waldo.serial.gui;
 
 import com.fazecast.jSerialComm.SerialPort;
+import com.waldo.serial.classes.SerialListener;
 import com.waldo.serial.classes.SerialManager;
 import com.waldo.serial.gui.dialogs.SerialSettingsDialog;
 import com.waldo.utils.GuiUtils;
@@ -15,7 +16,7 @@ import java.awt.event.ActionEvent;
 
 import static com.waldo.serial.classes.SerialManager.serMgr;
 
-public class Application extends IFrame {
+public class Application extends IFrame implements SerialListener {
 
     public static final ResourceManager resMgr = new ResourceManager("settings/", "Icons.properties");
     public static final ImageIcon greenBall = resMgr.readImage("Ball.green");
@@ -33,7 +34,7 @@ public class Application extends IFrame {
 
 
     public Application(String startUpPath) {
-
+        SerialManager.serMgr().init(this);
     }
 
     private void updateStatus(SerialPort serialPort) {
@@ -61,6 +62,21 @@ public class Application extends IFrame {
         return  panel;
     }
 
+    private void beginWait() {
+        this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+    }
+
+    private void endWait() {
+        this.setCursor(Cursor.getDefaultCursor());
+    }
+
+    public boolean isUpdating() {
+        return this.getCursor().getType() == Cursor.WAIT_CURSOR;
+    }
+
+    //
+    // Gui interface
+    //
     @Override
     public void initializeComponents() {
         statusLbl = new ILabel();
@@ -74,11 +90,16 @@ public class Application extends IFrame {
                         Application.this, "Settings", serMgr().getSerialPort());
 
                 if (dialog.showDialog() == IDialog.OK) {
-                    SerialPort port = dialog.getSerialPort();
-                    if (port != null) {
-                        SerialManager.serMgr().open(port);
+                    beginWait();
+                    try {
+                        SerialPort port = dialog.getSerialPort();
+                        if (port != null) {
+                            messagePanel.setEnabled(serMgr().open(port));
+                        }
+                        updateStatus(port);
+                    } finally {
+                        endWait();
                     }
-                    updateStatus(port);
                 }
             }
         };
@@ -86,7 +107,7 @@ public class Application extends IFrame {
         clearAction = new AbstractAction("Clear") {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                messagePanel.clearMessagePane();
             }
         };
     }
@@ -102,5 +123,40 @@ public class Application extends IFrame {
     @Override
     public void updateComponents(Object... objects) {
         updateStatus(null);
+    }
+
+    //
+    // Serial listener
+    //
+    @Override
+    public void onSerialError(String error, Throwable throwable) {
+        String message = "";
+        if (error != null) {
+            message = error;
+        }
+        if (throwable != null) {
+            if (!message.isEmpty()) {
+                message += "\r\n Exception: \n";
+            }
+            message += throwable.toString();
+        }
+
+        JOptionPane.showMessageDialog(
+                Application.this,
+                message,
+                "Serial error",
+                JOptionPane.ERROR_MESSAGE
+        );
+    }
+
+    @Override
+    public void onTransmitted(String message) {
+        messagePanel.addTransmittedMessage(message);
+        messagePanel.clearInput();
+    }
+
+    @Override
+    public void onReceived(String message) {
+        messagePanel.addReceivedMessage(message);
     }
 }
