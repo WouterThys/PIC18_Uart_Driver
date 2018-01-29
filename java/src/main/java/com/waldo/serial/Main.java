@@ -1,16 +1,28 @@
 package com.waldo.serial;
 
+import com.waldo.serial.classes.Message.SerialMessage;
+import com.waldo.serial.classes.SerialManager.MessageTypes;
 import com.waldo.serial.gui.Application;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 import java.io.File;
+import java.text.ParseException;
 
 public class Main {
 
     public static void main(String[] args) {
         String startUpPath = new File("").getAbsolutePath() + File.separator;
+
+        try {
+            SerialMessage m = SerialMessage.create(
+                    MessageTypes.PICMessageVariable,
+                    "$C:4:abcd:3&");
+            System.out.println(m);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
         SwingUtilities.invokeLater(() -> {
             setLookAndFeel();

@@ -1,6 +1,7 @@
 package com.waldo.serial.gui;
 
 import com.fazecast.jSerialComm.SerialPort;
+import com.waldo.serial.classes.Message.SerialMessage;
 import com.waldo.serial.classes.SerialListener;
 import com.waldo.serial.classes.SerialManager;
 import com.waldo.serial.gui.dialogs.serialsettingsdialog.SerialSettingsDialog;
@@ -164,13 +165,17 @@ public class Application extends IFrame implements SerialListener {
     }
 
     @Override
-    public void onTransmitted(String message) {
-        messagePanel.addTransmittedMessage(message);
-        messagePanel.clearInput();
+    public void onTransmitted(SerialMessage message) {
+        if (message != null) {
+            messagePanel.addTransmittedMessage(message.getInput());
+            messagePanel.clearInput();
+        }
     }
 
     @Override
-    public void onReceived(String message) {
-        messagePanel.addReceivedMessage(message);
+    public void onReceived(SerialMessage message) {
+        if (message != null) {
+            messagePanel.addReceivedMessage(message.getInput());
+        }
     }
 }

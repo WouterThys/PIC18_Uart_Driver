@@ -1,7 +1,9 @@
 package com.waldo.serial.classes;
 
+import com.waldo.serial.classes.Message.SerialMessage;
+
 public interface SerialListener {
     void onSerialError(String error, Throwable throwable);
-    void onTransmitted(String message);
-    void onReceived(String message);
+    void onTransmitted(SerialMessage serialMessage);
+    void onReceived(SerialMessage serialMessage);
 }

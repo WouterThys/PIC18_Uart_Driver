@@ -3,8 +3,10 @@ package com.waldo.serial.classes;
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
+import com.waldo.serial.classes.Message.SerialMessage;
 
 import javax.swing.*;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -166,8 +168,8 @@ public class SerialManager {
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     private List<SerialListener> serialListenerList = new ArrayList<>();
     private SerialPort serialPort;
-    private List<String> txMessageList = new ArrayList<>();
-    private List<String> rxMessageList = new ArrayList<>();
+    private final List<SerialMessage> txSerialMessageList = new ArrayList<>();
+    private final List<SerialMessage> rxSerialMessageList = new ArrayList<>();
 
     // Settings
     private MessageTypes messageType;
@@ -211,11 +213,11 @@ public class SerialManager {
     }
 
     public void clearRxMessages() {
-        rxMessageList.clear();
+        rxSerialMessageList.clear();
     }
 
     public void clearTxMessages() {
-        txMessageList.clear();
+        txSerialMessageList.clear();
     }
 
     public void addSerialListener(SerialListener serialListener) {
@@ -271,12 +273,12 @@ public class SerialManager {
         open(port);
     }
 
-    public List<String> getTxMessageList() {
-        return new ArrayList<>(txMessageList);
+    public List<SerialMessage> getTxSerialMessageList() {
+        return txSerialMessageList;
     }
 
-    public List<String> getRxMessageList() {
-        return new ArrayList<>(rxMessageList);
+    public List<SerialMessage> getRxSerialMessageList() {
+        return new ArrayList<>(rxSerialMessageList);
     }
 
     public void write(String data) {
@@ -286,7 +288,7 @@ public class SerialManager {
                     SwingUtilities.invokeLater(() -> {
                         try {
                             serialPort.writeBytes(data.getBytes(), data.length());
-                            onTransmitted(data);
+                            onTransmitted(SerialMessage.create(messageType, data));
                         } catch (Exception e) {
                             onError("Failed to write bytes..", e);
                         }
@@ -303,8 +305,8 @@ public class SerialManager {
         }
     }
 
-    private void addToMessageList(String message) {
-        txMessageList.add(message);
+    private void addToMessageList(SerialMessage serialMessage) {
+        txSerialMessageList.add(serialMessage);
     }
 
     private void onError(Throwable throwable) {
@@ -321,15 +323,15 @@ public class SerialManager {
         }
     }
 
-    private void onReceived(String message) {
+    private void onReceived(SerialMessage serialMessage) {
         for (SerialListener listener : serialListenerList) {
-            listener.onReceived(message);
+            listener.onReceived(serialMessage);
         }
     }
 
-    private void onTransmitted(String message) {
+    private void onTransmitted(SerialMessage serialMessage) {
         for (SerialListener listener : serialListenerList) {
-            listener.onTransmitted(message);
+            listener.onTransmitted(serialMessage);
         }
     }
 
@@ -359,16 +361,16 @@ public class SerialManager {
         if (!newMessage.isEmpty()) {
             inputMessage += new String(newData);
 
-            if (getMessageType().stopChar.isEmpty()) {
-                rxMessageList.add(inputMessage);
-                onReceived(inputMessage);
-                inputMessage = "";
-            } else {
-                if (inputMessage.endsWith(getMessageType().stopChar)) {
-                    rxMessageList.add(inputMessage);
-                    onReceived(inputMessage);
+            try {
+                SerialMessage m = SerialMessage.create(messageType, inputMessage);
+                if (m != null && m.isConverted()) {
+                    rxSerialMessageList.add(m);
+                    onReceived(m);
                     inputMessage = "";
                 }
+            } catch (ParseException e) {
+                onError(e);
+                e.printStackTrace();
             }
         }
     }
@@ -376,14 +378,12 @@ public class SerialManager {
 
     public enum MessageTypes {
         Text ("Simple text", "", -2, -2, "", "", "", false),
-        PICMessageShort("PIC Simple short", "Simple PIC message, short form", 1, 1, "$", "&", ":", true),
+        PICMessageShort("PIC Simple short", "Simple PIC message, short form", 1, 1, "$", "&", ":", false),
         PICMessageLong("PIC Simple long", "Simple PIC message, long form", 2, 2, "$", "&", ":", true),
         PICMessageVariable("PIC Simple variable", "Variable PIC message", 1, -1, "$", "&", ":", true);
 
         public static final int VARIABLE = -1;
         public static final int NONE = -2;
-
-        // TODO acknowledge stuff
 
         private final String name;
         private final String description;
@@ -434,7 +434,7 @@ public class SerialManager {
                 }
             }
 
-            // Message
+            // SerialMessage
             if (messageBytes != VARIABLE) {
                 if (messageBytes == 1) {
                     builder.append("M");
@@ -487,6 +487,10 @@ public class SerialManager {
 
         public String getSeparator() {
             return separator;
+        }
+
+        public boolean isAcknowledge() {
+            return acknowledge;
         }
     }
 }
