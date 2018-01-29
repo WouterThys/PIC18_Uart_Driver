@@ -3,7 +3,7 @@ package com.waldo.serial.gui;
 import com.fazecast.jSerialComm.SerialPort;
 import com.waldo.serial.classes.SerialListener;
 import com.waldo.serial.classes.SerialManager;
-import com.waldo.serial.gui.dialogs.SerialSettingsDialog;
+import com.waldo.serial.gui.dialogs.serialsettingsdialog.SerialSettingsDialog;
 import com.waldo.utils.GuiUtils;
 import com.waldo.utils.ResourceManager;
 import com.waldo.utils.icomponents.IDialog;

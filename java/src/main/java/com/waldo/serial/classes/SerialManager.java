@@ -172,6 +172,9 @@ public class SerialManager {
     private List<String> txMessageList = new ArrayList<>();
     private List<String> rxMessageList = new ArrayList<>();
 
+    // Settings
+    private String messageEnd = "\n";
+
     /*
      *                  METHODS
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -181,17 +184,6 @@ public class SerialManager {
 
     public void registerShutDownHook() {
         Runtime.getRuntime().addShutdownHook(new Thread(this::close));
-    }
-
-    public void close() {
-        if (serialPort != null) {
-            try {
-                serialPort.removeDataListener();
-                serialPort.closePort();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     public List<SerialPort> getSerialPorts() {
@@ -211,6 +203,17 @@ public class SerialManager {
             }
         }
         return null;
+    }
+
+    public String getMessageEnd() {
+        if (messageEnd == null) {
+            messageEnd = "";
+        }
+        return messageEnd;
+    }
+
+    public void setMessageEnd(String messageEnd) {
+        this.messageEnd = messageEnd;
     }
 
     public void clearRxMessages() {
@@ -238,6 +241,17 @@ public class SerialManager {
             return serialListenerList.get(0);
         }
         return null;
+    }
+
+    public void close() {
+        if (serialPort != null) {
+            try {
+                serialPort.removeDataListener();
+                serialPort.closePort();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public boolean open(SerialPort port) {
@@ -350,10 +364,17 @@ public class SerialManager {
         String newMessage = new String(newData);
         if (!newMessage.isEmpty()) {
             inputMessage += new String(newData);
-            if (inputMessage.charAt(inputMessage.length()-1) == '\n') {
+
+            if (getMessageEnd().isEmpty()) {
                 rxMessageList.add(inputMessage);
                 onReceived(inputMessage);
                 inputMessage = "";
+            } else {
+                if (inputMessage.endsWith(messageEnd)) {
+                    rxMessageList.add(inputMessage);
+                    onReceived(inputMessage);
+                    inputMessage = "";
+                }
             }
         }
     }
