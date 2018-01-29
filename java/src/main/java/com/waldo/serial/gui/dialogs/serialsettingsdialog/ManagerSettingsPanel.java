@@ -1,24 +1,31 @@
 package com.waldo.serial.gui.dialogs.serialsettingsdialog;
 
+import com.waldo.serial.classes.SerialManager.MessageTypes;
 import com.waldo.utils.GuiUtils;
-import com.waldo.utils.icomponents.ICheckBox;
+import com.waldo.utils.icomponents.IComboBox;
+import com.waldo.utils.icomponents.ILabel;
+import com.waldo.utils.icomponents.ITextArea;
 import com.waldo.utils.icomponents.ITextField;
 
 import javax.swing.*;
-
-import static com.waldo.serial.classes.SerialManager.serMgr;
+import java.awt.*;
+import java.awt.event.ItemEvent;
 
 class ManagerSettingsPanel extends JPanel implements GuiUtils.GuiInterface {
     
     /*
      *                  COMPONENTS
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-    private ICheckBox useMessageEndCb;
-    private ITextField messageEndTf;
+    private final DefaultComboBoxModel<MessageTypes> messageTypeCbModel = new DefaultComboBoxModel<>(MessageTypes.values());
+    private final IComboBox<MessageTypes> messageTypeCb = new IComboBox<>(messageTypeCbModel);
+
+    private final ITextArea descriptionTa = new ITextArea(false);
+    private final ITextField templateTf = new ITextField(false);
 
     /*
      *                  VARIABLES
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    private MessageTypes selectedMessageType;
 
     /*
      *                  CONSTRUCTOR
@@ -31,58 +38,65 @@ class ManagerSettingsPanel extends JPanel implements GuiUtils.GuiInterface {
     /*
      *                  METHODS
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-    private void setMessageEndTf(String messageEnd) {
-        if (messageEnd != null && !messageEnd.isEmpty()) {
-            if (messageEnd.equals("\n")) {
-                messageEndTf.setText("<new line>");
-            } else {
-                messageEndTf.setText(messageEnd);
-            }
-        } else {
-            messageEndTf.setText("");
-        }
-    }
 
-    public String getMessageEnd() {
-        if (useMessageEndCb.isSelected()) {
-            return messageEndTf.getText();
-        }
-        return "";
+    MessageTypes getSelectedMessageType() {
+        return selectedMessageType;
     }
 
     /*
-     *                  LISTENERS
-     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+         *                  LISTENERS
+         * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     @Override
     public void initializeComponents() {
-        useMessageEndCb = new ICheckBox();
-        useMessageEndCb.addActionListener(e -> messageEndTf.setEnabled(useMessageEndCb.isSelected()));
-        messageEndTf = new ITextField(false, 7);
+        descriptionTa.setBorder(templateTf.getBorder());
+        descriptionTa.setEnabled(false);
+        descriptionTa.setLineWrap(true);
+        descriptionTa.setWrapStyleWord(true);
+
+        messageTypeCb.addItemListener(e -> {
+            if (e.getStateChange() == ItemEvent.SELECTED) {
+                selectedMessageType = (MessageTypes) messageTypeCb.getSelectedItem();
+                if (selectedMessageType != null) {
+                    descriptionTa.setText(selectedMessageType.getDescription());
+                    templateTf.setText(selectedMessageType.getTemplate());
+                } else {
+                    descriptionTa.setText("");
+                    templateTf.setText("");
+                }
+            }
+        });
     }
 
     @Override
     public void initializeLayouts() {
-        //setLayout(new BorderLayout());
+        JPanel panel1 = new JPanel(new BorderLayout());
+        JPanel panel2 = new JPanel(new BorderLayout());
+        JPanel panel3 = new JPanel(new BorderLayout());
+        JPanel panel4 = new JPanel();
 
-        JPanel panel = new JPanel();
-        GuiUtils.GridBagHelper gbc = new GuiUtils.GridBagHelper(panel, 140);
-        gbc.addLine("Use message end: ", useMessageEndCb);
-        gbc.addLine("Message end: ", messageEndTf);
+        GuiUtils.GridBagHelper gbc = new GuiUtils.GridBagHelper(panel4, 10);
+        gbc.addLine("", new ILabel("C = Command"));
+        gbc.addLine("", new ILabel("M = Message"));
+        gbc.addLine("", new ILabel("L = Length"));
+        gbc.addLine("", new ILabel("A = Acknowledge"));
 
-        add(panel);
+        panel1.add(messageTypeCb, BorderLayout.NORTH);
+        panel1.add(descriptionTa, BorderLayout.CENTER);
+
+        panel2.add(panel1, BorderLayout.CENTER);
+        panel2.add(templateTf, BorderLayout.SOUTH);
+
+        panel3.add(panel2, BorderLayout.CENTER);
+        panel3.add(panel4, BorderLayout.SOUTH);
+
+        add(panel3);
     }
 
     @Override
     public void updateComponents(Object... args) {
-        String currentEnd = serMgr().getMessageEnd();
-        if (!currentEnd.isEmpty()) {
-            setMessageEndTf(currentEnd);
-            messageEndTf.setEnabled(true);
-            useMessageEndCb.setSelected(true);
-        } else {
-            messageEndTf.setText("");
-            messageEndTf.setEnabled(false);
-            useMessageEndCb.setSelected(false);
+        if (args.length > 0 && args[0] != null) {
+            selectedMessageType = (MessageTypes) args[0];
+            messageTypeCb.setSelectedItem(selectedMessageType);
         }
     }
 }

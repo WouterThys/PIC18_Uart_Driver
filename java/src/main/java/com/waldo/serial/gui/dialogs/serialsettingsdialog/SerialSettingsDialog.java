@@ -29,7 +29,7 @@ public class SerialSettingsDialog extends SerialSettingsDialogLayout {
     }
 
     private void copyManagerValues() {
-        serMgr().setMessageEnd(managerSettingsPanel.getMessageEnd());
+        serMgr().setMessageType(managerSettingsPanel.getSelectedMessageType());
     }
 
     public SerialPort getSerialPort() {

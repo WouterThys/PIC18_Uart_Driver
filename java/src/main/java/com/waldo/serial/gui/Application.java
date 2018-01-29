@@ -25,10 +25,10 @@ public class Application extends IFrame implements SerialListener {
 
 
     // Tool bar
-    ILabel statusLbl;
-    ILabel infoLbl;
-    AbstractAction settingsActions;
-    AbstractAction clearAction;
+    private ILabel statusLbl;
+    private ILabel infoLbl;
+    private AbstractAction settingsActions;
+    private AbstractAction clearAction;
 
     private MessagePanel messagePanel;
 

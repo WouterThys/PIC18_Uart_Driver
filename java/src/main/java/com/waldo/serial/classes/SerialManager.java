@@ -11,19 +11,6 @@ import java.util.List;
 
 public class SerialManager {
 
-    /*
-     *                  SINGLETON
-     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-    private static final SerialManager Instance = new SerialManager();
-    public static SerialManager serMgr() {
-        return Instance;
-    }
-    private SerialManager() {
-    }
-
-    /*
-     *
-     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     public enum ParityTypes {
         None  (SerialPort.NO_PARITY),
         Odd   (SerialPort.ODD_PARITY),
@@ -165,6 +152,16 @@ public class SerialManager {
     }
 
     /*
+     *                  SINGLETON
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    private static final SerialManager Instance = new SerialManager();
+    public static SerialManager serMgr() {
+        return Instance;
+    }
+    private SerialManager() {
+    }
+
+    /*
      *                  VARIABLES
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     private List<SerialListener> serialListenerList = new ArrayList<>();
@@ -173,7 +170,7 @@ public class SerialManager {
     private List<String> rxMessageList = new ArrayList<>();
 
     // Settings
-    private String messageEnd = "\n";
+    private MessageTypes messageType;
 
     /*
      *                  METHODS
@@ -205,15 +202,12 @@ public class SerialManager {
         return null;
     }
 
-    public String getMessageEnd() {
-        if (messageEnd == null) {
-            messageEnd = "";
-        }
-        return messageEnd;
+    public MessageTypes getMessageType() {
+        return messageType;
     }
 
-    public void setMessageEnd(String messageEnd) {
-        this.messageEnd = messageEnd;
+    public void setMessageType(MessageTypes messageType) {
+        this.messageType = messageType;
     }
 
     public void clearRxMessages() {
@@ -365,17 +359,134 @@ public class SerialManager {
         if (!newMessage.isEmpty()) {
             inputMessage += new String(newData);
 
-            if (getMessageEnd().isEmpty()) {
+            if (getMessageType().stopChar.isEmpty()) {
                 rxMessageList.add(inputMessage);
                 onReceived(inputMessage);
                 inputMessage = "";
             } else {
-                if (inputMessage.endsWith(messageEnd)) {
+                if (inputMessage.endsWith(getMessageType().stopChar)) {
                     rxMessageList.add(inputMessage);
                     onReceived(inputMessage);
                     inputMessage = "";
                 }
             }
+        }
+    }
+
+
+    public enum MessageTypes {
+        Text ("Simple text", "", -2, -2, "", "", "", false),
+        PICMessageShort("PIC Simple short", "Simple PIC message, short form", 1, 1, "$", "&", ":", true),
+        PICMessageLong("PIC Simple long", "Simple PIC message, long form", 2, 2, "$", "&", ":", true),
+        PICMessageVariable("PIC Simple variable", "Variable PIC message", 1, -1, "$", "&", ":", true);
+
+        public static final int VARIABLE = -1;
+        public static final int NONE = -2;
+
+        // TODO acknowledge stuff
+
+        private final String name;
+        private final String description;
+
+        private final int commandBytes;
+        private final int messageBytes;
+        private final String startChar;
+        private final String stopChar;
+        private final String separator;
+
+        private final boolean acknowledge;
+
+        MessageTypes(String name, String description, int commandBytes, int messageBytes, String startChar, String stopChar, String separator, boolean acknowledge) {
+            this.name = name;
+            this.description = description;
+            this.commandBytes = commandBytes;
+            this.messageBytes = messageBytes;
+            this.startChar = startChar;
+            this.stopChar = stopChar;
+            this.separator = separator;
+            this.acknowledge = acknowledge;
+        }
+
+        @Override
+        public String toString() {
+            return name;
+        }
+
+        public String getTemplate() {
+            StringBuilder builder = new StringBuilder();
+
+            // Start
+            builder.append(startChar);
+
+            // Command
+            if (commandBytes != VARIABLE) {
+                if (commandBytes == 1) {
+                    builder.append("C");
+                } else {
+                    for (int i = 0; i < commandBytes; i++) {
+                        builder.append("C").append(i);
+                    }
+                }
+                builder.append(separator);
+                if (messageBytes == VARIABLE) {
+                    builder.append("L");
+                    builder.append(separator);
+                }
+            }
+
+            // Message
+            if (messageBytes != VARIABLE) {
+                if (messageBytes == 1) {
+                    builder.append("M");
+                } else {
+                    for (int i = 0; i < messageBytes; i++) {
+                        builder.append("M").append(i);
+                    }
+                }
+            } else {
+                if (commandBytes != VARIABLE) {
+                    builder.append("M0M1M2..ML");
+                }
+            }
+
+            // Acknowledge
+            if (acknowledge) {
+                builder.append(":");
+                builder.append("A");
+            }
+
+            // Stop
+            builder.append(stopChar);
+
+            return builder.toString();
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public int getCommandBytes() {
+            return commandBytes;
+        }
+
+        public int getMessageBytes() {
+            return messageBytes;
+        }
+
+        public String getStartChar() {
+            return startChar;
+        }
+
+        public String getStopChar() {
+            return stopChar;
+        }
+
+        public String getSeparator() {
+            return separator;
         }
     }
 }

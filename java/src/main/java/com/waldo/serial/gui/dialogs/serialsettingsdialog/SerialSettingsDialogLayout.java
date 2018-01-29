@@ -7,6 +7,8 @@ import com.waldo.utils.icomponents.IDialog;
 import javax.swing.*;
 import java.awt.*;
 
+import static com.waldo.serial.classes.SerialManager.serMgr;
+
 
 abstract class SerialSettingsDialogLayout extends IDialog {
 
@@ -71,6 +73,6 @@ abstract class SerialSettingsDialogLayout extends IDialog {
         }
 
         portSettingsPanel.updateComponents(serialPort);
-        managerSettingsPanel.updateComponents();
+        managerSettingsPanel.updateComponents(serMgr().getMessageType());
     }
 }
