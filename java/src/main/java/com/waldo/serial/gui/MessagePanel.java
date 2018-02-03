@@ -17,6 +17,7 @@ import static com.waldo.serial.classes.SerialManager.serMgr;
 
 public class MessagePanel extends IPanel {
 
+    JScrollPane scrollPane;
     private final ITextPane textPn = new ITextPane();;
     private ITextField inputTf;
     private AbstractAction sendAction;
@@ -46,6 +47,8 @@ public class MessagePanel extends IPanel {
             StyleConstants.setForeground(messageStyle, Color.blue);
             try {
                 messageDoc.insertString(messageDoc.getLength(), m, messageStyle);
+                JScrollBar vertical = scrollPane.getVerticalScrollBar();
+                vertical.setValue(vertical.getMaximum());
             } catch (BadLocationException e) {
                 e.printStackTrace();
             }
@@ -58,6 +61,8 @@ public class MessagePanel extends IPanel {
             StyleConstants.setForeground(messageStyle, Color.green);
             try {
                 messageDoc.insertString(messageDoc.getLength(), m, messageStyle);
+                JScrollBar vertical = scrollPane.getVerticalScrollBar();
+                vertical.setValue(vertical.getMaximum());
             } catch (BadLocationException e) {
                 e.printStackTrace();
             }
@@ -100,7 +105,7 @@ public class MessagePanel extends IPanel {
         setLayout(new BorderLayout());
 
         JPanel sendPnl = GuiUtils.createComponentWithActions(inputTf, sendAction);
-        JScrollPane scrollPane = new JScrollPane(textPn);
+        scrollPane = new JScrollPane(textPn);
         scrollPane.setPreferredSize(new Dimension(600, 400));
 
         add(scrollPane, BorderLayout.CENTER);

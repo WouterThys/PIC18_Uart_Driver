@@ -7,588 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0495e1f5-6b88-4b0b-b38b-92f915e883e8" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.lock" afterPath="$PROJECT_DIR$/../Interface/.metadata/.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/11/d0049107fd9d00161ae5945dcaefb09d" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/11/d0049107fd9d00161ae5945dcaefb09d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/19/b0638907fd9d00161ae5945dcaefb09d" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/19/b0638907fd9d00161ae5945dcaefb09d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/49/709f2736019a00161484e2e15e64a428" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/49/709f2736019a00161484e2e15e64a428" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/5d/a01e8e07fd9d00161ae5945dcaefb09d" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/5d/a01e8e07fd9d00161ae5945dcaefb09d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/90/c0d763518c980016186bbe439f971d27" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/90/c0d763518c980016186bbe439f971d27" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/f6/7098ede3029a00161484e2e15e64a428" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/f6/7098ede3029a00161484e2e15e64a428" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/f8/90d99207fd9d00161ae5945dcaefb09d" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/f8/90d99207fd9d00161ae5945dcaefb09d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.projects/UartInterface/.indexes/e4/26/history.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.projects/UartInterface/.indexes/e4/26/history.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.projects/UartInterface/.indexes/e4/88/history.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.projects/UartInterface/.indexes/e4/88/history.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.projects/UartInterface/.indexes/e4/history.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.projects/UartInterface/.indexes/e4/history.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.projects/UartInterface/.indexes/e4/properties.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.projects/UartInterface/.indexes/e4/properties.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.projects/UartInterface/.markers" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.projects/UartInterface/.markers" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.projects/UartInterface/org.eclipse.jdt.core/state.dat" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.projects/UartInterface/org.eclipse.jdt.core/state.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.root/22.tree" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.root/22.tree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/1259291233.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/1259291233.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/1513993030.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/1513993030.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/2195268926.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/2195268926.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/2259717368.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/2259717368.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/2307328643.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/2307328643.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/2426646370.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/2426646370.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/2598035366.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/2598035366.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/3542660237.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/3542660237.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/3841566188.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/3841566188.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/3900037835.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/3900037835.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/392775124.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/392775124.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/3938652823.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/3938652823.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/460152253.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/460152253.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/664741535.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/664741535.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/989528713.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/989528713.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/invalidArchivesCache" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/invalidArchivesCache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.wb.core/descriptions/org.eclipse.wb.swing.cached-presentations.dat" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.wb.core/descriptions/org.eclipse.wb.swing.cached-presentations.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/Interface.jar" afterPath="$PROJECT_DIR$/../Interface/Interface.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.lock" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.resources/.root/1.tree" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.resources/.root/1.tree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.core/invalidArchivesCache" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.core/invalidArchivesCache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame$1.class" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame$2.class" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame$3.class" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame$4.class" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame$5.class" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame$6.class" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame$7.class" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame.class" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/InterfaceFrame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/SerialInterface$SerialReader.class" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/SerialInterface$SerialReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/SerialInterface$SerialWriter.class" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/SerialInterface$SerialWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/SerialInterface.class" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/SerialInterface.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/SerialUartInterface.class" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/SerialUartInterface.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/blueled.png" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/blueled.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/classes/Message.class" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/classes/Message.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/greenled.png" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/greenled.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/redled.png" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/redled.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/bin/trash.png" afterPath="$PROJECT_DIR$/../Interface/UartInterface/bin/trash.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/src/blueled.png" afterPath="$PROJECT_DIR$/../Interface/UartInterface/src/blueled.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/src/greenled.png" afterPath="$PROJECT_DIR$/../Interface/UartInterface/src/greenled.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/src/redled.png" afterPath="$PROJECT_DIR$/../Interface/UartInterface/src/redled.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/src/trash.png" afterPath="$PROJECT_DIR$/../Interface/UartInterface/src/trash.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/resources/inherit.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/resources/inherit.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/blue-ball-small.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/blue-ball-small.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/blue-ball.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/blue-ball.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/class-index.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/class-index.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/constructor-index.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/constructor-index.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/constructors.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/constructors.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/exception-index.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/exception-index.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/green-ball-small.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/green-ball-small.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/green-ball.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/green-ball.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/interface-index.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/interface-index.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/magenta-ball-small.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/magenta-ball-small.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/magenta-ball.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/magenta-ball.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/method-index.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/method-index.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/methods.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/methods.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/package-index.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/package-index.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/red-ball-small.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/red-ball-small.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/red-ball.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/red-ball.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/variable-index.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/variable-index.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/variables.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/variables.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/yellow-ball-small.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/yellow-ball-small.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/yellow-ball.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/images/yellow-ball.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/resources/inherit.gif" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/resources/inherit.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/pdf/Portmapping_Example.pdf" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/pdf/Portmapping_Example.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/BaudRate.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/BaudRate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/BlackBox.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/BlackBox.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/BufferSize.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/BufferSize.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ByteCounter.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ByteCounter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ByteStatistics.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ByteStatistics.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ConvertedOutputStream.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ConvertedOutputStream.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/CtlSigDisplay.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/CtlSigDisplay.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/DataBits.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/DataBits.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/FlowCtlDisplay.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/FlowCtlDisplay.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/OneWayMouseListener.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/OneWayMouseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/Parity.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/Parity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveFraming.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveFraming.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveOptions.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveOptions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveThreshold.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveThreshold.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveTimeout.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveTimeout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/Receiver.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/Receiver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/SerialPortDisplay.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/SerialPortDisplay.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/StopBits.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/StopBits.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ToggleLabel.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ToggleLabel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ToggleMouseListener.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ToggleMouseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/Transmitter.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/Transmitter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/NullDriver/NullDriver.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/NullDriver/NullDriver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/NullDriver/NullSerialPort.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/NullDriver/NullSerialPort.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/BufferSize.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/BufferSize.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ByteCounter.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ByteCounter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ByteStatistics.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ByteStatistics.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/CtlSigDisplay.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/CtlSigDisplay.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/LPTMode.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/LPTMode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ParallelBlackBox.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ParallelBlackBox.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ParallelPortDisplay.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ParallelPortDisplay.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveFraming.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveFraming.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveOptions.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveOptions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveThreshold.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveThreshold.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveTimeout.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveTimeout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/Receiver.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/Receiver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/Transmitter.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/Transmitter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/AlertDialog.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/AlertDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/PortRequestedDialog.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/PortRequestedDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialConnection$KeyHandler.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialConnection$KeyHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialConnection.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialConnection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialConnectionException.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialConnectionException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialDemo$CloseHandler.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialDemo$CloseHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialDemo$ConfigurationPanel.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialDemo$ConfigurationPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialDemo.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialDemo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialParameters.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialParameters.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/Simple/SimpleRead.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/Simple/SimpleRead.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/Simple/SimpleWrite.class" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/Simple/SimpleWrite.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/jar/comm.jar" afterPath="$PROJECT_DIR$/../Interface/commapi/jar/comm.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/jar/commtest.jar" afterPath="$PROJECT_DIR$/../Interface/commapi/jar/commtest.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/jar/tools/BlackBox.jar" afterPath="$PROJECT_DIR$/../Interface/commapi/jar/tools/BlackBox.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/jar/tools/ParallelBlackBox.jar" afterPath="$PROJECT_DIR$/../Interface/commapi/jar/tools/ParallelBlackBox.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/lib/libLinuxSerialParallel.so" afterPath="$PROJECT_DIR$/../Interface/commapi/lib/libLinuxSerialParallel.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/lib/libLinuxSerialParallel_g.so" afterPath="$PROJECT_DIR$/../Interface/commapi/lib/libLinuxSerialParallel_g.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/lib/libSolarisSerialParallel.so" afterPath="$PROJECT_DIR$/../Interface/commapi/lib/libSolarisSerialParallel.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/lib/libSolarisSerialParallel_g.so" afterPath="$PROJECT_DIR$/../Interface/commapi/lib/libSolarisSerialParallel_g.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.elf" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.elf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.obj" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.rlf" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.rlf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.elf" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.elf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.obj" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.rlf" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.rlf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/java_jar/Serialator.jar" afterPath="$PROJECT_DIR$/out/artifacts/java_jar/Serialator.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/libs/Utilities.jar" afterPath="$PROJECT_DIR$/src/main/libs/Utilities.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/icons/balls/black.png" afterPath="$PROJECT_DIR$/src/main/resources/icons/balls/black.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/icons/balls/blue.png" afterPath="$PROJECT_DIR$/src/main/resources/icons/balls/blue.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/icons/balls/blue2.png" afterPath="$PROJECT_DIR$/src/main/resources/icons/balls/blue2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/icons/balls/green.png" afterPath="$PROJECT_DIR$/src/main/resources/icons/balls/green.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/icons/balls/green2.png" afterPath="$PROJECT_DIR$/src/main/resources/icons/balls/green2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/icons/balls/orange.png" afterPath="$PROJECT_DIR$/src/main/resources/icons/balls/orange.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/icons/balls/red.png" afterPath="$PROJECT_DIR$/src/main/resources/icons/balls/red.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/icons/balls/red2.png" afterPath="$PROJECT_DIR$/src/main/resources/icons/balls/red2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/icons/balls/yellow.png" afterPath="$PROJECT_DIR$/src/main/resources/icons/balls/yellow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/icons/balls/yellow2.png" afterPath="$PROJECT_DIR$/src/main/resources/icons/balls/yellow2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/Application$1.class" afterPath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/Application$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/Application$2.class" afterPath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/Application$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/icons/balls/black.png" afterPath="$PROJECT_DIR$/target/classes/icons/balls/black.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/icons/balls/blue.png" afterPath="$PROJECT_DIR$/target/classes/icons/balls/blue.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/icons/balls/blue2.png" afterPath="$PROJECT_DIR$/target/classes/icons/balls/blue2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/icons/balls/green.png" afterPath="$PROJECT_DIR$/target/classes/icons/balls/green.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/icons/balls/green2.png" afterPath="$PROJECT_DIR$/target/classes/icons/balls/green2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/icons/balls/orange.png" afterPath="$PROJECT_DIR$/target/classes/icons/balls/orange.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/icons/balls/red.png" afterPath="$PROJECT_DIR$/target/classes/icons/balls/red.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/icons/balls/red2.png" afterPath="$PROJECT_DIR$/target/classes/icons/balls/red2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/icons/balls/yellow.png" afterPath="$PROJECT_DIR$/target/classes/icons/balls/yellow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/icons/balls/yellow2.png" afterPath="$PROJECT_DIR$/target/classes/icons/balls/yellow2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.log" afterPath="$PROJECT_DIR$/../Interface/.metadata/.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/10/c0309170049e00161342aa148321e04a" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/10/c0309170049e00161342aa148321e04a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/13/b00a99b18898001617b58d0eba2032e5" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/13/b00a99b18898001617b58d0eba2032e5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/15/003a2cfce49d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/15/003a2cfce49d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/15/00bdc142ea9d00161a8ed7e430177283" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/15/00bdc142ea9d00161a8ed7e430177283" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/17/c0442e0f8d980016186bbe439f971d27" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/17/c0442e0f8d980016186bbe439f971d27" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/1a/6047f38ed29d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/1a/6047f38ed29d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/1c/f001a3d5ff9d001618b4b9ff093c1608" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/1c/f001a3d5ff9d001618b4b9ff093c1608" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/27/60ee4724c99d00161b628aeb981292bd" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/27/60ee4724c99d00161b628aeb981292bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/29/a08f8c1a9498001616c4e09a10c25380" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/29/a08f8c1a9498001616c4e09a10c25380" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/3/602c57b5029a00161484e2e15e64a428" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/3/602c57b5029a00161484e2e15e64a428" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/30/b079da40da9d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/30/b079da40da9d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/30/d09c2d00cb9d00161b628aeb981292bd" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/30/d09c2d00cb9d00161b628aeb981292bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/34/7056c2989998001616c4e09a10c25380" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/34/7056c2989998001616c4e09a10c25380" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/34/805cbe46de9d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/34/805cbe46de9d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/3b/70355cb5029a00161484e2e15e64a428" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/3b/70355cb5029a00161484e2e15e64a428" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/3c/002ee4aee59d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/3c/002ee4aee59d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/42/30b1ed6ec89d00161d92c1deaa16051c" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/42/30b1ed6ec89d00161d92c1deaa16051c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/47/a00c1cbda59b00161c98f780418deeb1" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/47/a00c1cbda59b00161c98f780418deeb1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/47/a0659c9f8898001617b58d0eba2032e5" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/47/a0659c9f8898001617b58d0eba2032e5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/49/d0bdbd06d29d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/49/d0bdbd06d29d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/4b/c0b5b1e0d09d00161837f88a214336ed" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/4b/c0b5b1e0d09d00161837f88a214336ed" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/4c/20ea64d7e79d0016135fae970bb51d18" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/4c/20ea64d7e79d0016135fae970bb51d18" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/4d/e08cf0f3d29d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/4d/e08cf0f3d29d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/5/10a0675de69d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/5/10a0675de69d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/50/102cabac029a00161484e2e15e64a428" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/50/102cabac029a00161484e2e15e64a428" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/50/9044b1cbe69d0016135fae970bb51d18" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/50/9044b1cbe69d0016135fae970bb51d18" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/53/b08eae14be9d001619d2d1f86f2a07f8" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/53/b08eae14be9d001619d2d1f86f2a07f8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/53/e05208c1d29d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/53/e05208c1d29d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/55/e04ba088ca9d00161b628aeb981292bd" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/55/e04ba088ca9d00161b628aeb981292bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/57/50df0078ea9d00161a8ed7e430177283" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/57/50df0078ea9d00161a8ed7e430177283" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/59/e0bc3024c99d00161b628aeb981292bd" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/59/e0bc3024c99d00161b628aeb981292bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/5c/404517608c980016186bbe439f971d27" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/5c/404517608c980016186bbe439f971d27" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/5c/c0ebb4b9039a00161484e2e15e64a428" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/5c/c0ebb4b9039a00161484e2e15e64a428" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/5e/70ffc103d19d00161837f88a214336ed" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/5e/70ffc103d19d00161837f88a214336ed" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/60/604e50e4d29d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/60/604e50e4d29d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/62/204842f5fc9d00161ae5945dcaefb09d" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/62/204842f5fc9d00161ae5945dcaefb09d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/64/50bfcc43039a00161484e2e15e64a428" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/64/50bfcc43039a00161484e2e15e64a428" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/66/c062290f8d980016186bbe439f971d27" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/66/c062290f8d980016186bbe439f971d27" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/69/c0e415f0a39b00161c98f780418deeb1" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/69/c0e415f0a39b00161c98f780418deeb1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/6d/90e1a812e89d0016135fae970bb51d18" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/6d/90e1a812e89d0016135fae970bb51d18" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/72/50708312c99d00161b628aeb981292bd" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/72/50708312c99d00161b628aeb981292bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/73/e0f415a2dd9d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/73/e0f415a2dd9d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/74/20a0f505049e00161342aa148321e04a" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/74/20a0f505049e00161342aa148321e04a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/75/c07b3537cc9d00161837f88a214336ed" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/75/c07b3537cc9d00161837f88a214336ed" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/75/d04da76ed29d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/75/d04da76ed29d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/7d/e0a9590a9b98001616c4e09a10c25380" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/7d/e0a9590a9b98001616c4e09a10c25380" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/7f/f048eddfff9d001618b4b9ff093c1608" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/7f/f048eddfff9d001618b4b9ff093c1608" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/81/d06f9cd8d39d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/81/d06f9cd8d39d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/81/d0ed1af0a39b00161c98f780418deeb1" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/81/d0ed1af0a39b00161c98f780418deeb1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/84/90e525c4dd9d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/84/90e525c4dd9d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/87/00d921bda59b00161c98f780418deeb1" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/87/00d921bda59b00161c98f780418deeb1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/89/d0c62cc8e89d0016135fae970bb51d18" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/89/d0c62cc8e89d0016135fae970bb51d18" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/89/e09afaf0d19d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/89/e09afaf0d19d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/8c/f0797169fd9d00161ae5945dcaefb09d" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/8c/f0797169fd9d00161ae5945dcaefb09d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/9/f00fccbefd9d00161ae5945dcaefb09d" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/9/f00fccbefd9d00161ae5945dcaefb09d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/9b/00886ebce99d00161a8ed7e430177283" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/9b/00886ebce99d00161a8ed7e430177283" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/9b/d097d0d7039a00161484e2e15e64a428" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/9b/d097d0d7039a00161484e2e15e64a428" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/9d/30913374ca9d00161b628aeb981292bd" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/9d/30913374ca9d00161b628aeb981292bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/9d/50293f01ca9d00161b628aeb981292bd" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/9d/50293f01ca9d00161b628aeb981292bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/9d/a00bb005049e00161342aa148321e04a" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/9d/a00bb005049e00161342aa148321e04a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a/10194ebecb9d00161837f88a214336ed" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a/10194ebecb9d00161837f88a214336ed" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a2/9026c5fafd9d00161ae5945dcaefb09d" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a2/9026c5fafd9d00161ae5945dcaefb09d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a3/7020aca69b98001616c4e09a10c25380" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a3/7020aca69b98001616c4e09a10c25380" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a5/10398062e99d00161a8ed7e430177283" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a5/10398062e99d00161a8ed7e430177283" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a5/70c40b82cb9d00161b628aeb981292bd" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a5/70c40b82cb9d00161b628aeb981292bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a6/208ecc6de69d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a6/208ecc6de69d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a6/d014a8220a9a001619a2a7546aa65197" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a6/d014a8220a9a001619a2a7546aa65197" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a9/80823c1fcb9d00161b628aeb981292bd" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/a9/80823c1fcb9d00161b628aeb981292bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/aa/40aecc0ee79d0016135fae970bb51d18" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/aa/40aecc0ee79d0016135fae970bb51d18" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/ac/30bf22d2db9d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/ac/30bf22d2db9d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/ae/9050a747a79b00161c98f780418deeb1" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/ae/9050a747a79b00161c98f780418deeb1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/b/f0d1f3ced19d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/b/f0d1f3ced19d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/b3/e0c09863dc9d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/b3/e0c09863dc9d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/b4/e0f7ffbf049e00161342aa148321e04a" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/b4/e0f7ffbf049e00161342aa148321e04a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/ba/e00c48cac09d00161d92c1deaa16051c" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/ba/e00c48cac09d00161d92c1deaa16051c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/ba/e0b17ad5dd9d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/ba/e0b17ad5dd9d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/be/10d08429ff9d00161ae5945dcaefb09d" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/be/10d08429ff9d00161ae5945dcaefb09d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/c0/70b11e68cc9d00161837f88a214336ed" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/c0/70b11e68cc9d00161837f88a214336ed" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/c2/801dfd0dcc9d00161837f88a214336ed" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/c2/801dfd0dcc9d00161837f88a214336ed" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/c8/003369e1dd9d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/c8/003369e1dd9d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/cb/4008fc0bca9d00161b628aeb981292bd" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/cb/4008fc0bca9d00161b628aeb981292bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/cc/e0f8e434c89d00161d92c1deaa16051c" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/cc/e0f8e434c89d00161d92c1deaa16051c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/cf/e0f31913dd9d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/cf/e0f31913dd9d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/cf/f0872813df9d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/cf/f0872813df9d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/d/30a04ebc9498001616c4e09a10c25380" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/d/30a04ebc9498001616c4e09a10c25380" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/d/5090f9fd9c98001616c4e09a10c25380" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/d/5090f9fd9c98001616c4e09a10c25380" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/d0/b096b080ca9d00161b628aeb981292bd" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/d0/b096b080ca9d00161b628aeb981292bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/d5/203dd6efe79d0016135fae970bb51d18" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/d5/203dd6efe79d0016135fae970bb51d18" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/d9/30693300cb9d00161b628aeb981292bd" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/d9/30693300cb9d00161b628aeb981292bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/dc/40a426fe019e001610d1cd2e13931127" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/dc/40a426fe019e001610d1cd2e13931127" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/de/90454d24c99d00161b628aeb981292bd" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/de/90454d24c99d00161b628aeb981292bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/df/20f19becd09d00161837f88a214336ed" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/df/20f19becd09d00161837f88a214336ed" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/e1/a04e0678cb9d00161b628aeb981292bd" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/e1/a04e0678cb9d00161b628aeb981292bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/e5/a0cfcb07a79b00161c98f780418deeb1" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/e5/a0cfcb07a79b00161c98f780418deeb1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/e9/d0679240a39b00161c98f780418deeb1" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/e9/d0679240a39b00161c98f780418deeb1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/ef/905eace0d09d00161837f88a214336ed" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/ef/905eace0d09d00161837f88a214336ed" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/ef/a0eaae74e99d00161a8ed7e430177283" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/ef/a0eaae74e99d00161a8ed7e430177283" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/f2/b0f3e54abe9d001619d2d1f86f2a07f8" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/f2/b0f3e54abe9d001619d2d1f86f2a07f8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/f4/90eb0869e69d00161b678649b5f1f70e" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/f4/90eb0869e69d00161b678649b5f1f70e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/f6/50a0fe0bca9d00161b628aeb981292bd" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/f6/50a0fe0bca9d00161b628aeb981292bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/f8/d0d792010a9a001619a2a7546aa65197" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/f8/d0d792010a9a001619a2a7546aa65197" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/fd/e0717297ff9d00161ae5945dcaefb09d" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.resources/.history/fd/e0717297ff9d00161ae5945dcaefb09d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.pde.api.tools.prefs" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.pde.api.tools.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.pde.core.prefs" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.pde.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.tm.terminal.prefs" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.tm.terminal.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wb.core.prefs" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wb.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.debug.core/.launches/InterfaceFrame.launch" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.debug.core/.launches/InterfaceFrame.launch" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.debug.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.debug.ui/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.equinox.p2.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.equinox.p2.ui/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.debug.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.debug.ui/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/UartInterface/2016/10/43/refactorings.history" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/UartInterface/2016/10/43/refactorings.history" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/UartInterface/2016/10/43/refactorings.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/UartInterface/2016/10/43/refactorings.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/UartInterface/2016/10/44/refactorings.history" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/UartInterface/2016/10/44/refactorings.history" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/UartInterface/2016/10/44/refactorings.index" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/UartInterface/2016/10/44/refactorings.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ltk.ui.refactoring/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ltk.ui.refactoring/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.pde.core/.local_targets/1477155390736.target" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.pde.core/.local_targets/1477155390736.target" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.pde.core/SavedExternalPluginList.txt" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.pde.core/SavedExternalPluginList.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.tcf.te.ui.swt/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.tcf.te.ui.swt/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.tcf.te.ui/viewerstates.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.tcf.te.ui/viewerstates.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ui.workbench/workbench.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ui.workbench/workbench.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.wb.core/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.wb.core/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.wb.core/palettes/org.eclipse.wb.swing.commands" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.wb.core/palettes/org.eclipse.wb.swing.commands" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.wb.swing/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Interface/.metadata/.plugins/org.eclipse.wb.swing/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.metadata/version.ini" afterPath="$PROJECT_DIR$/../Interface/.metadata/version.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/README" afterPath="$PROJECT_DIR$/../Interface/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.classpath" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/version.ini" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.metadata/version.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.project" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/../Interface/UartInterface/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/src/InterfaceFrame.java" afterPath="$PROJECT_DIR$/../Interface/UartInterface/src/InterfaceFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/src/SerialInterface.java" afterPath="$PROJECT_DIR$/../Interface/UartInterface/src/SerialInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/src/SerialUartInterface.java" afterPath="$PROJECT_DIR$/../Interface/UartInterface/src/SerialUartInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/UartInterface/src/classes/Message.java" afterPath="$PROJECT_DIR$/../Interface/UartInterface/src/classes/Message.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/html/API_users_guide.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/html/API_users_guide.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/html/InteractiveSerialPortTest.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/html/InteractiveSerialPortTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/html/Portmapping.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/html/Portmapping.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/html/ReceiveBehavior.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/html/ReceiveBehavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/html/platform/linux/PlatformSpecific.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/html/platform/linux/PlatformSpecific.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/html/platform/solaris/PlatformSpecific.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/html/platform/solaris/PlatformSpecific.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/html/platform/win32/PlatformSpecific.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/html/platform/win32/PlatformSpecific.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/index.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/allclasses-frame.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/allclasses-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/allclasses-noframe.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/allclasses-noframe.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/constant-values.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/constant-values.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/deprecated-list.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/deprecated-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/help-doc.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/help-doc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/index-all.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/index-all.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/index.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/CommDriver.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/CommDriver.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/CommPort.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/CommPort.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/CommPortIdentifier.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/CommPortIdentifier.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/CommPortOwnershipListener.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/CommPortOwnershipListener.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/NoSuchPortException.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/NoSuchPortException.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/ParallelPort.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/ParallelPort.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/ParallelPortEvent.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/ParallelPortEvent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/ParallelPortEventListener.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/ParallelPortEventListener.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/PortInUseException.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/PortInUseException.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/SerialPort.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/SerialPort.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/SerialPortEvent.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/SerialPortEvent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/SerialPortEventListener.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/SerialPortEventListener.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/UnsupportedCommOperationException.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/UnsupportedCommOperationException.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/package-frame.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/package-summary.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/package-tree.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/javax/comm/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/overview-tree.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/overview-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/package-list" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/package-list" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/packages.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/packages.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/serialized-form.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/serialized-form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/stylesheet.css" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/dist/stylesheet.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/allclasses-frame.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/allclasses-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/allclasses-noframe.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/allclasses-noframe.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/Alias.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/Alias.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/CommProperties.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/CommProperties.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxDriver.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxDriver.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxParallel.LPInputStream.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxParallel.LPInputStream.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxParallel.LPOutputStream.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxParallel.LPOutputStream.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxParallel.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxParallel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxSerial.SSCheckStatusThread.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxSerial.SSCheckStatusThread.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxSerial.SSInputStream.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxSerial.SSInputStream.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxSerial.SSOutputStream.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxSerial.SSOutputStream.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxSerial.SSReaderThread.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxSerial.SSReaderThread.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxSerial.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/LinuxSerial.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/PathBundle.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/PathBundle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/PlatformPortBundle.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/PlatformPortBundle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/PortmapDatabase.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/PortmapDatabase.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/PortmapEntry.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/PortmapEntry.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/Portmapping.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/Portmapping.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/SunrayInfo.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/SunrayInfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/Unix.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/Unix.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/Util.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/Util.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/package-frame.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/package-summary.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/package-tree.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/com/sun/comm/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/constant-values.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/constant-values.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/deprecated-list.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/deprecated-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/help-doc.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/help-doc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/index-all.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/index-all.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/index.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/CommApiVersion.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/CommApiVersion.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/CommDriver.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/CommDriver.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/CommPort.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/CommPort.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/CommPortIdentifier.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/CommPortIdentifier.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/CommPortOwnershipListener.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/CommPortOwnershipListener.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/NoSuchPortException.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/NoSuchPortException.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/ParallelPort.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/ParallelPort.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/ParallelPortEvent.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/ParallelPortEvent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/ParallelPortEventListener.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/ParallelPortEventListener.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/PortInUseException.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/PortInUseException.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/SerialPort.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/SerialPort.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/SerialPortEvent.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/SerialPortEvent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/SerialPortEventListener.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/SerialPortEventListener.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/UnsupportedCommOperationException.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/UnsupportedCommOperationException.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/package-frame.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/package-summary.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/package-tree.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/javax/comm/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/overview-frame.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/overview-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/overview-summary.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/overview-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/overview-tree.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/overview-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/package-list" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/package-list" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/packages.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/packages.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/serialized-form.html" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/serialized-form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/stylesheet.css" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javadoc/impl/stylesheet.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/javax.comm.properties" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/javax.comm.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/license.txt" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/license.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/portmap.conf_example.txt" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/portmap.conf_example.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/txt/CommAPI_FAQ.txt" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/txt/CommAPI_FAQ.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/txt/platform/linux/ReleaseNotes.txt" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/txt/platform/linux/ReleaseNotes.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/txt/platform/solaris/ReleaseNotes.txt" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/txt/platform/solaris/ReleaseNotes.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/docs/txt/platform/win32/ReleaseNotes.txt" afterPath="$PROJECT_DIR$/../Interface/commapi/docs/txt/platform/win32/ReleaseNotes.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/BaudRate.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/BaudRate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/BlackBox.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/BlackBox.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/BufferSize.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/BufferSize.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ByteCounter.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ByteCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ByteStatistics.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ByteStatistics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ConvertedOutputStream.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ConvertedOutputStream.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/CtlSigDisplay.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/CtlSigDisplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/DataBits.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/DataBits.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/FlowCtlDisplay.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/FlowCtlDisplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/Parity.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/Parity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/README" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveFraming.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveFraming.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveOptions.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveOptions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveThreshold.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveThreshold.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveTimeout.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ReceiveTimeout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/Receiver.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/Receiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/SerialPortDisplay.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/SerialPortDisplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/StopBits.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/StopBits.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ToggleLabel.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/ToggleLabel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/Transmitter.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/BlackBox/Transmitter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/NullDriver/NullDriver.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/NullDriver/NullDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/NullDriver/NullSerialPort.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/NullDriver/NullSerialPort.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/NullDriver/README" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/NullDriver/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/BufferSize.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/BufferSize.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ByteCounter.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ByteCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ByteStatistics.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ByteStatistics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/CtlSigDisplay.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/CtlSigDisplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/LPTMode.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/LPTMode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ParallelBlackBox.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ParallelBlackBox.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ParallelPortDisplay.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ParallelPortDisplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/README" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveFraming.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveFraming.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveOptions.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveOptions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveThreshold.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveThreshold.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveTimeout.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/ReceiveTimeout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/Receiver.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/Receiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/Transmitter.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/ParallelBlackBox/Transmitter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/README" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/AlertDialog.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/AlertDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/PortRequestedDialog.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/PortRequestedDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/README" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialConnection.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialConnectionException.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialConnectionException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialDemo.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialParameters.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/SerialDemo/SerialParameters.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/Simple/README" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/Simple/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/Simple/SimpleRead.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/Simple/SimpleRead.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/commapi/examples/Simple/SimpleWrite.java" afterPath="$PROJECT_DIR$/../Interface/commapi/examples/Simple/SimpleWrite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/Drivers/PORT_Driver.c" afterPath="$PROJECT_DIR$/../UartDriver.X/Drivers/PORT_Driver.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/Drivers/PORT_Driver.h" afterPath="$PROJECT_DIR$/../UartDriver.X/Drivers/PORT_Driver.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/Drivers/UART_Driver.c" afterPath="$PROJECT_DIR$/../UartDriver.X/Drivers/UART_Driver.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/Drivers/UART_Driver.h" afterPath="$PROJECT_DIR$/../UartDriver.X/Drivers/UART_Driver.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/Makefile" afterPath="$PROJECT_DIR$/../UartDriver.X/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/README" afterPath="$PROJECT_DIR$/../UartDriver.X/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/Drivers/PORT_Driver.p1" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/Drivers/PORT_Driver.p1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/Drivers/PORT_Driver.p1.d" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/Drivers/PORT_Driver.p1.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/Drivers/PORT_Driver.pre" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/Drivers/PORT_Driver.pre" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/Drivers/UART_Driver.p1" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/Drivers/UART_Driver.p1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/Drivers/UART_Driver.p1.d" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/Drivers/UART_Driver.p1.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/Drivers/UART_Driver.pre" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/Drivers/UART_Driver.pre" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/configuration.p1" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/configuration.p1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/configuration.p1.d" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/configuration.p1.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/configuration.pre" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/configuration.pre" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/main.p1" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/main.p1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/main.p1.d" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/main.p1.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/main.pre" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/debug/main.pre" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/production/Drivers/PORT_Driver.p1" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/production/Drivers/PORT_Driver.p1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/production/Drivers/PORT_Driver.p1.d" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/production/Drivers/PORT_Driver.p1.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/production/Drivers/PORT_Driver.pre" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/production/Drivers/PORT_Driver.pre" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/production/Drivers/UART_Driver.p1" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/production/Drivers/UART_Driver.p1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/production/Drivers/UART_Driver.p1.d" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/production/Drivers/UART_Driver.p1.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/production/Drivers/UART_Driver.pre" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/production/Drivers/UART_Driver.pre" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/production/configuration.p1" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/production/configuration.p1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/production/configuration.p1.d" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/production/configuration.p1.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/production/configuration.pre" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/production/configuration.pre" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/production/main.p1" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/production/main.p1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/production/main.p1.d" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/production/main.p1.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/build/default/production/main.pre" afterPath="$PROJECT_DIR$/../UartDriver.X/build/default/production/main.pre" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/configuration.c" afterPath="$PROJECT_DIR$/../UartDriver.X/configuration.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.cmf" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.cmf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.hxl" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.hxl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.lst" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.map" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.mum" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.mum" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.sdb" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.sdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.sym" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/UartDriver.X.debug.sym" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/doprnt.d" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/doprnt.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/doprnt.p1" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/doprnt.p1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/doprnt.pre" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/doprnt.pre" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/memoryfile.xml" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/debug/memoryfile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.cmf" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.cmf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.hex" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.hex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.hxl" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.hxl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.lst" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.map" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.mum" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.mum" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.sdb" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.sdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.sym" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/UartDriver.X.production.sym" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/doprnt.d" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/doprnt.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/doprnt.p1" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/doprnt.p1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/doprnt.pre" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/doprnt.pre" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/memoryfile.xml" afterPath="$PROJECT_DIR$/../UartDriver.X/dist/default/production/memoryfile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/main.c" afterPath="$PROJECT_DIR$/../UartDriver.X/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/nbproject/Makefile-default.mk" afterPath="$PROJECT_DIR$/../UartDriver.X/nbproject/Makefile-default.mk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/nbproject/Makefile-genesis.properties" afterPath="$PROJECT_DIR$/../UartDriver.X/nbproject/Makefile-genesis.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/nbproject/Makefile-impl.mk" afterPath="$PROJECT_DIR$/../UartDriver.X/nbproject/Makefile-impl.mk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/nbproject/Makefile-local-default.mk" afterPath="$PROJECT_DIR$/../UartDriver.X/nbproject/Makefile-local-default.mk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/nbproject/Makefile-variables.mk" afterPath="$PROJECT_DIR$/../UartDriver.X/nbproject/Makefile-variables.mk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/nbproject/Package-default.bash" afterPath="$PROJECT_DIR$/../UartDriver.X/nbproject/Package-default.bash" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/nbproject/configurations.xml" afterPath="$PROJECT_DIR$/../UartDriver.X/nbproject/configurations.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/nbproject/private/SuppressibleMessageMemo.properties" afterPath="$PROJECT_DIR$/../UartDriver.X/nbproject/private/SuppressibleMessageMemo.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/nbproject/private/configurations.xml" afterPath="$PROJECT_DIR$/../UartDriver.X/nbproject/private/configurations.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/nbproject/private/private.xml" afterPath="$PROJECT_DIR$/../UartDriver.X/nbproject/private/private.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UartDriver.X/nbproject/project.xml" afterPath="$PROJECT_DIR$/../UartDriver.X/nbproject/project.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fazecast_jSerialComm_1_3_11.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fazecast_jSerialComm_1_3_11.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Utilities.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Utilities.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/jSerialComm_1_3_11.xml" afterPath="$PROJECT_DIR$/.idea/libraries/jSerialComm_1_3_11.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/MessagePanel$1.class" afterPath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/MessagePanel$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/MessagePanel.class" afterPath="$PROJECT_DIR$/target/classes/com/waldo/serial/gui/MessagePanel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hs_err_pid16360.log" afterPath="$PROJECT_DIR$/hs_err_pid16360.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java.iml" afterPath="$PROJECT_DIR$/java.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/waldo/serial/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/waldo/serial/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/MessagePanel.java" afterPath="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/MessagePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialog.java" afterPath="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialogLayout.java" afterPath="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialogLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/settings/Icons.properties" afterPath="$PROJECT_DIR$/src/main/resources/settings/Icons.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/settings/Icons.properties" afterPath="$PROJECT_DIR$/target/classes/settings/Icons.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -609,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SerialSettingsDialogLayout.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SerialSettingsDialogLayout.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialogLayout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="118">
               <caret line="138" column="73" lean-forward="false" selection-start-line="138" selection-start-column="73" selection-end-line="138" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -636,7 +59,7 @@
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="1680">
               <caret line="138" column="43" lean-forward="false" selection-start-line="138" selection-start-column="43" selection-end-line="138" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -658,22 +81,20 @@
       <file leaf-file-name="MessagePanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/MessagePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="56" column="23" lean-forward="false" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+            <state relative-caret-position="705">
+              <caret line="64" column="57" lean-forward="false" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#996#997#0" expanded="true" />
-                <element signature="e#1031#1032#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SerialManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SerialManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1170">
-              <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="1515">
+              <caret line="242" column="42" lean-forward="false" selection-start-line="242" selection-start-column="42" selection-end-line="242" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#SerialManager#0;class#SerialManager#0" expanded="false" />
@@ -750,11 +171,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialog.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialogLayout.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/MessagePanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialManager.java" />
         <option value="$PROJECT_DIR$/src/main/resources/settings/Icons.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/Application.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/MessagePanel.java" />
       </list>
     </option>
   </component>
@@ -789,7 +210,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -849,8 +270,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1013,19 +434,18 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33701658" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33701658" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286638" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16168623" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16488793" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1039,6 +459,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="MaxCompute Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="MaxCompute Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998225" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1057,6 +478,105 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialogLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="138" column="73" lean-forward="false" selection-start-line="138" selection-start-column="73" selection-end-line="138" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1680">
+          <caret line="138" column="43" lean-forward="false" selection-start-line="138" selection-start-column="43" selection-end-line="138" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/settings/Icons.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/MessagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="56" column="23" lean-forward="false" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1515">
+          <caret line="242" column="42" lean-forward="true" selection-start-line="242" selection-start-column="42" selection-end-line="242" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#SerialManager#0;class#SerialManager#0" expanded="false" />
+            <element signature="class#ParityTypes#0;class#SerialManager#0" expanded="false" />
+            <element signature="method#fromInt#0;class#ParityTypes#0;class#SerialManager#0" expanded="false" />
+            <element signature="class#FlowControlTypes#0;class#SerialManager#0" expanded="false" />
+            <element signature="class#BaudRateValues#0;class#SerialManager#0" expanded="false" />
+            <element signature="method#BaudRateValues#0;class#BaudRateValues#0;class#SerialManager#0" expanded="false" />
+            <element signature="method#fromBaud#0;class#BaudRateValues#0;class#SerialManager#0" expanded="false" />
+            <element signature="method#DataBitValues#0;class#DataBitValues#0;class#SerialManager#0" expanded="false" />
+            <element signature="class#StopBitValues#0;class#SerialManager#0" expanded="false" />
+            <element signature="method#StopBitValues#0;class#StopBitValues#0;class#SerialManager#0" expanded="false" />
+            <element signature="method#fromStopBits#0;class#StopBitValues#0;class#SerialManager#0" expanded="false" />
+            <element signature="method#close#0;class#SerialManager#0" expanded="false" />
+            <element signature="method#addSerialListener#0;class#SerialManager#0" expanded="false" />
+            <element signature="method#removeSerialListener#0;class#SerialManager#0" expanded="false" />
+            <element signature="method#getMainSerialListener#0;class#SerialManager#0" expanded="false" />
+            <element signature="method#initSerialPort#0;class#SerialManager#0" expanded="false" />
+            <element signature="method#onError#2;class#SerialManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialogLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
@@ -1091,8 +611,6 @@
           <caret line="56" column="23" lean-forward="false" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1186,8 +704,6 @@
           <caret line="71" column="13" lean-forward="false" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1261,8 +777,6 @@
           <caret line="71" column="13" lean-forward="false" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1346,8 +860,6 @@
           <caret line="44" column="41" lean-forward="false" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1437,28 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/MessagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="56" column="23" lean-forward="false" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialogLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="138" column="73" lean-forward="false" selection-start-line="138" selection-start-column="73" selection-end-line="138" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/settings/Icons.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1471,7 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1485,7 +974,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="1680">
           <caret line="138" column="43" lean-forward="false" selection-start-line="138" selection-start-column="43" selection-end-line="138" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1495,8 +984,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/classes/SerialManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1170">
-          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="1515">
+          <caret line="242" column="42" lean-forward="false" selection-start-line="242" selection-start-column="42" selection-end-line="242" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#SerialManager#0;class#SerialManager#0" expanded="false" />
@@ -1516,6 +1005,26 @@
             <element signature="method#getMainSerialListener#0;class#SerialManager#0" expanded="false" />
             <element signature="method#initSerialPort#0;class#SerialManager#0" expanded="false" />
             <element signature="method#onError#2;class#SerialManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/MessagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="64" column="57" lean-forward="false" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/waldo/serial/gui/dialogs/SerialSettingsDialogLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="138" column="73" lean-forward="false" selection-start-line="138" selection-start-column="73" selection-end-line="138" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
