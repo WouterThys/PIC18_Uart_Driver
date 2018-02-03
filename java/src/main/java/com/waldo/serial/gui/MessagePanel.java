@@ -84,8 +84,6 @@ public class MessagePanel extends IPanel {
     public void initializeComponents() {
         textPn.setEditable(false);
 
-        inputTf = new ITextField("Send stuff");
-
         sendAction = new AbstractAction("Send") {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -96,6 +94,9 @@ public class MessagePanel extends IPanel {
                 inputTf.requestFocus();
             }
         };
+
+        inputTf = new ITextField("Send stuff");
+        inputTf.addActionListener(sendAction);
 
         setEnabled(false);
     }
