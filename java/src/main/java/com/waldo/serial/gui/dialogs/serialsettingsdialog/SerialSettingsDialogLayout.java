@@ -22,7 +22,7 @@ abstract class SerialSettingsDialogLayout extends IDialog {
     // Gui settings
     // TODO
 
-    // Message settings
+    // SerialMessage settings
     // TODO
 
     /*

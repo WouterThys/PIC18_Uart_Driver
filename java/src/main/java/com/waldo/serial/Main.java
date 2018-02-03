@@ -12,6 +12,15 @@ public class Main {
     public static void main(String[] args) {
         String startUpPath = new File("").getAbsolutePath() + File.separator;
 
+//        try {
+//            SerialMessage m = SerialMessage.createRx(
+//                    MessageTypes.PICMessageVariable,
+//                    "$C:4:abcd:3&");
+//            System.out.println(m);
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+
         SwingUtilities.invokeLater(() -> {
             setLookAndFeel();
             Application app = new Application(startUpPath);

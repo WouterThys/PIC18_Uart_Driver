@@ -1,6 +1,7 @@
 package com.waldo.serial.gui;
 
 import com.fazecast.jSerialComm.SerialPort;
+import com.waldo.serial.classes.Message.SerialMessage;
 import com.waldo.serial.classes.SerialListener;
 import com.waldo.serial.classes.SerialManager;
 import com.waldo.serial.gui.dialogs.serialsettingsdialog.SerialSettingsDialog;
@@ -23,6 +24,9 @@ public class Application extends IFrame implements SerialListener {
     public static final ImageIcon yellowBall = resMgr.readImage("Ball.yellow");
     public static final ImageIcon redBall = resMgr.readImage("Ball.red");
 
+    private static final String MESSAGE_PNL = "M";
+    private static final String TABLE_PNL = "T";
+
 
     // Tool bar
     private ILabel statusLbl;
@@ -30,8 +34,12 @@ public class Application extends IFrame implements SerialListener {
     private AbstractAction settingsActions;
     private AbstractAction clearAction;
 
+    private CardLayout cardLayout;
+    private JPanel cardPanel;
     private MessagePanel messagePanel;
+    private TablePanel tablePanel;
 
+    private IMessagePanelListener panelListener;
 
     public Application(String startUpPath) {
         SerialManager.serMgr().init(this);
@@ -83,7 +91,21 @@ public class Application extends IFrame implements SerialListener {
             try {
                 SerialPort port = dialog.getSerialPort();
                 if (port != null) {
-                    messagePanel.setEnabled(serMgr().open(port));
+                    boolean open = serMgr().open(port);
+                    if (open) {
+                        if (serMgr().getMessageType().getStartChar().isEmpty()) {
+                            messagePanel.updateComponents();
+                            panelListener = messagePanel;
+                            cardLayout.show(cardPanel, MESSAGE_PNL);
+                        } else {
+                            tablePanel.initializeComponents();
+                            tablePanel.updateComponents();
+                            panelListener = tablePanel;
+                            cardLayout.show(cardPanel, TABLE_PNL);
+                        }
+                    }
+                    messagePanel.setEnabled(open);
+                    tablePanel.setEnabled(open);
                 }
                 updateStatus(port);
             } finally {
@@ -108,7 +130,14 @@ public class Application extends IFrame implements SerialListener {
         // Stuff
         statusLbl = new ILabel();
         infoLbl = new ILabel();
+
         messagePanel = new MessagePanel();
+        tablePanel = new TablePanel();
+
+        cardLayout = new CardLayout();
+        cardPanel = new JPanel(cardLayout);
+        cardPanel.add(MESSAGE_PNL, messagePanel);
+        cardPanel.add(TABLE_PNL, tablePanel);
 
         settingsActions = new AbstractAction("Settings") {
             @Override
@@ -130,12 +159,13 @@ public class Application extends IFrame implements SerialListener {
         setLayout(new BorderLayout());
 
         add(createToolbarPanel(), BorderLayout.PAGE_START);
-        add(messagePanel, BorderLayout.CENTER);
+        add(cardPanel, BorderLayout.CENTER);
     }
 
     @Override
     public void updateComponents(Object... objects) {
         updateStatus(null);
+        cardLayout.show(cardPanel, MESSAGE_PNL);
         SwingUtilities.invokeLater(this::openSettings);
     }
 
@@ -164,13 +194,22 @@ public class Application extends IFrame implements SerialListener {
     }
 
     @Override
-    public void onTransmitted(String message) {
-        messagePanel.addTransmittedMessage(message);
-        messagePanel.clearInput();
+    public void onTransmitted(SerialMessage message) {
+        if (message != null) {
+            if (panelListener != null) {
+                panelListener.addTransmittedMessage(message);
+                panelListener.clearInput();
+            }
+        }
     }
 
     @Override
-    public void onReceived(String message) {
-        messagePanel.addReceivedMessage(message);
+    public void onReceived(SerialMessage message) {
+        if (message != null) {
+            if (panelListener != null) {
+                panelListener.addTransmittedMessage(message);
+                panelListener.clearInput();
+            }
+        }
     }
 }

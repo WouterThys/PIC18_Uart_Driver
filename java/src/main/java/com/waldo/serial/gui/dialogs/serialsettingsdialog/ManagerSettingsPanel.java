@@ -44,8 +44,8 @@ class ManagerSettingsPanel extends JPanel implements GuiUtils.GuiInterface {
     }
 
     /*
-         *                  LISTENERS
-         * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+     *                  LISTENERS
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     @Override
     public void initializeComponents() {
         descriptionTa.setBorder(templateTf.getBorder());
@@ -69,14 +69,14 @@ class ManagerSettingsPanel extends JPanel implements GuiUtils.GuiInterface {
 
     @Override
     public void initializeLayouts() {
-        JPanel panel1 = new JPanel(new BorderLayout());
-        JPanel panel2 = new JPanel(new BorderLayout());
-        JPanel panel3 = new JPanel(new BorderLayout());
-        JPanel panel4 = new JPanel();
+        final JPanel panel1 = new JPanel(new BorderLayout());
+        final JPanel panel2 = new JPanel(new BorderLayout());
+        final JPanel panel3 = new JPanel(new BorderLayout());
+        final JPanel panel4 = new JPanel();
 
         GuiUtils.GridBagHelper gbc = new GuiUtils.GridBagHelper(panel4, 10);
         gbc.addLine("", new ILabel("C = Command"));
-        gbc.addLine("", new ILabel("M = Message"));
+        gbc.addLine("", new ILabel("M = SerialMessage"));
         gbc.addLine("", new ILabel("L = Length"));
         gbc.addLine("", new ILabel("A = Acknowledge"));
 
