@@ -205,6 +205,9 @@ public class SerialManager {
     }
 
     public MessageTypes getMessageType() {
+        if (messageType == null) {
+            messageType = MessageTypes.Text;
+        }
         return messageType;
     }
 
@@ -288,7 +291,7 @@ public class SerialManager {
                     SwingUtilities.invokeLater(() -> {
                         try {
                             serialPort.writeBytes(data.getBytes(), data.length());
-                            onTransmitted(SerialMessage.create(messageType, data));
+                            onTransmitted(SerialMessage.createRx(messageType, data));
                         } catch (Exception e) {
                             onError("Failed to write bytes..", e);
                         }
@@ -362,7 +365,7 @@ public class SerialManager {
             inputMessage += new String(newData);
 
             try {
-                SerialMessage m = SerialMessage.create(messageType, inputMessage);
+                SerialMessage m = SerialMessage.createRx(messageType, inputMessage);
                 if (m != null && m.isConverted()) {
                     rxSerialMessageList.add(m);
                     onReceived(m);

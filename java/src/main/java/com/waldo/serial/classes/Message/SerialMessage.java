@@ -6,13 +6,23 @@ import java.text.ParseException;
 
 public class SerialMessage {
 
-    public static SerialMessage create(MessageTypes type, String input) throws ParseException {
-        SerialMessage m = new SerialMessage(type);
+    public static SerialMessage createRx(MessageTypes type, String input) throws ParseException {
+        SerialMessage m = new SerialMessage(type, true);
         createFromString(m, input);
         return m;
     }
 
+    public static SerialMessage createTx(MessageTypes type, String... args) throws ParseException {
+        SerialMessage m = new SerialMessage(type, true);
+//        switch (type) {
+            m.input = args[0];
+            m.message = args[0];
+//        }
+        return m;
+    }
+
     private final MessageTypes messageType;
+    private final boolean isRx;
     private boolean converted = false;
 
     private String input;
@@ -20,8 +30,9 @@ public class SerialMessage {
     private String message;
     private int ackId;
 
-    private SerialMessage(MessageTypes messageType) {
+    private SerialMessage(MessageTypes messageType, boolean isRx) {
         this.messageType = messageType;
+        this.isRx = isRx;
         this.input = "";
         this.command = "";
         this.message = "";
@@ -136,5 +147,13 @@ public class SerialMessage {
 
     public void setConverted(boolean converted) {
         this.converted = converted;
+    }
+
+    public boolean isRx() {
+        return isRx;
+    }
+
+    public boolean isTx() {
+        return !isRx;
     }
 }

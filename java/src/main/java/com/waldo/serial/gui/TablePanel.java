@@ -1,32 +1,27 @@
 package com.waldo.serial.gui;
 
 import com.waldo.serial.classes.Message.SerialMessage;
+import com.waldo.serial.gui.components.IMessageTableModel;
 import com.waldo.utils.GuiUtils;
 import com.waldo.utils.icomponents.IPanel;
+import com.waldo.utils.icomponents.ITable;
 import com.waldo.utils.icomponents.ITextField;
-import com.waldo.utils.icomponents.ITextPane;
 
 import javax.swing.*;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.Style;
-import javax.swing.text.StyleConstants;
-import javax.swing.text.StyledDocument;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
 import static com.waldo.serial.classes.SerialManager.serMgr;
 
-public class MessagePanel extends IPanel implements IMessagePanelListener {
+public class TablePanel extends IPanel implements IMessagePanelListener {
 
-    private final ITextPane textPn = new ITextPane();;
+    private IMessageTableModel messageTableModel;
+    private ITable<SerialMessage> messageTable;
+
     private ITextField inputTf;
     private AbstractAction sendAction;
 
-    private final Style messageStyle = textPn.addStyle("MessageStyle", textPn.getLogicalStyle());
-    private final StyledDocument messageDoc = textPn.getStyledDocument();
-
-
-    public MessagePanel() {
+    public TablePanel() {
         initializeComponents();
         initializeLayouts();
 
@@ -40,36 +35,26 @@ public class MessagePanel extends IPanel implements IMessagePanelListener {
 
     @Override
     public void clearMessagePane() {
-        textPn.setText("");
+        messageTableModel.clearItemList();
     }
 
     @Override
     public void addReceivedMessage(SerialMessage message) {
         if (message != null) {
-            StyleConstants.setForeground(messageStyle, Color.blue);
-            try {
-                messageDoc.insertString(messageDoc.getLength(), message.getMessage(), messageStyle);
-            } catch (BadLocationException e) {
-                e.printStackTrace();
-            }
+            messageTableModel.addItem(message);
         }
     }
 
     @Override
     public void addTransmittedMessage(SerialMessage message) {
         if (message != null) {
-            StyleConstants.setForeground(messageStyle, Color.green);
-            try {
-                messageDoc.insertString(messageDoc.getLength(), message.getMessage(), messageStyle);
-            } catch (BadLocationException e) {
-                e.printStackTrace();
-            }
+            messageTableModel.addItem(message);
         }
     }
 
     @Override
     public void setEnabled(boolean enabled) {
-        textPn.setEnabled(enabled);
+        messageTable.setEnabled(enabled);
         inputTf.setEnabled(enabled);
         sendAction.setEnabled(enabled);
         super.setEnabled(enabled);
@@ -80,7 +65,8 @@ public class MessagePanel extends IPanel implements IMessagePanelListener {
     //
     @Override
     public void initializeComponents() {
-        textPn.setEditable(false);
+        messageTableModel = IMessageTableModel.createInstance(serMgr().getMessageType());
+        messageTable = new ITable<>(messageTableModel);
 
         sendAction = new AbstractAction("Send") {
             @Override
@@ -104,7 +90,7 @@ public class MessagePanel extends IPanel implements IMessagePanelListener {
         setLayout(new BorderLayout());
 
         JPanel sendPnl = GuiUtils.createComponentWithActions(inputTf, sendAction);
-        JScrollPane scrollPane = new JScrollPane(textPn);
+        JScrollPane scrollPane = new JScrollPane(messageTable);
         scrollPane.setPreferredSize(new Dimension(600, 400));
 
         add(scrollPane, BorderLayout.CENTER);
