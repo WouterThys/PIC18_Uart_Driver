@@ -7,10 +7,7 @@ import com.waldo.utils.icomponents.ITextField;
 import com.waldo.utils.icomponents.ITextPane;
 
 import javax.swing.*;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.Style;
-import javax.swing.text.StyleConstants;
-import javax.swing.text.StyledDocument;
+import javax.swing.text.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
@@ -18,7 +15,8 @@ import static com.waldo.serial.classes.SerialManager.serMgr;
 
 public class MessagePanel extends IPanel implements IMessagePanelListener {
 
-    private final ITextPane textPn = new ITextPane();;
+    private final ITextPane textPn = new ITextPane();
+    private final JScrollPane textScrollPane = new JScrollPane(textPn);
     private ITextField inputTf;
     private AbstractAction sendAction;
 
@@ -81,6 +79,8 @@ public class MessagePanel extends IPanel implements IMessagePanelListener {
     @Override
     public void initializeComponents() {
         textPn.setEditable(false);
+        DefaultCaret caret = (DefaultCaret) textPn.getCaret();
+        caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
 
         sendAction = new AbstractAction("Send") {
             @Override
@@ -104,10 +104,9 @@ public class MessagePanel extends IPanel implements IMessagePanelListener {
         setLayout(new BorderLayout());
 
         JPanel sendPnl = GuiUtils.createComponentWithActions(inputTf, sendAction);
-        JScrollPane scrollPane = new JScrollPane(textPn);
-        scrollPane.setPreferredSize(new Dimension(600, 400));
+        textScrollPane.setPreferredSize(new Dimension(600, 400));
 
-        add(scrollPane, BorderLayout.CENTER);
+        add(textScrollPane, BorderLayout.CENTER);
         add(sendPnl, BorderLayout.SOUTH);
     }
 
