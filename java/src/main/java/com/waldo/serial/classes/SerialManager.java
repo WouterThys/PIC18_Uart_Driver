@@ -165,6 +165,8 @@ public class SerialManager {
         return Instance;
     }
     private SerialManager() {
+
+
     }
 
     /*
@@ -205,6 +207,9 @@ public class SerialManager {
                 return port;
             }
         }
+
+
+
         return null;
     }
 
@@ -295,7 +300,7 @@ public class SerialManager {
                     SwingUtilities.invokeLater(() -> {
                         try {
                             serialPort.writeBytes(data.getBytes(), data.length());
-                            onTransmitted(SerialMessage.createRx(messageType, data));
+                            onTransmitted(SerialMessage.createTx(messageType, data));
                         } catch (Exception e) {
                             onError("Failed to write bytes..", e);
                         }

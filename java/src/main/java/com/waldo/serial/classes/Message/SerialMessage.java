@@ -13,17 +13,19 @@ public class SerialMessage {
     }
 
     public static SerialMessage createTx(MessageTypes type, String... args) throws ParseException {
-        SerialMessage m = new SerialMessage(type, true);
+        SerialMessage m = new SerialMessage(type, false);
 //        switch (type) {
             m.input = args[0];
             m.message = args[0];
 //        }
+
         return m;
     }
 
     private final MessageTypes messageType;
     private final boolean isRx;
     private boolean converted = false;
+    private boolean acknowledged = false;
 
     private String input;
     private String command;
@@ -155,5 +157,13 @@ public class SerialMessage {
 
     public boolean isTx() {
         return !isRx;
+    }
+
+    public boolean isAcknowledged() {
+        return acknowledged;
+    }
+
+    public void setAcknowledged(boolean acknowledged) {
+        this.acknowledged = acknowledged;
     }
 }

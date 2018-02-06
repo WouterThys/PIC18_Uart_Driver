@@ -1,46 +1,25 @@
 package com.waldo.serial.gui.components;
 
 import com.waldo.serial.classes.Message.SerialMessage;
-import com.waldo.serial.classes.SerialManager;
-import com.waldo.utils.GuiUtils;
 import com.waldo.utils.icomponents.IAbstractTableModel;
 import com.waldo.utils.icomponents.ILabel;
+import com.waldo.utils.icomponents.ITableIcon;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.util.Arrays;
 
-import static com.waldo.serial.gui.Application.resMgr;
+public abstract class IPICMessageTableModel extends IAbstractTableModel<SerialMessage> {
 
-public class IPICMessageTableModel extends IAbstractTableModel<SerialMessage> {
+    private static final String[] COLUMN_NAMES = {""};
+    private static final Class[] COLUMN_CLASSES = {JLabel.class};
 
-    public static final ImageIcon greenBall = resMgr.readImage("Ball.green");
-    public static final ImageIcon redBall = resMgr.readImage("Ball.red");
-
-    public static final ImageIcon txIcon = resMgr.readImage("Message.Tx = mail/16/mail_out.png");
-    public static final ImageIcon rxIcon = resMgr.readImage("Message.Rx = mail/16/mail_into.png");
-
-    private static final String[] COLUMN_NAMES = {"", "Command", "Message", "Ack"};
-    private static final Class[] COLUMN_CLASSES = {ILabel.class, String.class, String.class, JButton.class};
-
-    public static IPICMessageTableModel createInstance(SerialManager.MessageTypes type) {
-        String[] columnNames;
-        Class[] classes;
-        if (type.isAcknowledge()) {
-            columnNames = Arrays.copyOfRange(COLUMN_NAMES, 0, 2);
-            classes = Arrays.copyOfRange(COLUMN_CLASSES, 0, 2);
-        } else {
-            columnNames = COLUMN_NAMES;
-            classes = COLUMN_CLASSES;
-        }
-        return new IPICMessageTableModel(columnNames, classes);
+    public IPICMessageTableModel() {
+        super(COLUMN_NAMES, COLUMN_CLASSES);
     }
 
-    private IPICMessageTableModel(String[] columnNames, Class[] classes) {
-        super(columnNames, classes);
-    }
+    public abstract Color getTxColor();
+    public abstract Color getRxColor();
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
@@ -49,20 +28,8 @@ public class IPICMessageTableModel extends IAbstractTableModel<SerialMessage> {
             switch (columnIndex) {
                 case -1:
                     return message;
-                case 0: // Rx or Tx
-                    return message.isConverted();
-                case 1: // Command
-                    return message.getCommand();
-                case 2: // Message
-                    return message.getMessage();
-                case 3: // Ack
-                    AbstractAction action1 = new AbstractAction("Action 1", greenBall) {
-                        @Override
-                        public void actionPerformed(ActionEvent e) {
-                            System.out.println("Action 1");
-                        }
-                    };
-                    return new JButton(action1);
+                case 0: // Input
+                    return message;
             }
         }
         return null;
@@ -70,7 +37,12 @@ public class IPICMessageTableModel extends IAbstractTableModel<SerialMessage> {
 
     @Override
     public boolean hasTableCellRenderer() {
-        return false;
+        return true;
+    }
+
+    @Override
+    public boolean isCellEditable(int rowIndex, int columnIndex) {
+        return true;
     }
 
     @Override
@@ -78,38 +50,30 @@ public class IPICMessageTableModel extends IAbstractTableModel<SerialMessage> {
         return new DefaultTableCellRenderer() {
             @Override
             public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
-                Component component = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
                 if (value instanceof SerialMessage) {
-//                    if (row == 0) {
-//                        TableColumn tableColumn = table.getColumnModel().getColumn(column);
-//                        tableColumn.setMaxWidth(32);
-//                        tableColumn.setMinWidth(32);
-//                    }
-//
-//                    SerialMessage message = (SerialMessage) value;
-//                    if (message.isRx()) {
-//                        return new ITableIcon(component.getBackground(), row, isSelected, rxIcon);
-//                    } else {
-//                        return new ITableIcon(component.getBackground(), row, isSelected, txIcon);
-//                    }
-                    AbstractAction action1 = new AbstractAction("Action 1", greenBall) {
-                        @Override
-                        public void actionPerformed(ActionEvent e) {
-                            System.out.println("Action 1");
-                        }
-                    };
 
-                    AbstractAction action2 = new AbstractAction("Action 2", redBall) {
-                        @Override
-                        public void actionPerformed(ActionEvent e) {
-                            System.out.println("Action 2");
-                        }
-                    };
+                    SerialMessage message = (SerialMessage) value;
+                    ILabel lbl = new ITableIcon(c.getBackground(), row, isSelected, message.getInput());
+                    lbl.setFont(Font.BOLD);
 
-                    JToolBar toolBar = GuiUtils.createNewToolbar(action1, action2);
-                    return toolBar;
+                    if (message.isRx()) {
+                        if (isSelected) {
+                            lbl.setForeground(Color.WHITE);
+                        } else {
+                            lbl.setForeground(getRxColor());
+                        }
+                    } else {
+                        if (isSelected) {
+                            lbl.setForeground(Color.WHITE);
+                        } else {
+                            lbl.setForeground(getTxColor());
+                        }
+                    }
+
+                    return lbl;
                 }
-                return component;
+                return c;
             }
         };
     }

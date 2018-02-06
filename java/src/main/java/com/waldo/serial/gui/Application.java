@@ -25,9 +25,6 @@ public class Application extends IFrame implements SerialListener {
     public static final ImageIcon yellowBall = resMgr.readImage("Ball.yellow");
     public static final ImageIcon redBall = resMgr.readImage("Ball.red");
 
-    private static final String MESSAGE_PNL = "M";
-    private static final String TABLE_PNL = "T";
-
 
     // Tool bar
     private ILabel statusLbl;
@@ -37,6 +34,7 @@ public class Application extends IFrame implements SerialListener {
 
     private MessagePanel messagePanel;
     private InputPanel inputPanel;
+    private PicMessageInfoPanel picMessageInfoPanel;
 
     private SerialManager.FakeMessageTask fakeMessageTask;
 
@@ -111,6 +109,11 @@ public class Application extends IFrame implements SerialListener {
                         startFakeMessages();
                     }
                     messagePanel.setEnabled(open);
+                    SerialManager.MessageTypes type = serMgr().getMessageType();
+                    if (type == SerialManager.MessageTypes.Text) {
+                        picMessageInfoPanel.setVisible(false);
+                    }
+                    messagePanel.setMessageType(type);
                 }
                 updateStatus(port);
             } finally {
@@ -136,8 +139,17 @@ public class Application extends IFrame implements SerialListener {
         statusLbl = new ILabel();
         infoLbl = new ILabel();
 
-        messagePanel = new MessagePanel();
+        messagePanel = new MessagePanel() {
+            @Override
+            public void selectedMessageChanged(SerialMessage message) {
+                if (message != null && message.getMessageType() != SerialManager.MessageTypes.Text) {
+                    picMessageInfoPanel.updateComponents(message);
+                }
+            }
+        };
         inputPanel = new InputPanel();
+        picMessageInfoPanel = new PicMessageInfoPanel();
+        picMessageInfoPanel.setVisible(false);
 
         settingsActions = new AbstractAction("Settings") {
             @Override
@@ -161,6 +173,7 @@ public class Application extends IFrame implements SerialListener {
         add(createToolbarPanel(), BorderLayout.PAGE_START);
         add(messagePanel, BorderLayout.CENTER);
         add(inputPanel, BorderLayout.SOUTH);
+        add(picMessageInfoPanel, BorderLayout.EAST);
     }
 
     @Override

@@ -10,4 +10,6 @@ public interface IMessagePanelListener {
 
     void addTransmittedMessage(SerialMessage message);
 
+    void selectedMessageChanged(SerialMessage message);
+
 }
