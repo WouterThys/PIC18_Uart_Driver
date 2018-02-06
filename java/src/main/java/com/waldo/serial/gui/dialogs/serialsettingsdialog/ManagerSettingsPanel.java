@@ -2,16 +2,13 @@ package com.waldo.serial.gui.dialogs.serialsettingsdialog;
 
 import com.waldo.serial.classes.SerialManager.MessageTypes;
 import com.waldo.utils.GuiUtils;
-import com.waldo.utils.icomponents.IComboBox;
-import com.waldo.utils.icomponents.ILabel;
-import com.waldo.utils.icomponents.ITextArea;
-import com.waldo.utils.icomponents.ITextField;
+import com.waldo.utils.icomponents.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ItemEvent;
 
-class ManagerSettingsPanel extends JPanel implements GuiUtils.GuiInterface {
+class ManagerSettingsPanel extends IPanel {
     
     /*
      *                  COMPONENTS

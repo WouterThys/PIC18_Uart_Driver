@@ -4,12 +4,16 @@ import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
 import com.waldo.serial.classes.Message.SerialMessage;
+import com.waldo.utils.StringUtils;
 
 import javax.swing.*;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
+
+import static com.waldo.serial.classes.SerialManager.MessageTypes.VARIABLE;
 
 public class SerialManager {
 
@@ -495,5 +499,107 @@ public class SerialManager {
         public boolean isAcknowledge() {
             return acknowledge;
         }
+    }
+
+    public abstract static class FakeMessageTask extends SwingWorker<Void, SerialMessage> {
+
+        private final MessageTypes messageType;
+        private boolean keepRunning;
+        private StringUtils.RandomString randomString;
+
+        public FakeMessageTask(MessageTypes messageType) {
+            this.messageType = messageType;
+            this.keepRunning = true;
+        }
+
+        public void stop() {
+            keepRunning = false;
+            this.cancel(true);
+        }
+
+        private SerialMessage createTextMessage() {
+            SerialMessage textMessage = null;
+            int l = ThreadLocalRandom.current().nextInt(2, 10);
+            randomString = new StringUtils.RandomString(l);
+            try {
+                textMessage = SerialMessage.createRx(MessageTypes.Text, randomString.nextString());
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            return textMessage;
+        }
+
+        private SerialMessage createPICMessage() {
+            SerialMessage textMessage = null;
+            String command;
+            String message;
+
+            randomString = new StringUtils.RandomString(messageType.commandBytes);
+            command = randomString.nextString();
+
+            int messageLength = messageType.messageBytes;
+            if (messageType.messageBytes == VARIABLE) {
+                messageLength = ThreadLocalRandom.current().nextInt(2, 8);
+            } else {
+                messageLength = messageType.messageBytes;
+            }
+            randomString = new StringUtils.RandomString(messageLength);
+            message = randomString.nextString();
+            String m = messageType.startChar + command;
+            if (messageType.messageBytes == VARIABLE) {
+                m += messageType.separator + messageLength;
+            }
+            m += messageType.separator + message;
+            if (messageType.isAcknowledge()) {
+                m += messageType.separator;
+                m += ThreadLocalRandom.current().nextInt(0, 255);
+            }
+            m += messageType.stopChar;
+
+            try {
+                textMessage = SerialMessage.createRx(messageType, m);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            return textMessage;
+        }
+
+        @Override
+        protected Void doInBackground() throws Exception {
+            try {
+                System.out.println("Start faking messages");
+                while(keepRunning) {
+                    switch (messageType) {
+                        case Text:
+                            publish(createTextMessage());
+                            break;
+                        case PICMessageShort:
+                        case PICMessageLong:
+                        case PICMessageVariable:
+                            publish(createPICMessage());
+                            break;
+                    }
+
+                    int sleep = ThreadLocalRandom.current().nextInt(1000, 6000 + 1);
+                    Thread.sleep(sleep);
+                }
+            } catch (InterruptedException e) {
+                System.out.println("Stopped while sleeping");
+            }
+            return null;
+        }
+
+        @Override
+        protected void process(List<SerialMessage> chunks) {
+            super.process(chunks);
+
+            if (chunks != null && chunks.size() > 0) {
+                for (SerialMessage message : chunks) {
+                    processMessage(message);
+                }
+            }
+        }
+
+        public abstract void processMessage(SerialMessage serialMessage);
     }
 }

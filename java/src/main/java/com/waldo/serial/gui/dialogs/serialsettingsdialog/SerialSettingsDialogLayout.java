@@ -18,12 +18,7 @@ abstract class SerialSettingsDialogLayout extends IDialog {
 
     PortSettingsPanel portSettingsPanel;
     ManagerSettingsPanel managerSettingsPanel;
-
-    // Gui settings
-    // TODO
-
-    // SerialMessage settings
-    // TODO
+    GuiSettingsPanel guiSettingsPanel;
 
     /*
     *                  VARIABLES
@@ -48,6 +43,7 @@ abstract class SerialSettingsDialogLayout extends IDialog {
     public void initializeComponents() {
         portSettingsPanel = new PortSettingsPanel(this);
         managerSettingsPanel = new ManagerSettingsPanel();
+        guiSettingsPanel = new GuiSettingsPanel();
     }
 
     @Override
@@ -56,11 +52,11 @@ abstract class SerialSettingsDialogLayout extends IDialog {
 
         portSettingsPanel.setBorder(GuiUtils.createTitleBorder("Port config"));
         managerSettingsPanel.setBorder(GuiUtils.createTitleBorder("Manager config"));
-        // ...
+        guiSettingsPanel.setBorder(GuiUtils.createTitleBorder("Gui settings"));
 
         getContentPanel().add(portSettingsPanel);
         getContentPanel().add(managerSettingsPanel);
-        // ...
+        getContentPanel().add(guiSettingsPanel);
 
         pack();
     }
@@ -74,5 +70,8 @@ abstract class SerialSettingsDialogLayout extends IDialog {
 
         portSettingsPanel.updateComponents(serialPort);
         managerSettingsPanel.updateComponents(serMgr().getMessageType());
+        if (args.length >= 4) {
+            guiSettingsPanel.updateComponents(args[1], args[2], args[3]);
+        }
     }
 }

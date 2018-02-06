@@ -5,6 +5,7 @@ import com.waldo.serial.classes.SerialManager;
 import com.waldo.utils.GuiUtils;
 import com.waldo.utils.icomponents.IComboBox;
 import com.waldo.utils.icomponents.IDialog;
+import com.waldo.utils.icomponents.IPanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +14,7 @@ import java.util.List;
 
 import static com.waldo.serial.classes.SerialManager.serMgr;
 
-class PortSettingsPanel extends JPanel implements GuiUtils.GuiInterface {
+class PortSettingsPanel extends IPanel {
 
     /*
      *                  COMPONENTS

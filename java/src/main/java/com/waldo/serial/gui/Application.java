@@ -4,6 +4,7 @@ import com.fazecast.jSerialComm.SerialPort;
 import com.waldo.serial.classes.Message.SerialMessage;
 import com.waldo.serial.classes.SerialListener;
 import com.waldo.serial.classes.SerialManager;
+import com.waldo.serial.gui.components.InputPanel;
 import com.waldo.serial.gui.dialogs.serialsettingsdialog.SerialSettingsDialog;
 import com.waldo.utils.GuiUtils;
 import com.waldo.utils.ResourceManager;
@@ -34,12 +35,10 @@ public class Application extends IFrame implements SerialListener {
     private AbstractAction settingsActions;
     private AbstractAction clearAction;
 
-    private CardLayout cardLayout;
-    private JPanel cardPanel;
     private MessagePanel messagePanel;
-    private TablePanel tablePanel;
+    private InputPanel inputPanel;
 
-    private IMessagePanelListener panelListener;
+    private SerialManager.FakeMessageTask fakeMessageTask;
 
     public Application(String startUpPath) {
         SerialManager.serMgr().init(this);
@@ -82,9 +81,24 @@ public class Application extends IFrame implements SerialListener {
         return this.getCursor().getType() == Cursor.WAIT_CURSOR;
     }
 
+    private void startFakeMessages() {
+        SwingUtilities.invokeLater(() -> {
+            if (fakeMessageTask != null) {
+                fakeMessageTask.stop();
+            }
+            fakeMessageTask = new SerialManager.FakeMessageTask(serMgr().getMessageType()) {
+                @Override
+                public void processMessage(SerialMessage serialMessage) {
+                    onReceived(serialMessage);
+                }
+            };
+            fakeMessageTask.execute();
+        });
+    }
+
     private void openSettings() {
         SerialSettingsDialog dialog = new SerialSettingsDialog(
-                Application.this, "Settings", serMgr().getSerialPort());
+                Application.this, "Settings", serMgr().getSerialPort(), messagePanel);
 
         if (dialog.showDialog() == IDialog.OK) {
             beginWait();
@@ -93,19 +107,10 @@ public class Application extends IFrame implements SerialListener {
                 if (port != null) {
                     boolean open = serMgr().open(port);
                     if (open) {
-                        if (serMgr().getMessageType().getStartChar().isEmpty()) {
-                            messagePanel.updateComponents();
-                            panelListener = messagePanel;
-                            cardLayout.show(cardPanel, MESSAGE_PNL);
-                        } else {
-                            tablePanel.initializeComponents();
-                            tablePanel.updateComponents();
-                            panelListener = tablePanel;
-                            cardLayout.show(cardPanel, TABLE_PNL);
-                        }
+                        messagePanel.updateComponents();
+                        startFakeMessages();
                     }
                     messagePanel.setEnabled(open);
-                    tablePanel.setEnabled(open);
                 }
                 updateStatus(port);
             } finally {
@@ -132,12 +137,7 @@ public class Application extends IFrame implements SerialListener {
         infoLbl = new ILabel();
 
         messagePanel = new MessagePanel();
-        tablePanel = new TablePanel();
-
-        cardLayout = new CardLayout();
-        cardPanel = new JPanel(cardLayout);
-        cardPanel.add(MESSAGE_PNL, messagePanel);
-        cardPanel.add(TABLE_PNL, tablePanel);
+        inputPanel = new InputPanel();
 
         settingsActions = new AbstractAction("Settings") {
             @Override
@@ -159,13 +159,13 @@ public class Application extends IFrame implements SerialListener {
         setLayout(new BorderLayout());
 
         add(createToolbarPanel(), BorderLayout.PAGE_START);
-        add(cardPanel, BorderLayout.CENTER);
+        add(messagePanel, BorderLayout.CENTER);
+        add(inputPanel, BorderLayout.SOUTH);
     }
 
     @Override
     public void updateComponents(Object... objects) {
         updateStatus(null);
-        cardLayout.show(cardPanel, MESSAGE_PNL);
         SwingUtilities.invokeLater(this::openSettings);
     }
 
@@ -196,20 +196,15 @@ public class Application extends IFrame implements SerialListener {
     @Override
     public void onTransmitted(SerialMessage message) {
         if (message != null) {
-            if (panelListener != null) {
-                panelListener.addTransmittedMessage(message);
-                panelListener.clearInput();
-            }
+            messagePanel.addTransmittedMessage(message);
+            inputPanel.clearInput();
         }
     }
 
     @Override
     public void onReceived(SerialMessage message) {
         if (message != null) {
-            if (panelListener != null) {
-                panelListener.addTransmittedMessage(message);
-                panelListener.clearInput();
-            }
+            messagePanel.addReceivedMessage(message);
         }
     }
 }

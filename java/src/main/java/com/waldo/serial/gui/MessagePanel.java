@@ -1,9 +1,7 @@
 package com.waldo.serial.gui;
 
 import com.waldo.serial.classes.Message.SerialMessage;
-import com.waldo.utils.GuiUtils;
 import com.waldo.utils.icomponents.IPanel;
-import com.waldo.utils.icomponents.ITextField;
 import com.waldo.utils.icomponents.ITextPane;
 
 import javax.swing.*;
@@ -12,30 +10,48 @@ import javax.swing.text.Style;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-
-import static com.waldo.serial.classes.SerialManager.serMgr;
 
 public class MessagePanel extends IPanel implements IMessagePanelListener {
 
-    private final ITextPane textPn = new ITextPane();;
-    private ITextField inputTf;
-    private AbstractAction sendAction;
+    private final ITextPane textPn = new ITextPane();
 
     private final Style messageStyle = textPn.addStyle("MessageStyle", textPn.getLogicalStyle());
     private final StyledDocument messageDoc = textPn.getStyledDocument();
 
+    // Settings
+    private boolean appendWithNewLine = true;
+    private Color txColor = new Color(0, 0, 100);
+    private Color rxColor = new Color(0,100,0);
 
-    public MessagePanel() {
+    MessagePanel() {
         initializeComponents();
         initializeLayouts();
 
         updateComponents();
     }
 
-    @Override
-    public void clearInput() {
-        inputTf.setText("");
+    public boolean isAppendWithNewLine() {
+        return appendWithNewLine;
+    }
+
+    public void setAppendWithNewLine(boolean appendWithNewLine) {
+        this.appendWithNewLine = appendWithNewLine;
+    }
+
+    public Color getTxColor() {
+        return txColor;
+    }
+
+    public void setTxColor(Color txColor) {
+        this.txColor = txColor;
+    }
+
+    public Color getRxColor() {
+        return rxColor;
+    }
+
+    public void setRxColor(Color rxColor) {
+        this.rxColor = rxColor;
     }
 
     @Override
@@ -46,9 +62,11 @@ public class MessagePanel extends IPanel implements IMessagePanelListener {
     @Override
     public void addReceivedMessage(SerialMessage message) {
         if (message != null) {
-            StyleConstants.setForeground(messageStyle, Color.blue);
+            StyleConstants.setForeground(messageStyle, rxColor);
             try {
-                messageDoc.insertString(messageDoc.getLength(), message.getMessage(), messageStyle);
+                String m = message.getInput();
+                if (appendWithNewLine && !m.endsWith("\n")) m += "\n";
+                messageDoc.insertString(messageDoc.getLength(), m, messageStyle);
             } catch (BadLocationException e) {
                 e.printStackTrace();
             }
@@ -58,9 +76,11 @@ public class MessagePanel extends IPanel implements IMessagePanelListener {
     @Override
     public void addTransmittedMessage(SerialMessage message) {
         if (message != null) {
-            StyleConstants.setForeground(messageStyle, Color.green);
+            StyleConstants.setForeground(messageStyle, txColor);
             try {
-                messageDoc.insertString(messageDoc.getLength(), message.getMessage(), messageStyle);
+                String m = message.getInput();
+                if (appendWithNewLine && !m.endsWith("\n")) m += "\n";
+                messageDoc.insertString(messageDoc.getLength(), m, messageStyle);
             } catch (BadLocationException e) {
                 e.printStackTrace();
             }
@@ -70,8 +90,6 @@ public class MessagePanel extends IPanel implements IMessagePanelListener {
     @Override
     public void setEnabled(boolean enabled) {
         textPn.setEnabled(enabled);
-        inputTf.setEnabled(enabled);
-        sendAction.setEnabled(enabled);
         super.setEnabled(enabled);
     }
 
@@ -82,19 +100,7 @@ public class MessagePanel extends IPanel implements IMessagePanelListener {
     public void initializeComponents() {
         textPn.setEditable(false);
 
-        sendAction = new AbstractAction("Send") {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String data = inputTf.getText();
-                if (data != null && !data.isEmpty()) {
-                    serMgr().write(data);
-                }
-                inputTf.requestFocus();
-            }
-        };
-
-        inputTf = new ITextField("Send stuff");
-        inputTf.addActionListener(sendAction);
+        StyleConstants.setBold(messageStyle, true);
 
         setEnabled(false);
     }
@@ -103,12 +109,10 @@ public class MessagePanel extends IPanel implements IMessagePanelListener {
     public void initializeLayouts() {
         setLayout(new BorderLayout());
 
-        JPanel sendPnl = GuiUtils.createComponentWithActions(inputTf, sendAction);
         JScrollPane scrollPane = new JScrollPane(textPn);
         scrollPane.setPreferredSize(new Dimension(600, 400));
 
         add(scrollPane, BorderLayout.CENTER);
-        add(sendPnl, BorderLayout.SOUTH);
     }
 
     @Override

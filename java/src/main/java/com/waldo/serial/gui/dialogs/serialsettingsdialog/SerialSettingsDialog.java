@@ -2,6 +2,7 @@ package com.waldo.serial.gui.dialogs.serialsettingsdialog;
 
 
 import com.fazecast.jSerialComm.SerialPort;
+import com.waldo.serial.gui.MessagePanel;
 
 import java.awt.*;
 
@@ -9,12 +10,20 @@ import static com.waldo.serial.classes.SerialManager.serMgr;
 
 public class SerialSettingsDialog extends SerialSettingsDialogLayout {
 
-    public SerialSettingsDialog(Window parent, String title, SerialPort serialPort) {
+    private final MessagePanel messagePanel;
+
+    public SerialSettingsDialog(Window parent, String title, SerialPort serialPort, MessagePanel messagePanel) {
         super(parent, title);
+
+        this.messagePanel = messagePanel;
 
         initializeComponents();
         initializeLayouts();
-        updateComponents(serialPort);
+        updateComponents(
+                serialPort,
+                messagePanel.isAppendWithNewLine(),
+                messagePanel.getTxColor(),
+                messagePanel.getRxColor());
 
     }
 
@@ -32,6 +41,12 @@ public class SerialSettingsDialog extends SerialSettingsDialogLayout {
         serMgr().setMessageType(managerSettingsPanel.getSelectedMessageType());
     }
 
+    private void copyGuiValues() {
+        messagePanel.setAppendWithNewLine(guiSettingsPanel.isAppendWithNewLine());
+        messagePanel.setTxColor(guiSettingsPanel.getTxColor());
+        messagePanel.setRxColor(guiSettingsPanel.getRxColor());
+    }
+
     public SerialPort getSerialPort() {
         return portSettingsPanel.getSelectedPort();
     }
@@ -41,6 +56,7 @@ public class SerialSettingsDialog extends SerialSettingsDialogLayout {
         if (portSettingsPanel.getSelectedPort() != null) {
             copyPortValues(portSettingsPanel.getSelectedPort());
             copyManagerValues();
+            copyGuiValues();
         }
         super.onOK();
     }
