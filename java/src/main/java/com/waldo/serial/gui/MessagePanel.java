@@ -1,7 +1,9 @@
 package com.waldo.serial.gui;
 
 import com.waldo.serial.classes.Message.SerialMessage;
+import com.waldo.utils.GuiUtils;
 import com.waldo.utils.icomponents.IPanel;
+import com.waldo.utils.icomponents.ITextField;
 import com.waldo.utils.icomponents.ITextPane;
 
 import javax.swing.*;
@@ -10,6 +12,9 @@ import javax.swing.text.Style;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+
+import static com.waldo.serial.classes.SerialManager.serMgr;
 
 public class MessagePanel extends IPanel implements IMessagePanelListener {
 
@@ -30,30 +35,6 @@ public class MessagePanel extends IPanel implements IMessagePanelListener {
         updateComponents();
     }
 
-    public boolean isAppendWithNewLine() {
-        return appendWithNewLine;
-    }
-
-    public void setAppendWithNewLine(boolean appendWithNewLine) {
-        this.appendWithNewLine = appendWithNewLine;
-    }
-
-    public Color getTxColor() {
-        return txColor;
-    }
-
-    public void setTxColor(Color txColor) {
-        this.txColor = txColor;
-    }
-
-    public Color getRxColor() {
-        return rxColor;
-    }
-
-    public void setRxColor(Color rxColor) {
-        this.rxColor = rxColor;
-    }
-
     @Override
     public void clearMessagePane() {
         textPn.setText("");
@@ -62,11 +43,9 @@ public class MessagePanel extends IPanel implements IMessagePanelListener {
     @Override
     public void addReceivedMessage(SerialMessage message) {
         if (message != null) {
-            StyleConstants.setForeground(messageStyle, rxColor);
+            StyleConstants.setForeground(messageStyle, Color.blue);
             try {
-                String m = message.getInput();
-                if (appendWithNewLine && !m.endsWith("\n")) m += "\n";
-                messageDoc.insertString(messageDoc.getLength(), m, messageStyle);
+                messageDoc.insertString(messageDoc.getLength(), message.getMessage(), messageStyle);
             } catch (BadLocationException e) {
                 e.printStackTrace();
             }
@@ -76,11 +55,9 @@ public class MessagePanel extends IPanel implements IMessagePanelListener {
     @Override
     public void addTransmittedMessage(SerialMessage message) {
         if (message != null) {
-            StyleConstants.setForeground(messageStyle, txColor);
+            StyleConstants.setForeground(messageStyle, Color.green);
             try {
-                String m = message.getInput();
-                if (appendWithNewLine && !m.endsWith("\n")) m += "\n";
-                messageDoc.insertString(messageDoc.getLength(), m, messageStyle);
+                messageDoc.insertString(messageDoc.getLength(), message.getMessage(), messageStyle);
             } catch (BadLocationException e) {
                 e.printStackTrace();
             }
@@ -90,6 +67,8 @@ public class MessagePanel extends IPanel implements IMessagePanelListener {
     @Override
     public void setEnabled(boolean enabled) {
         textPn.setEnabled(enabled);
+        inputTf.setEnabled(enabled);
+        sendAction.setEnabled(enabled);
         super.setEnabled(enabled);
     }
 
@@ -99,6 +78,8 @@ public class MessagePanel extends IPanel implements IMessagePanelListener {
     @Override
     public void initializeComponents() {
         textPn.setEditable(false);
+        DefaultCaret caret = (DefaultCaret) textPn.getCaret();
+        caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
 
         StyleConstants.setBold(messageStyle, true);
 
