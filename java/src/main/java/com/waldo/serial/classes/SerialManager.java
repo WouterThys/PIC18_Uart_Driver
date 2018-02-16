@@ -527,7 +527,7 @@ public class SerialManager {
             int l = ThreadLocalRandom.current().nextInt(2, 10);
             randomString = new StringUtils.RandomString(l);
             try {
-                textMessage = SerialMessage.createRx(MessageTypes.Text, randomString.nextString());
+                textMessage = SerialMessage.createRx(MessageTypes.Text, "");
             } catch (ParseException e) {
                 e.printStackTrace();
             }
@@ -540,7 +540,7 @@ public class SerialManager {
             String message;
 
             randomString = new StringUtils.RandomString(messageType.commandBytes);
-            command = randomString.nextString();
+            command = "";//randomString.nextString();
 
             int messageLength = messageType.messageBytes;
             if (messageType.messageBytes == VARIABLE) {
@@ -549,7 +549,7 @@ public class SerialManager {
                 messageLength = messageType.messageBytes;
             }
             randomString = new StringUtils.RandomString(messageLength);
-            message = randomString.nextString();
+            message = "";//randomString.nextString();
             String m = messageType.startChar + command;
             if (messageType.messageBytes == VARIABLE) {
                 m += messageType.separator + messageLength;
