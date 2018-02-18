@@ -106,7 +106,7 @@ public class Application extends IFrame implements SerialListener {
                     boolean open = serMgr().open(port);
                     if (open) {
                         messagePanel.updateComponents();
-                        startFakeMessages();
+                        //startFakeMessages();
                     }
                     messagePanel.setEnabled(open);
                     SerialManager.MessageTypes type = serMgr().getMessageType();
