@@ -3,6 +3,7 @@ package com.waldo.serial.gui.dialogs.serialsettingsdialog;
 import com.waldo.utils.GuiUtils;
 import com.waldo.utils.icomponents.ICheckBox;
 import com.waldo.utils.icomponents.IPanel;
+import com.waldo.utils.icomponents.ITextField;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,6 +13,7 @@ public class GuiSettingsPanel extends IPanel {
     /*
      *                  COMPONENTS
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    private ITextField sessionNameTf;
     private ICheckBox appendWithNewLineCb;
     private JButton txColorBtn;
     private JButton rxColorBtn;
@@ -45,6 +47,9 @@ public class GuiSettingsPanel extends IPanel {
         return txColor;
     }
 
+    public String getSessionName() {
+        return sessionNameTf.getText();
+    }
 
     private void setTxColor(Color txColor) {
         if (txColor != null) {
@@ -65,6 +70,8 @@ public class GuiSettingsPanel extends IPanel {
              * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     @Override
     public void initializeComponents() {
+        sessionNameTf = new ITextField();
+
         appendWithNewLineCb = new ICheckBox();
         txColorBtn = new JButton();
         rxColorBtn = new JButton();
@@ -83,13 +90,22 @@ public class GuiSettingsPanel extends IPanel {
     @Override
     public void initializeLayouts() {
 
+        JPanel sessionPanel = new JPanel();
         JPanel panel = new JPanel();
-        GuiUtils.GridBagHelper gbc = new GuiUtils.GridBagHelper(panel, 140);
-        gbc.addLine("Append new line: ", appendWithNewLineCb);
-        gbc.addLine("TX message color: ", txColorBtn);
-        gbc.addLine("RX message color: ", rxColorBtn);
+        GuiUtils.GridBagHelper gbc;
 
-        add(panel);
+        gbc = new GuiUtils.GridBagHelper(sessionPanel);
+        gbc.addLineVertical("Session name", sessionNameTf);
+
+        gbc = new GuiUtils.GridBagHelper(panel, 160);
+        gbc.addLine("Append new line: ", appendWithNewLineCb);
+        gbc.addLine("TX msg color: ", txColorBtn);
+        gbc.addLine("RX mmsg color: ", rxColorBtn);
+
+        setLayout(new BorderLayout());
+
+        add(sessionPanel, BorderLayout.NORTH);
+        add(panel, BorderLayout.CENTER);
     }
 
     @Override

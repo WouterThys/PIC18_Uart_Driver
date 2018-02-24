@@ -28,6 +28,7 @@ public class Application extends IFrame implements SerialListener {
 
     // Tool bar
     private ILabel statusLbl;
+    private ILabel sessionLbl;
     private ILabel infoLbl;
     private AbstractAction settingsActions;
     private AbstractAction clearAction;
@@ -62,6 +63,7 @@ public class Application extends IFrame implements SerialListener {
         leftPnl.add(infoLbl, BorderLayout.CENTER);
 
         panel.add(leftPnl, BorderLayout.WEST);
+        panel.add(sessionLbl, BorderLayout.CENTER);
         panel.add(toolBar, BorderLayout.EAST);
 
         return  panel;
@@ -73,6 +75,10 @@ public class Application extends IFrame implements SerialListener {
 
     private void endWait() {
         this.setCursor(Cursor.getDefaultCursor());
+    }
+
+    public void setSessionName(String name) {
+        sessionLbl.setText(name);
     }
 
     public boolean isUpdating() {
@@ -138,6 +144,9 @@ public class Application extends IFrame implements SerialListener {
         // Stuff
         statusLbl = new ILabel();
         infoLbl = new ILabel();
+        sessionLbl = new ILabel();
+        sessionLbl.setFont(20, Font.BOLD);
+        sessionLbl.setHorizontalAlignment(SwingConstants.CENTER);
 
         messagePanel = new MessagePanel() {
             @Override

@@ -4,7 +4,8 @@
     <root id="archive" name="Serialator.jar">
       <element id="module-output" name="java" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fazecast/jSerialComm/1.3.11/jSerialComm-1.3.11.jar" path-in-jar="/" />
-      <element id="library" level="project" name="Maven: com.waldo.utils:Utilities:1.0" />
+      <element id="library" level="project" name="Maven: com.fazecast:jSerialComm:1.3.11" />
+      <element id="library" level="project" name="Utilities" />
     </root>
   </artifact>
 </component>

@@ -2,19 +2,20 @@ package com.waldo.serial.gui.dialogs.serialsettingsdialog;
 
 
 import com.fazecast.jSerialComm.SerialPort;
+import com.waldo.serial.gui.Application;
 import com.waldo.serial.gui.MessagePanel;
-
-import java.awt.*;
 
 import static com.waldo.serial.classes.SerialManager.serMgr;
 
 public class SerialSettingsDialog extends SerialSettingsDialogLayout {
 
     private final MessagePanel messagePanel;
+    private final Application application;
 
-    public SerialSettingsDialog(Window parent, String title, SerialPort serialPort, MessagePanel messagePanel) {
-        super(parent, title);
+    public SerialSettingsDialog(Application application, String title, SerialPort serialPort, MessagePanel messagePanel) {
+        super(application, title);
 
+        this.application = application;
         this.messagePanel = messagePanel;
 
         initializeComponents();
@@ -42,6 +43,7 @@ public class SerialSettingsDialog extends SerialSettingsDialogLayout {
     }
 
     private void copyGuiValues() {
+        application.setSessionName(guiSettingsPanel.getSessionName());
         messagePanel.setAppendWithNewLine(guiSettingsPanel.isAppendWithNewLine());
         messagePanel.setTxColor(guiSettingsPanel.getTxColor());
         messagePanel.setRxColor(guiSettingsPanel.getRxColor());
